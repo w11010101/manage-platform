@@ -47,6 +47,7 @@ module.exports = {
         use:[
           {
             loader: 'vue-loader',
+            options: vueLoaderConfig
           },
           {
             loader: 'iview-loader',
@@ -54,8 +55,8 @@ module.exports = {
                 prefix: false
             }
           }
-        ]
-        options: vueLoaderConfig
+        ],
+        
       },
       // {
       //   test: /iview\/.*?js$/,
