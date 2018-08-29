@@ -5,21 +5,21 @@ var data = [
         text: 'Header',
         id: 1,
         href:null,
-        icon: "gear-a",
+        icon: "md-baseball",
         nodes:[
             {
                 level: 2,
-                text: 'header',
+                text: 'h1',
                 id: 11,
                 href:null,
-                icon: "gear-a",
+                icon: "ios-baseball",
             },
             {
                 level: 2,
                 text: 'sub-header',
                 id: 12,
                 href:null,
-                icon: "gear-a",
+                icon: "ios-baseball-outline",
             }
         ]
     },
@@ -28,21 +28,21 @@ var data = [
         text: 'Form',
         id: 2,
         href:null,
-        icon: "gear-a",
+        icon: "ios-football",
         nodes:[
             {
                 level: 2,
                 text: 'form-input',
                 id: 21,
                 href:null,
-                icon: "gear-a",
+                icon: "ios-football-outline",
             },
             {
                 level: 2,
                 text: 'form-btns',
                 id: 22,
                 href:null,
-                icon: "gear-a",
+                icon: "md-football",
             }
         ]
     },
@@ -51,14 +51,30 @@ var data = [
         text: 'Table',
         id: 3,
         href:null,
-        icon: "gear-a",
+        icon: "md-basketball",
         nodes:[
             {
                 level: 2,
                 text: 'table',
                 id: 31,
                 href:null,
-                icon: "gear-a",
+                icon: "ios-basketball",
+            }
+        ]
+    },
+    {
+        level: 1,
+        text: 'nav',
+        id: 4,
+        href:null,
+        icon: "md-basketball",
+        nodes:[
+            {
+                level: 2,
+                text: 'nav',
+                id: 41,
+                href:null,
+                icon: "ios-basketball",
             }
         ]
     }

@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import header from '@/components/header'
 import nav from '@/components/nav'
-
-Vue.use(Router)
+import h1 from '@/components/h1'
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -13,8 +13,18 @@ export default new Router({
       // name: 'header',
       components: {
         header: header,
-        content: HelloWorld,
+        viewsContent: HelloWorld,
         'side-nav': nav
+      }
+    },{
+      path:"/h1",
+      components:{
+        default:h1
+      }
+    },{
+      path:"/nav",
+      components:{
+        default: header,
       }
     }
   ]
