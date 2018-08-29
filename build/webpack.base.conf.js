@@ -43,25 +43,8 @@ module.exports = {
       ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
         test: /\.vue$/,
-<<<<<<< HEAD
         loader: 'vue-loader',
         options: vueLoaderConfig
-=======
-        
-        use:[
-          {
-            loader: 'vue-loader',
-            options: vueLoaderConfig
-          },
-          {
-            loader: 'iview-loader',
-            options: {
-                prefix: false
-            }
-          }
-        ],
-        
->>>>>>> 3a6757861e0e571ef060b362432a519cc6dbd92c
       },
       {
         test: /\.js$/,
