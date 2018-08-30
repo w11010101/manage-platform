@@ -1,13 +1,20 @@
 <template>
-  <h1>{{msg}}</h1>
+  <div>
+    <h1>{{msg}}</h1>
+    <router-link to='foo'>foo</router-link>
+    <router-link to='h1'>h1</router-link>
+    <router-view name="container"></router-view> 
+  </div>
+  
+
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'content',
   data () {
     return {
-      msg: 'this is h1!'
+      msg: 'this is content!'
     }
   }
 }
@@ -28,5 +35,6 @@ li {
 }
 a {
   color: #42b983;
+  font-size: 20px
 }
 </style>

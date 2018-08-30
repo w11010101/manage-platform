@@ -10,7 +10,7 @@ Vue.component("menu-parts",{
                 <MenuItem  v-for="item in data.nodes" 
                     :key="item.id"  
                     :name="item.href || item.id"
-                    
+                    :to="'/layoutView/'+item.text"
                     v-if="!item.nodes || !item.nodes.length" >
                     <Icon :type="item.icon" size="20"></Icon>
                     <span>{{item.text}}</span>

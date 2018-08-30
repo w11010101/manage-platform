@@ -1,6 +1,24 @@
 header{
   height: 50px;
   line-height: 50px;
-  border-top:1px solid #ddd;
-  border-bottom:1px solid #ddd;
+  border-bottom:1px solid #515a6e;
+  color:#f5f7f9;
+  background: #515a6e;
+  font-size: 20px;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  font-size: 20px;
+  color: #42b983;
 }

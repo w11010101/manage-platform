@@ -16,7 +16,7 @@ var data = [
             },
             {
                 level: 2,
-                text: 'sub-header',
+                text: 'h2',
                 id: 12,
                 href:null,
                 icon: "ios-baseball-outline",

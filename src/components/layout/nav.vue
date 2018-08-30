@@ -1,82 +1,21 @@
 <style>
-    @import url(../plugin/iview/iview.css);
-    .layout{
-        border: 1px solid #d7dde4;
-        background: #f5f7f9;
-        position: relative;
-        border-radius: 4px;
-        overflow: hidden;
-    }
-    .layout-header-bar{
-        background: #fff;
-        box-shadow: 0 1px 1px rgba(0,0,0,.1);
-    }
-    .layout-logo-left{
-        width: 90%;
-        height: 30px;
-        background: #5b6270;
-        border-radius: 3px;
-        margin: 15px auto;
-    }
-    .menu-icon{
-        transition: all .3s;
-    }
-    .rotate-icon{
-        transform: rotate(-90deg);
-    }
-    .menu-item span{
-        display: inline-block;
-        overflow: hidden;
-        width: 69px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        vertical-align: bottom;
-        transition: width .2s ease .2s;
-    }
-    .menu-item i{
-        transform: translateX(0px);
-        transition: font-size .2s ease, transform .2s ease;
-        vertical-align: middle;
-        font-size: 16px;
-    }
-    .collapsed-menu span{
-        width: 0px;
-        height:0px;
-        font-size: 0;
-        transition: width .2s ease;
-    }
-    .collapsed-menu i{
-        transform: translateX(5px);
-        transition: font-size .2s ease .2s, transform .2s ease .2s;
-        vertical-align: middle;
-        font-size: 22px;
-    }
-    /**/
-    .collapsed-menu .ivu-menu-submenu-title-icon{
-        width: 0px;
-        height:0px;
-        opacity: 0;
-    }
+@import url(../../css/nav.css);
 </style>
 <template>
-    <Sider ref='side' hide-trigger collapsible :collapsed-width="78" v-model="isCollapsed" width="230px" >
+    <Sider ref='side' hide-trigger collapsible :collapsed-width="78" v-model="isCollapsed" width="230px" :style='{background:"#fff"}'>
         <div class="nav-icon">
-            <Icon @click.native="collapsedSider" :class="rotateIcon" type="md-menu" size="24"></Icon>
+            <Icon @click.native="collapsedSider" :style='{color: "#515a6e"}' :class="rotateIcon" type="md-menu" size="24"></Icon>
         </div>
-        <Menu theme='dark' :open-names="open" :active-name="active" width="auto" :class="menuitemClasses" accordion @on-select="jumpPage" @on-open-change="collapsedMenuShow">
+        <Menu theme='light' :open-names="open" :active-name="active" width="auto" :class="menuitemClasses" accordion @on-select="jumpPage" @on-open-change="collapsedMenuShow">
             <menu-parts v-for="data in navData" :data='data' :key="data.id" ></menu-parts>
         </Menu>
     </Sider>
 </template>
 <script>
     import Vue from 'vue';
-    import Main from '../js/nav.js';
-    import iview from 'iview';
-    var breadcrumb = require('../plugin/breadcrumb/breadcrumb');
+    import Main from '../../js/nav.js';
+    var breadcrumb = require('../../plugin/breadcrumb/breadcrumb');
     breadcrumb = new breadcrumb.breadcrumb();
-
-    console.log(breadcrumb)
-    Vue.use(iview);
 
     export default {
         name:"myNav",
@@ -126,11 +65,12 @@
         methods:{
             // 点击页面跳转
             jumpPage:function(name){
-                console.log(breadcrumb)
-                var currentSubMenu = breadcrumb.init(this.navData,name);
-                console.log(currentSubMenu);
 
-                this.$router.push('/'+currentSubMenu.currentNode.text);
+                // console.log(breadcrumb)
+                // var currentSubMenu = breadcrumb.init(this.navData,name);
+                // console.log(currentSubMenu);
+
+                // this.$router.push('/layoutView/'+currentSubMenu.currentNode.text);
                 // var currentNode = currentSubMenu.currentNode;
                 // var href = currentNode.href;
                 // var nid = currentNode.nid;
