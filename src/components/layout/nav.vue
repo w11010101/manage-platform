@@ -137,7 +137,6 @@
             // set 面包屑
             setBreadcrumb:function(breadcrumbArr){
             }
-
         }
     }
 </script>
