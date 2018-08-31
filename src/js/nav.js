@@ -18,6 +18,7 @@ Vue.component("menu-parts",{
                 <menu-parts v-if="data.nodes && data.nodes.length"  v-for="item in data.nodes" :key="'sub-'+item.id" :data='item'></menu-parts>
             </Submenu>
             `,
+            // :to="'/'+item.text"
     computed: {
         rotateIcon: function () {
             return [

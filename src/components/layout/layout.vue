@@ -20,13 +20,9 @@
     </div>
 </template>
 <script>
-
 import myHeader from './header'
 import myNav from './nav';
 import myContentFooter from './contentFooter';
-// import Vue from 'vue'
-// import iview from 'iview'
-// Vue.use(iview)
 var breadC = require('../../plugin/breadcrumb/breadcrumb').breadcrumb;
 var breadcrumb = new breadC({
     paramName:'href'
@@ -46,24 +42,20 @@ export default {
     },
     beforeRouteEnter (to,from,next){
         next();
+        // console.log(to);
     },
     beforeRouteUpdate (to,from,next){
-        // console.log('beforeRouteUpdate 3 = ',to);
+        console.log('beforeRouteUpdate 3 = ',to);
         next();
         if(to.path === '/layoutView') return false;
         var navData = this.$refs.navVm.navData;
         var breadcrumbObj = breadcrumb.init(navData,to.path);
-        // console.log(breadcrumbObj);
+        console.log(breadcrumbObj);
 
         var nodesArr = breadcrumbObj.nodesArr;
         var ids = nodesArr.map(e=>e.id)
         this.$refs.navVm.active = to.path;
         this.$refs.navVm.open = ids;
-        this.$nextTick(function(){
-            console.log(this.$refs)
-            // console.log(this.$refs.navVm.updateActiveName)
-        })
-        
     },
 }
 

@@ -2,20 +2,83 @@
 @import url(../../css/nav.css);
 </style>
 <template>
-    <Sider ref='side' hide-trigger collapsible :collapsed-width="78" v-model="isCollapsed" width="230px" :style='{background:"#fff"}'>
-        <div class="nav-icon">
-            <Icon @click.native="collapsedSider" :style='{color: "#515a6e"}' :class="rotateIcon" type="md-menu" size="24"></Icon>
-        </div>
-        <Menu theme='light' :open-names="open" :active-name="active" width="auto" :class="menuitemClasses" accordion @on-select="jumpPage" @on-open-change="collapsedMenuShow">
-            <menu-parts v-for="data in navData" :data='data' :key="data.id" ></menu-parts>
-        </Menu>
-    </Sider>
+    <!-- <div id="navVm"> -->
+        <Sider ref='side' hide-trigger collapsible :collapsed-width="78" v-model="isCollapsed" width="230px" :style='{background:"#fff"}'>
+            <div class="nav-icon">
+                <Icon @click.native="collapsedSider" :style='{color: "#515a6e"}' :class="rotateIcon" type="md-menu" size="24"></Icon>
+            </div>
+            <Menu ref='side1' theme='light' :open-names="open" :active-name="active" width="auto" :class="menuitemClasses" accordion @on-select="jumpPage" @on-open-change="collapsedMenuShow">
+                <menu-parts v-for="data in navData" :data='data' :key="data.id" ></menu-parts>
+            </Menu>
+        </Sider>
+    <!-- </div> -->
 </template>
 <script>
     import Vue from 'vue';
     import Main from '../../js/nav.js';
+
     var breadcrumb = require('../../plugin/breadcrumb/breadcrumb');
     breadcrumb = new breadcrumb.breadcrumb();
+    // var navVm = new Vue({
+    //     el:'#navVm',
+    //     data:{
+    //         msg:'message',
+    //         activeNav:'',
+    //         collapsedMenuTitle:'',
+    //         open:[],
+    //         name:'',
+    //         active:'',
+    //         openSubMenuID:[],
+    //         breadcrumbArr:[],
+    //         isCollapsed:false
+    //     },
+    //     mixins:[Main],
+    //     computed: {
+    //         menuitemClasses: function () {
+    //             return [
+    //                 'menu-item',
+    //                 this.isCollapsed ? 'collapsed-menu' : ''
+    //             ]
+    //         },
+    //         rotateIcon: function () {
+    //             return [
+    //                 'menu-icon',
+    //                 this.isCollapsed ? 'rotate-icon' : ''
+    //             ];
+    //         },
+    //     },
+    //     watch:{
+    //         // 手动更新展开的子目录
+    //         open:function(){
+    //             this.$nextTick(function() {
+    //                 this.$refs.side1.updateOpened();   
+    //                 this.$refs.side1.updateActiveName();
+    //             });
+    //         },
+    //         // 手动更新当前选择项
+    //         active:function(){
+    //             var _this = this;
+    //             setTimeout(function(){
+    //                 $(_this.$el).find('.ivu-menu-item-selected').trigger('click');
+    //             },100);
+    //         }
+    //     },
+    //     methods:{
+    //         // 点击页面跳转
+    //         jumpPage:function(name){
+
+    //         },
+    //         // 
+    //         collapsedMenuShow:function(name){
+                
+    //         },
+
+    //         // set 面包屑
+    //         setBreadcrumb:function(breadcrumbArr){
+    //         }
+    //     }
+    // })
+    // export default navVm;
     export default {
         name:"myNav",
         data(){
@@ -49,10 +112,9 @@
             // 手动更新展开的子目录
             open:function(){
                 this.$nextTick(function() {
-
-                    console.log(this)
-                    // this.$refs.side.updateOpened();   
-                    // this.$refs.side.updateActiveName();
+                    console.log(this.$refs.side1)
+                    this.$refs.side1.updateOpened();   
+                    this.$refs.side1.updateActiveName();
                 });
             },
             // 手动更新当前选择项
