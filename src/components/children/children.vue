@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="child">
     <h1>{{msg}}</h1>
-    <router-link to='foo'>foo</router-link>
-    <router-link to='h1'>h1</router-link>
+    <router-link class="link" to='/layoutView/h2'>to h2.vue</router-link>
+    <router-link class="link" to='/layoutView/h1'>to h1.vue</router-link>
     <router-view name="container"></router-view> 
   </div>
   
@@ -11,10 +11,10 @@
 
 <script>
 export default {
-  name: 'content',
+  name: 'children',
   data () {
     return {
-      msg: 'this is content!'
+      msg: 'this is children!'
     }
   }
 }
@@ -37,4 +37,5 @@ a {
   color: #42b983;
   font-size: 20px
 }
+
 </style>

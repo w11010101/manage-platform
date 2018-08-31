@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="child">
     <h1>{{msg}}</h1>
     <router-link class="link" to="/layoutView/h2">to h2.vue</router-link>
-    <router-link class="link" to="/layoutView/h1/show">show</router-link>
+    <router-link class="link" to="/layoutView/h1/children">children</router-link>
     <router-view name='h1-content'></router-view>
   </div>
   
@@ -15,7 +15,7 @@ export default {
     return {
       msg: 'this is h1 !!!!'
     }
-  }
+  },
 }
 </script>
 

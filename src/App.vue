@@ -3,6 +3,7 @@
         <div class="layout">
             <Layout>
                 <router-view name="layoutView"/>
+            
             </Layout>
         </div>
     </div>

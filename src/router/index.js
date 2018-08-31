@@ -2,15 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import layoutView from '@/components/layout/layout'
 
-// children
-
-import HelloWorld from '@/components/children/HelloWorld'
+// children template
 
 import h1 from '@/components/children/h1'
 import h2 from '@/components/children/h2'
-
-import show from '@/components/children/show'
-
+import children from '@/components/children/children'
+import VueCli from '@/components/layout/Vue-cli'
 
 Vue.use(Router);
 
@@ -23,15 +20,21 @@ export default new Router({
             },
             children:[
                 {
+                    path:'Vue-cli',
+                    components:{
+                        viewsContent:VueCli
+                    }
+                },
+                {
                     path:'h1',
                     components:{
                         viewsContent:h1
                     },
                     children:[
                         {
-                            path:"show",
+                            path:"children",
                             components:{
-                                "h1-content":show
+                                "h1-content":children
                             }
                         }
                     ]
@@ -40,7 +43,7 @@ export default new Router({
                     components:{
                         viewsContent:h2
                     }
-                }
+                },
             ]
         }
     ]

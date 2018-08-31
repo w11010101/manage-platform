@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="child">
     <h1>{{msg}}</h1>
     <router-link class="link" to="/layoutView/h1">to h1.vue</router-link>
 
