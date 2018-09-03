@@ -19,66 +19,7 @@
 
     var breadcrumb = require('../../plugin/breadcrumb/breadcrumb');
     breadcrumb = new breadcrumb.breadcrumb();
-    // var navVm = new Vue({
-    //     el:'#navVm',
-    //     data:{
-    //         msg:'message',
-    //         activeNav:'',
-    //         collapsedMenuTitle:'',
-    //         open:[],
-    //         name:'',
-    //         active:'',
-    //         openSubMenuID:[],
-    //         breadcrumbArr:[],
-    //         isCollapsed:false
-    //     },
-    //     mixins:[Main],
-    //     computed: {
-    //         menuitemClasses: function () {
-    //             return [
-    //                 'menu-item',
-    //                 this.isCollapsed ? 'collapsed-menu' : ''
-    //             ]
-    //         },
-    //         rotateIcon: function () {
-    //             return [
-    //                 'menu-icon',
-    //                 this.isCollapsed ? 'rotate-icon' : ''
-    //             ];
-    //         },
-    //     },
-    //     watch:{
-    //         // 手动更新展开的子目录
-    //         open:function(){
-    //             this.$nextTick(function() {
-    //                 this.$refs.side1.updateOpened();   
-    //                 this.$refs.side1.updateActiveName();
-    //             });
-    //         },
-    //         // 手动更新当前选择项
-    //         active:function(){
-    //             var _this = this;
-    //             setTimeout(function(){
-    //                 $(_this.$el).find('.ivu-menu-item-selected').trigger('click');
-    //             },100);
-    //         }
-    //     },
-    //     methods:{
-    //         // 点击页面跳转
-    //         jumpPage:function(name){
 
-    //         },
-    //         // 
-    //         collapsedMenuShow:function(name){
-                
-    //         },
-
-    //         // set 面包屑
-    //         setBreadcrumb:function(breadcrumbArr){
-    //         }
-    //     }
-    // })
-    // export default navVm;
     export default {
         name:"myNav",
         data(){
@@ -112,7 +53,6 @@
             // 手动更新展开的子目录
             open:function(){
                 this.$nextTick(function() {
-                    console.log(this.$refs.side1)
                     this.$refs.side1.updateOpened();   
                     this.$refs.side1.updateActiveName();
                 });
@@ -120,9 +60,6 @@
             // 手动更新当前选择项
             active:function(){
                 var _this = this;
-                setTimeout(function(){
-                    // $(_this.$el).find('.ivu-menu-item-selected').trigger('click');
-                },100);
             }
         },
         methods:{

@@ -28,6 +28,11 @@ var data = [
                 id: 12,
                 href:"/layoutView/h2",
                 icon: "ios-baseball-outline",
+                props:{
+                    from:'h2.vue',
+                    id:12,
+                    name:'h2'
+                },
             }
         ]
     },

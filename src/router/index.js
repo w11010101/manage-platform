@@ -10,7 +10,15 @@ import children from '@/components/children/children'
 import VueCli from '@/components/layout/Vue-cli'
 
 Vue.use(Router);
-
+function dynamicPropsFn(route){
+    console.log(route);
+    console.log(arguments);
+    return {
+        from:"fn",
+        id:"111",
+        name:"dynamicPropsFn"
+    }
+}
 export default new Router({
     routes:[
         {
@@ -21,25 +29,34 @@ export default new Router({
             children:[
                 {
                     path:'Vue-cli',
+                    name:'Vue-cli',
                     components:{
                         viewsContent:VueCli
                     }
                 },
                 {
-                    path:'h1',
+                    // path:'h1',
+                    path:'h1/:from/:id/:name',
+                    name:"h1",
                     components:{
                         viewsContent:h1
+                    },
+                    props:{
+                        viewsContent:dynamicPropsFn
                     },
                     children:[
                         {
                             path:"children",
+                            name:"children",
                             components:{
                                 "h1-content":children
                             }
                         }
-                    ]
+                    ],
+                    
                 },{
-                    path:'h2',
+                    path:'h2/:from/:id/:name',
+                    name:"h2",
                     components:{
                         viewsContent:h2
                     }

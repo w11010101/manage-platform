@@ -10,7 +10,7 @@ Vue.component("menu-parts",{
                 <MenuItem  v-for="item in data.nodes" 
                     :key="item.id"  
                     :name="item.href || item.id"
-                    :to="'/layoutView/'+item.text"
+                    :to="setTo(item)"
                     v-if="!item.nodes || !item.nodes.length" >
                     <Icon :type="item.icon" size="20"></Icon>
                     <span>{{item.text}}</span>
@@ -18,7 +18,6 @@ Vue.component("menu-parts",{
                 <menu-parts v-if="data.nodes && data.nodes.length"  v-for="item in data.nodes" :key="'sub-'+item.id" :data='item'></menu-parts>
             </Submenu>
             `,
-            // :to="'/'+item.text"
     computed: {
         rotateIcon: function () {
             return [
@@ -26,6 +25,14 @@ Vue.component("menu-parts",{
                 this.isCollapsed ? 'rotate-icon' : ''
             ];
         },
+        setTo:(event) =>(item)=>{
+            console.log(item);
+            var params = "";
+            for(var key in item.props){
+                params += '/'+item.props[key];
+            }
+            return item['props']?'/layoutView/'+item.text+params:{name:item.text.indexOf('/')?item.text.substr(item.text.lastIndexOf('/')+1):item.text};
+        }
     },
 });
 
