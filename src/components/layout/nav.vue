@@ -14,7 +14,7 @@
     <!-- </div> -->
 </template>
 <script>
-    import Vue from 'vue';
+    // import Vue from 'vue';
     import Main from '../../js/nav.js';
 
     var breadcrumb = require('../../plugin/breadcrumb/breadcrumb');

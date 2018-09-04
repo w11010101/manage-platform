@@ -1,3 +1,32 @@
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.ivu-layout-footer{
+  position: absolute;
+  bottom: 0
+}
+.vueCli{
+}
+.vueCli h1{
+  margin-top: 10px;
+  text-align: center;
+}
+.vueCli-content{
+  padding: 15px;
+}
+.vueCli-content h2 {
+  font-size: 18px;
+  margin:10px 0;
+}
+.alert{
+  font-size: 20px;
+  line-height: 30px;
+}
+.vueCli-content .code{
+  font-size: 16px;
+}
+</style>
+
 <template>
   <div class='vueCli'>
     <h1>{{msg}}</h1>
@@ -34,31 +63,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.ivu-layout-footer{
-  position: absolute;
-  bottom: 0
-}
-.vueCli{
-}
-.vueCli h1{
-  margin-top: 10px;
-  text-align: center;
-}
-.vueCli-content{
-  padding: 15px;
-}
-.vueCli-content h2 {
-  font-size: 18px;
-  margin:10px 0;
-}
-.alert{
-  font-size: 20px;
-  line-height: 30px;
-}
-.vueCli-content .code{
-  font-size: 16px;
-}
-</style>

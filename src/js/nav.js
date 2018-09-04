@@ -1,4 +1,4 @@
-import Vue from 'vue';
+// import Vue from 'vue';
 import data from '../js/data.js';
 Vue.component("menu-parts",{
     props:["data"],
@@ -26,7 +26,6 @@ Vue.component("menu-parts",{
             ];
         },
         setTo:(event) =>(item)=>{
-            console.log(item);
             var params = "";
             for(var key in item.props){
                 params += '/'+item.props[key];

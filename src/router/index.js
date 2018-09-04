@@ -1,15 +1,15 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import layoutView from '@/components/layout/layout'
+// import Vue from 'vue'
+// import Router from 'vue-router'
+// import layoutView from '@/components/layout/layout'
 
 // children template
 
-import h1 from '@/components/children/h1'
-import h2 from '@/components/children/h2'
-import children from '@/components/children/children'
-import VueCli from '@/components/layout/Vue-cli'
+// import h1 from '@/components/children/h1'
+// import h2 from '@/components/children/h2'
+// import children from '@/components/children/children'
+// import VueCli from '@/components/layout/Vue-cli'
 
-Vue.use(Router);
+Vue.use(VueRouter);
 function dynamicPropsFn(route){
     console.log(route);
     console.log(arguments);
@@ -19,19 +19,20 @@ function dynamicPropsFn(route){
         name:"dynamicPropsFn"
     }
 }
-export default new Router({
+export default new VueRouter({
     routes:[
         {
             path:"/layoutView",
+            name:"layoutView",
             components:{
-                layoutView:layoutView
+                layoutView:resolve =>require(['@/components/layout/layout'],resolve)
             },
             children:[
                 {
                     path:'Vue-cli',
                     name:'Vue-cli',
                     components:{
-                        viewsContent:VueCli
+                        viewsContent:resolve =>require(['@/components/layout/Vue-cli'],resolve)
                     }
                 },
                 {
@@ -39,7 +40,7 @@ export default new Router({
                     path:'h1/:from/:id/:name',
                     name:"h1",
                     components:{
-                        viewsContent:h1
+                        viewsContent:resolve =>require(['@/components/children/h1'],resolve)
                     },
                     props:{
                         viewsContent:dynamicPropsFn
@@ -49,7 +50,7 @@ export default new Router({
                             path:"children",
                             name:"children",
                             components:{
-                                "h1-content":children
+                                "h1-content":resolve =>require(['@/components/children/children'],resolve)
                             }
                         }
                     ],
@@ -58,7 +59,7 @@ export default new Router({
                     path:'h2/:from/:id/:name',
                     name:"h2",
                     components:{
-                        viewsContent:h2
+                        viewsContent:resolve =>require(['@/components/children/h2'],resolve)
                     }
                 },
             ]

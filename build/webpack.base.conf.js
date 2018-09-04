@@ -31,6 +31,15 @@ module.exports = {
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
   },
+  devtool:'source-map',
+  externals:{
+    Vue:"Vue",
+    // 'vue-router':'VueRouter',
+    // Router:'vue-router',
+    Router:'VueRouter',
+    iview:"iview",
+    Vuex:"Vuex"
+  },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {

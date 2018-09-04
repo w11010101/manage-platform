@@ -23,6 +23,7 @@
                             <!-- $store.state.count:{{$store.state.count}} -->
                         </h2>
                         <Button @click=stortFn size='large'>$store.state.count++</Button>
+                        <!-- <Button @click='incrementPayload(2)' size='large'>$store.state.count+2</Button> -->
                         <Button @click=getListFn size='large'>$store.getters.ajax 请求</Button>
                         <!-- <Footer>
                             <myContentFooter></myContentFooter>
@@ -34,11 +35,12 @@
     </div>
 </template>
 <script>
-import myHeader from './header'
-import myNav from './nav';
-import myContentFooter from './contentFooter';
+// import myHeader from './header'
+// import myNav from './nav';
+// import myContentFooter from './contentFooter';
 
 import {mapState} from 'vuex';
+import {mapMutations} from 'vuex';
 
 var breadC = require('../../plugin/breadcrumb/breadcrumb').breadcrumb;
 var breadcrumb = new breadC({
@@ -57,14 +59,14 @@ export default {
     }, 
     // store,
     components: {
-        myHeader,
-        myNav,
+        myHeader:resolve =>require(['./header'],resolve),
+        myNav:resolve =>require(['./nav'],resolve),
         // myContentFooter
     },
-    '$route' (to, from) {
-        console.log(to)
-      // 对路由变化作出响应...
-    },
+    // '$route' (to, from) {
+    //     console.log(to)
+    //   // 对路由变化作出响应...
+    // },
     beforeRouteEnter (to,from,next){
         next();
     },
@@ -81,8 +83,9 @@ export default {
     },
     methods:{
         stortFn:function(){
-            // this.$store.state.count++;
-            this.$store.commit('increment');
+            this.increment()
+            // this.add();
+            // this.$store.commit('increment');
         },
         getListFn:function(){
             var second = 2000;
@@ -96,7 +99,14 @@ export default {
             }).catch(function(){
                 console.log('error');
             })
-        }
+        },
+        // ...mapMutations({
+        //     add:'increment'
+        // }),
+        ...mapMutations([
+            'increment',
+            'incrementPayload'
+        ]),
     }
 }
 

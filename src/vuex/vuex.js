@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+// import Vue from 'vue'
+// import Vuex from 'vuex'
 Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
@@ -20,7 +20,10 @@ export default new Vuex.Store({
     },
     mutations: {
         increment (state) {
-            state.count++
+            state.count++;
+        },
+        incrementPayload (state,payload){
+            state.count += payload.amount;  
         }
     },
     getters:{

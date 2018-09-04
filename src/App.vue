@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" adsf>
         <div class="layout">
             <Layout>
                 <router-view name="layoutView"/>
@@ -16,6 +16,6 @@
 </script>
 
 <style>
-    @import url(./plugin/iview/iview.css);
+    /*@import url(./plugin/iview/iview.css);*/
     @import url(./css/default.css);
 </style>
