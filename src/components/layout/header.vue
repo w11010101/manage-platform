@@ -1,7 +1,7 @@
 <template>
     <Header>
         <Menu mode="horizontal" theme="dark" active-name="1">
-            <div class="layout-logo">Logo</div>
+            <img src="../../assets/logo.png" alt="" class="logo">
             <div class="layout-nav">
                 <MenuItem name="1">
                     <Dropdown trigger="click"   >
@@ -36,6 +36,10 @@ export default {
             msg: 'Header',
             navList:[
                 {
+                    name:'Vue-cli',
+                    to:'/layoutView/Vue-cli'
+                },
+                {
                     name:'Vue',
                     href:'https://cn.vuejs.org/'
                 },
@@ -48,8 +52,12 @@ export default {
                     href:'https://vuex.vuejs.org/zh/'
                 },
                 {
-                    name:'Vue-cli',
-                    to:'/layoutView/Vue-cli'
+                    name:'Wepback',
+                    href:'https://www.webpackjs.com/'
+                },
+                {
+                    name:'Git',
+                    href:'https://git-scm.com/'
                 }
             ]
         }

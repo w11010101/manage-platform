@@ -11,6 +11,7 @@
       <br>
       $store.state.count:{{$store.state.count}}
     </h2>
+    <Input type="text" name="" />
     <router-view name='h1-content'></router-view>
   </div>
   
@@ -21,7 +22,7 @@ export default {
   name: 'myh1',
   data () {
     return {
-      msg: 'this is h1 !!!!',
+      msg: 'this is h1.vue !!!!',
       from:"",
       id:"",
       name:""

@@ -27,8 +27,13 @@
 .nav-icon {
   padding: 12px 24px;
   color: #fff;
-}
 
+}
+.viewContent{
+  height:calc(100vh - 60px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 .layout {
   height: 100vh;
   background: #f5f7f9;
@@ -85,4 +90,10 @@ a[target=_blank]{
   padding:15px;
   border:1px solid #42b983;
   border-radius:4px;
+}
+.logo{
+  height: 40px;
+  position: absolute;
+  top:50%;
+  margin-top:-20px;
 }

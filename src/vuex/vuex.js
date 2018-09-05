@@ -2,6 +2,7 @@
 // import Vuex from 'vuex'
 Vue.use(Vuex);
 export default new Vuex.Store({
+    strict: process.env.NODE_ENV !== 'production',
     state: {
         count: 0,
         num:123,
@@ -16,7 +17,8 @@ export default new Vuex.Store({
         todos: [
           { id: 1, text: 'id-1=true', done: true },
           { id: 2, text: 'id-2-false', done: false }
-        ]
+        ],
+        inputVal:"表单处理12"
     },
     mutations: {
         increment (state) {
@@ -24,6 +26,9 @@ export default new Vuex.Store({
         },
         incrementPayload (state,payload){
             state.count += payload.amount;  
+        },
+        updateInputVal(state,val){
+            state.inputVal = val
         }
     },
     getters:{

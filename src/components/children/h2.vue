@@ -10,16 +10,36 @@
       <br>
       $store.state.count:{{$store.state.count}}
     </h2>
+    <h2>&lt;keep-alive&gt;</h2>
+    <Input type="text" name="" />
+    <h2>表单处理</h2>
+    <Input type="text" name="" :value='getInputVal' @input='onInputVal'/>
   </div>
   
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'myh2',
   data () {
     return {
-      msg: 'this is h2 '
+      msg: 'this is h2.vue !',
+      
+    }
+  },
+  computed:{
+    //
+    // getInputVal(){
+    //   return this.$store.state.inputVal;
+    // }
+    ...mapState({
+      getInputVal:state => state.inputVal
+    })
+  },
+  methods:{
+    onInputVal(e){
+      this.$store.commit('updateInputVal',e.target.value)
     }
   }
 }

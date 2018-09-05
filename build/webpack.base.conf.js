@@ -34,8 +34,6 @@ module.exports = {
   devtool:'source-map',
   externals:{
     Vue:"Vue",
-    // 'vue-router':'VueRouter',
-    // Router:'vue-router',
     Router:'VueRouter',
     iview:"iview",
     Vuex:"Vuex"
