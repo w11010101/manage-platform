@@ -2,17 +2,23 @@
     <div class="layout">
         <Layout>
             <myHeader></myHeader>
-            <Layout>
-                <Sider :style='{height:"calc(100vh - 60px)",background:"#fff"}' width="230px">
+            <Layout >
+                <Sider :style='{height:"calc(100vh - 60px)",background:"#fff"}' width="230">
                     <myNav ref="navVm"></myNav>
                 </Sider>
                 <Layout>
                     <Content :style="{background: '#fff',padding:'10px 15px'}" class="viewContent">
-                        <router-view class="child"/>
+                        <!-- <router-view class="child pagesTab" name="pagesTab"></router-view> -->
+                        <Layout >
+                            <pagesTab class="pagesTab"></pagesTab>
+                        </Layout>
+                        <Layout >
                         <keep-alive>
                             <router-view class='view-content child' name="viewsContent"/>
                         </keep-alive>
-                        <div class="child">
+                        <h1>layout.vue</h1>
+                        </Layout>
+                        <!-- <div class="child">
                             <h2>
                                 Vuex $store.state.obj：{{obj}}
                                 <br>
@@ -23,12 +29,13 @@
                                 this.private：{{private}}
                                 <br>
                                 $store.getters：{{$store.getters.doneTodos}}
-                                <!-- $store.state.count:{{$store.state.count}} -->
                             </h2>
                             <Button @click=stortFn size='large'>$store.state.count++</Button>
-                            <!-- <Button @click='incrementPayload(2)' size='large'>$store.state.count+2</Button> -->
                             <Button @click=getListFn size='large'>$store.getters.ajax 请求</Button>
-                        </div>
+                            <Button @click=axiosFn size='large'>axios 请求</Button>
+                            <Button @click=GeneratorFn size='large'>ES6-Generator函数语法</Button>
+                            <Button @click=GeneratorNextFn size='large'>ES6-Generator-next()</Button>
+                        </div> -->
                         <!-- <Footer>
                             <myContentFooter></myContentFooter>
                         </Footer> -->
@@ -41,15 +48,36 @@
 <script>
 import {mapState} from 'vuex';
 import {mapMutations} from 'vuex';
+import axios from 'axios'
 var breadC = require('../../plugin/breadcrumb/breadcrumb').breadcrumb;
 var breadcrumb = new breadC({
     paramName:'href'
 });
+// function getParams(arr){
+//     var obj = {};
+//     for(var i in arr){
+//         // var obj = {};
+//         // obj[arr[i]] = {
+//         //     abc:function(){}
+//         // }
+//         obj[arr[i]] =function(){
+//             console.log(arr[i])
+//             return arr[i]
+//         }
+//     }
+//     return new Object(obj);
+// }
+
+// var objs = {
+//     ...getParams(['name','id','age'])
+// }
+// console.log(objs.name());
 export default {
     name: 'layout',
     data() {
         return {
-            msg: 'this is layout!'
+            msg: 'this is layout!',
+            generators:{}
         }
     },
     computed:{
@@ -60,6 +88,7 @@ export default {
     components: {
         myHeader:resolve =>require(['./header'],resolve),
         myNav:resolve =>require(['./nav'],resolve),
+        pagesTab:resolve =>require(['../children/pagesTab'],resolve),
         // myContentFooter
     },
     '$route' (to, from) {
@@ -73,9 +102,7 @@ export default {
         if(to.path === '/layoutView') return false;
         var navData = this.$refs.navVm.navData;
         var breadcrumbObj = breadcrumb.init(navData,to.meta.href);
-
         var nodesArr = breadcrumbObj.nodesArr;
-        console.log(nodesArr)
         var ids = nodesArr.map(e=>e.id);
         this.$refs.navVm.active = to.meta.href;
         this.$refs.navVm.open = ids;
@@ -108,9 +135,68 @@ export default {
             'increment',
             'incrementPayload'
         ]),
+        axiosFn(){
+            // axios.default.baseURL = 'https://wisdom.xzxpay.com/card/anonymous/childInfo';
+            axios.default.post['Content-Type'] = 'application/json';
+
+            axios.post('https://wisdom.xzxpay.com/card/anonymous/childInfo',{
+                no:344,
+                type:0
+            }).then(function(){
+                console.log(arguments);
+            }).catch(function(){
+                console.log(arguments);
+            })
+        },
+        GeneratorFn(){
+            function* helloWorldGenerator() {
+              yield 'hello';
+              console.log('hello wangchi ')
+              yield 'world';
+              yield 'wangchi';
+              return 'ending';
+            }
+            var hw = helloWorldGenerator();
+            this.$set(this.generators,'hw',hw);
+        },
+        GeneratorNextFn(){
+            console.log(this.generators.hw.next())
+        }
     }
 }
+// var myObject = {
+//     value:10,
+    
+//     get value(){
+//         console.log(arguments)
+//     },
+//     set value(){
+//         console.log(this)
+//     },
+// }
 
+var cart = {
+  abc: 4,
+  get _abc () {
+    console.log(arguments)
+    return this.abc;
+  },
+  set _abc (value) {
+    if (value < this.abc) {
+      throw new Error('数值太小了！');
+    }
+    this.abc = value;
+  },
+  get myFn () {
+    console.log("get myFn");
+    return 1123123;
+  },
+  set myFn (value) {
+    console.log("set myFn")
+    this.myFn = 10
+  },
+}
+console.log(cart)
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

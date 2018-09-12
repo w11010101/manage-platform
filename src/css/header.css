@@ -12,3 +12,9 @@ header{
   color:#fff;
   text-align: center;
 }
+.header-title{
+  font-size: 24px;
+  color:#fff;
+  position: absolute;
+  left:80px;
+}

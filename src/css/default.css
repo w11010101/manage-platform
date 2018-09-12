@@ -68,10 +68,15 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-a {
+/*a {
+  font-size: 18px;
+  color: #5b6270;
+}*/
+a.a-link {
   font-size: 20px;
   color: #42b983;
 }
+
 .link{
   padding:5px 10px;
   border:1px solid #42b983;
@@ -97,3 +102,25 @@ a[target=_blank]{
   top:50%;
   margin-top:-20px;
 }
+.pagesTab{
+}
+.pagesTabs,.scrollLeftBtn{
+  float:left;
+}
+.pagesTabs{
+  height: 40px;
+  width:calc(100% - 120px);
+  background: #e8eaec;
+  padding:2px;
+  border-radius:4px;
+  margin-left:8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.scrollLeftBtn,.scrollRightBtn{
+  height: 40px;
+}
+.scrollRightBtn{
+  float:right;
+}
+

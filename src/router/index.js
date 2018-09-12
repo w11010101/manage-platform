@@ -1,3 +1,5 @@
+import layout from '@/components/layout/layout'
+console.log(layout)
 Vue.use(VueRouter);
 function dynamicPropsFn(route){
     // console.log(route);
@@ -24,6 +26,16 @@ export default new VueRouter({
                 href:"/layoutView"
             },
             children:[
+                // {
+                //     path:'pagesTab',
+                //     name:'pagesTab',
+                //     components:{
+                //         pagesTab:resolve =>require(['@/components/children/pagesTab'],resolve)
+                //     },
+                //     meta:{
+                //         href:"/layoutView/pagesTab"
+                //     },
+                // },
                 {
                     path:'Vue-cli',
                     name:'Vue-cli',

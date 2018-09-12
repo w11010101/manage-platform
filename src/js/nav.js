@@ -1,5 +1,5 @@
-// import Vue from 'vue';
-import data from '../js/data.js';
+import {mapState} from 'vuex'
+// import data from '../js/data.js';
 Vue.component("menu-parts",{
     props:["data"],
     template:`<Submenu :name="data.id" v-if="data.nodes && data.nodes.length" :title='data.text' >
@@ -39,12 +39,15 @@ var Main = {
     data () {
         return {
             isCollapsed: false,
-            navData:null,
+            // navData:null,
         }
+    },
+    computed:{
+        ...mapState(['navData'])
     },
     // 生命周期
     mounted:function(){
-        this.navData = data;
+        // this.navData = this.navData;
     },
     methods: {
         collapsedSider: function() {

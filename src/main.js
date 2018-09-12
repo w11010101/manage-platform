@@ -20,3 +20,4 @@ new Vue({
   },
   template: '<App/>'
 });
+// router.push('/layoutView/pagesTab');
