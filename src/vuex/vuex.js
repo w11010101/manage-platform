@@ -1,4 +1,4 @@
-import data from '../../src/js/data';
+import data from '@/js/data';
 console.log(data)
 Vue.use(Vuex);
 export default new Vuex.Store({
@@ -21,38 +21,28 @@ export default new Vuex.Store({
         // ],
         // inputVal:"表单处理12",
         pageTabsList:[{
-            text:"标签1",
-            id:991,
-            router:""
-        },{
-            text:"标签2",
-            id:992,
-            router:""
-        },{
-            text:"标签3",
-            id:993,
-            router:""
-        },{
-            text:"标签4",
-            id:994,
-            router:""
-        },{
-            text:"标签5",
-            id:995,
-            router:""
-        },{
-            text:"标签6",
-            id:996,
-            router:""
-        },{
-            text:"标签7",
-            id:997,
-            router:""
-        },{
-            text:"标签9",
-            id:998,
-            router:""
-        },]            //     [{ title:"标签一", router:"", id:"" }]
+            name:'layoutView',
+            id:0,
+            router:"/",
+            props:null
+        }],
+        // pageTabsList:[{
+        //     text:"标签1",
+        //     id:991,
+        //     href:""
+        // },{
+        //     text:"标签2",
+        //     id:992,
+        //     href:""
+        // },{
+        //     text:"标签3",
+        //     id:993,
+        //     href:""
+        // },{
+        //     text:"标签4",
+        //     id:994,
+        //     href:""
+        // }]            //     [{ title:"标签一", router:"", id:"" }]
     },
     mutations: {
         setPageTabsList(state,objs){
@@ -60,18 +50,21 @@ export default new Vuex.Store({
             if(!state.pageTabsList.length){
                 state.pageTabsList.push(objs);
             }else{
-                var i = 0;
-                for(;i <= state.pageTabsList;i++){
+                // var i = 0;
+                for(var i = 0;i < state.pageTabsList.length;i++){
                     var event = state.pageTabsList[i];
                     if(event.id === objs.id){
                         repeat = true;
                     }
                     event = null;
                 }
-                if(i+1 == state.pageTabsList.length && !repeat){
+                // console.log('i = ',i);
+                // console.log(state.pageTabsList.length);
+                // console.log(repeat); 
+                if(i == state.pageTabsList.length && !repeat){
                     state.pageTabsList.push(objs);
                 }
-            }            
+            }          
         },
         removePageTabsList(state,id){
             for(var i in state.pageTabsList){
@@ -79,6 +72,9 @@ export default new Vuex.Store({
                     state.pageTabsList.splice(i,1);
                 }
             };
+        },
+        removeALLPageTabsList(state){
+            state.pageTabsList = [];
         },
         increment (state) {
             state.count++;

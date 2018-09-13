@@ -4,7 +4,7 @@
 import router from './router'
 import store from './vuex/vuex'
 
-store.commit('increment')
+// store.commit('increment')
 
 Vue.config.productionTip = false;
 Vue.use(iview);

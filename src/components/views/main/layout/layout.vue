@@ -8,15 +8,17 @@
                 </Sider>
                 <Layout>
                     <Content :style="{background: '#fff',padding:'10px 15px'}" class="viewContent">
-                        <!-- <router-view class="child pagesTab" name="pagesTab"></router-view> -->
+                        <router-view class="child pagesTab" name="pagesTab"></router-view>
                         <Layout >
-                            <pagesTab class="pagesTab"></pagesTab>
+                            <!-- <keep-alive> -->
+                                <pagesTab class="pagesTab" :value="$route"></pagesTab>
+                            <!-- </keep-alive> -->
                         </Layout>
                         <Layout >
                         <keep-alive>
                             <router-view class='view-content child' name="viewsContent"/>
                         </keep-alive>
-                        <h1>layout.vue</h1>
+                        <!-- <h1>layout.vue</h1> -->
                         </Layout>
                         <!-- <div class="child">
                             <h2>
@@ -46,32 +48,12 @@
     </div>
 </template>
 <script>
-import {mapState} from 'vuex';
-import {mapMutations} from 'vuex';
+import {mapState,mapMutations} from 'vuex';
 import axios from 'axios'
-var breadC = require('../../plugin/breadcrumb/breadcrumb').breadcrumb;
+var breadC = require('@/plugin/breadcrumb/breadcrumb').breadcrumb;
 var breadcrumb = new breadC({
     paramName:'href'
 });
-// function getParams(arr){
-//     var obj = {};
-//     for(var i in arr){
-//         // var obj = {};
-//         // obj[arr[i]] = {
-//         //     abc:function(){}
-//         // }
-//         obj[arr[i]] =function(){
-//             console.log(arr[i])
-//             return arr[i]
-//         }
-//     }
-//     return new Object(obj);
-// }
-
-// var objs = {
-//     ...getParams(['name','id','age'])
-// }
-// console.log(objs.name());
 export default {
     name: 'layout',
     data() {
@@ -82,13 +64,18 @@ export default {
     },
     computed:{
         private:()=>"this is private !",
-        ...mapState(['obj','arr','count']) // mapState用来映射，比如将$store.state.obj 映射成obj,少敲几个单词
+        ...mapState(['obj','arr','count','pageTabsList']), // mapState用来映射，比如将$store.state.obj 映射成obj,少敲几个单词
+        // getTabsList(){
+        //     // console.log(this)
+        //     // console.log(this.pageTabsList)
+        //     return this.pageTabsList;
+        // }
     }, 
     // store,
     components: {
-        myHeader:resolve =>require(['./header'],resolve),
-        myNav:resolve =>require(['./nav'],resolve),
-        pagesTab:resolve =>require(['../children/pagesTab'],resolve),
+        myHeader:resolve =>require(['../header/header'],resolve),
+        myNav:resolve =>require(['../nav/nav.vue'],resolve),
+        pagesTab:resolve =>require(['../tabs/tabs'],resolve),
         // myContentFooter
     },
     '$route' (to, from) {
@@ -133,7 +120,8 @@ export default {
         // }),
         ...mapMutations([
             'increment',
-            'incrementPayload'
+            'incrementPayload',
+            // 'removeALLPageTabsList'
         ]),
         axiosFn(){
             // axios.default.baseURL = 'https://wisdom.xzxpay.com/card/anonymous/childInfo';
@@ -161,42 +149,20 @@ export default {
         },
         GeneratorNextFn(){
             console.log(this.generators.hw.next())
-        }
+        },
+        abcFn(val){
+            console.log('abc')
+            console.log(val);
+        },
+        // handleCloseTag(){
+        //     this.$store.commit('removeALLPageTabsList')
+        //     // console.log(this.pageTabsList)
+        //     // this.pageTabsList = [];
+        //     // console.log('handleCloseTag')
+        // }
     }
 }
-// var myObject = {
-//     value:10,
-    
-//     get value(){
-//         console.log(arguments)
-//     },
-//     set value(){
-//         console.log(this)
-//     },
-// }
 
-var cart = {
-  abc: 4,
-  get _abc () {
-    console.log(arguments)
-    return this.abc;
-  },
-  set _abc (value) {
-    if (value < this.abc) {
-      throw new Error('数值太小了！');
-    }
-    this.abc = value;
-  },
-  get myFn () {
-    console.log("get myFn");
-    return 1123123;
-  },
-  set myFn (value) {
-    console.log("set myFn")
-    this.myFn = 10
-  },
-}
-console.log(cart)
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

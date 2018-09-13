@@ -9,7 +9,9 @@
 .ivu-layout-sider {
   text-align: left;
 }
-
+.viewContent .ivu-layout{
+ margin-bottom: 10px;
+}
 .view-side-nav,
 .ivu-layout-sider:after {
   content: '';
@@ -91,7 +93,7 @@ a[target=_blank]{
   display: block;
 }
 .child{
-  margin: 10px 0;
+  /*margin: 10px 0;*/
   padding:15px;
   border:1px solid #42b983;
   border-radius:4px;
@@ -102,25 +104,3 @@ a[target=_blank]{
   top:50%;
   margin-top:-20px;
 }
-.pagesTab{
-}
-.pagesTabs,.scrollLeftBtn{
-  float:left;
-}
-.pagesTabs{
-  height: 40px;
-  width:calc(100% - 120px);
-  background: #e8eaec;
-  padding:2px;
-  border-radius:4px;
-  margin-left:8px;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.scrollLeftBtn,.scrollRightBtn{
-  height: 40px;
-}
-.scrollRightBtn{
-  float:right;
-}
-

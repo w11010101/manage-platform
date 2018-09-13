@@ -1,5 +1,5 @@
 <style>
-@import url(../../css/nav.css);
+@import url(./nav.css);
 </style>
 <template>
     <Sider ref='side' hide-trigger collapsible :collapsed-width="78" v-model="isCollapsed" width="auto" :style='{background:"#fff"}'>
@@ -12,15 +12,14 @@
     </Sider>
 </template>
 <script>
-    import {mapState} from 'vuex'
-    import {mapMutations} from 'vuex'
-    import Main from '../../js/nav.js';
+    import {mapState,mapMutations} from 'vuex'
+    import Main from './nav.js';
 
-    var breadcrumb = require('../../plugin/breadcrumb/breadcrumb');
+    var breadcrumb = require('@/plugin/breadcrumb/breadcrumb');
     breadcrumb = new breadcrumb.breadcrumb({
         paramName:"href"
     });
-
+    
     export default {
         name:"myNav",
         data(){
@@ -70,9 +69,9 @@
             jumpPage:function(name){
                 var currentNode = breadcrumb.init(this.navData,name).currentNode;
                 this.$store.commit('setPageTabsList',{
-                    text:currentNode.text,
+                    name:currentNode.text,
                     id:currentNode.id,
-                    href:currentNode.href,
+                    router:currentNode.href,
                     props:currentNode.props||null
                 })
             },
