@@ -16,6 +16,6 @@
 </script>
 
 <style>
-    /*@import url(./plugin/iview/iview.css);*/
     @import url(./css/default.css);
+    @import url(./css/dome-style.css);
 </style>

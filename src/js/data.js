@@ -2,39 +2,42 @@
 var data = [
     {
         level: 1,
-        text: 'Header',
+        text: 'h1',
         id: 1,
-        href:"/Header",
+        href:"/h1",
         icon: "md-baseball",
-        nodes:[
-            {
-                level: 2,
-                text: 'h1',
-                id: 11,
-                href:"/layoutView/h1",
-                icon: "ios-baseball",
-                nodes:[                    {
-                        level: 2,
-                        text: 'h1/children',
-                        id: 111,
-                        href:"/layoutView/h1/children",
-                        icon: "ios-baseball-outline",
-                    }
-                ]
-            },
-            {
-                level: 2,
-                text: 'h2',
-                id: 12,
-                href:"/layoutView/h2",
-                icon: "ios-baseball-outline",
-                props:{
-                    from:'h2.vue',
-                    id:12,
-                    name:'h2'
-                },
-            }
-        ]
+        // nodes: null
+        // nodes:[
+        //     {
+        //         level: 2,
+        //         text: 'h1',
+        //         id: 11,
+        //         href:"/layoutView/h1",
+        //         icon: "ios-baseball",
+        //         nodes:null,
+        //         // nodes:[                    
+        //         //     {
+        //         //         level: 2,
+        //         //         text: 'h1/children',
+        //         //         id: 111,
+        //         //         href:"/layoutView/h1/children",
+        //         //         icon: "ios-baseball-outline",
+        //         //     }
+        //         // ]
+        //     },
+        //     {
+        //         level: 2,
+        //         text: 'h2',
+        //         id: 12,
+        //         href:"/layoutView/h2",
+        //         icon: "ios-baseball-outline",
+        //         props:{
+        //             from:'h2.vue',
+        //             id:12,
+        //             name:'h2'
+        //         },
+        //     }
+        // ]
     },
     {
         level: 1,

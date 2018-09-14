@@ -2,7 +2,7 @@
 @import url(./nav.css);
 </style>
 <template>
-    <Sider ref='side' hide-trigger collapsible :collapsed-width="78" v-model="isCollapsed" width="auto" :style='{background:"#fff"}'>
+    <Sider ref='side' hide-trigger collapsible :collapsed-width="78" v-model="isCollapsed" width='240' :style='{background:"#fff"}'>
         <div class="nav-icon">
             <Icon @click.native="collapsedSider" :style='{color: "#515a6e"}' :class="rotateIcon" type="md-menu" size="24"></Icon>
         </div>
@@ -67,6 +67,7 @@
             ...mapMutations(['setPageTabsList']),
             // 点击页面跳转
             jumpPage:function(name){
+                console.log(event.target.getAttribute('setid'))
                 var currentNode = breadcrumb.init(this.navData,name).currentNode;
                 this.$store.commit('setPageTabsList',{
                     name:currentNode.text,
@@ -77,6 +78,7 @@
             },
             // 
             collapsedMenuShow:function(name){
+
                 // console.log('collapsedMenuShow')
                 // pageTabsList
             },

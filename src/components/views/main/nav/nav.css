@@ -32,7 +32,7 @@
 .menu-item span {
   display: inline-block;
   overflow: hidden;
-  width: 69px;
+  width: calc(100% - 60px);
   text-overflow: ellipsis;
   white-space: nowrap;
   vertical-align: bottom;

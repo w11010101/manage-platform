@@ -3,21 +3,19 @@
         <Layout>
             <myHeader></myHeader>
             <Layout >
-                <Sider :style='{height:"calc(100vh - 60px)",background:"#fff"}' width="230">
+                <Sider :style='{height:"calc(100vh - 60px)",background:"#fff"}' width="240">
                     <myNav ref="navVm"></myNav>
                 </Sider>
                 <Layout>
                     <Content :style="{background: '#fff',padding:'10px 15px'}" class="viewContent">
                         <router-view class="child pagesTab" name="pagesTab"></router-view>
+                        <!-- <Layout >
+                            <pagesTab class="pagesTab" :value="$route"></pagesTab>
+                        </Layout> -->
                         <Layout >
-                            <!-- <keep-alive> -->
-                                <pagesTab class="pagesTab" :value="$route"></pagesTab>
-                            <!-- </keep-alive> -->
-                        </Layout>
-                        <Layout >
-                        <keep-alive>
-                            <router-view class='view-content child' name="viewsContent"/>
-                        </keep-alive>
+                            <keep-alive>
+                                <router-view class='view-content child' name="viewsContent"/>
+                            </keep-alive>
                         <!-- <h1>layout.vue</h1> -->
                         </Layout>
                         <!-- <div class="child">
@@ -166,5 +164,4 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 </style>

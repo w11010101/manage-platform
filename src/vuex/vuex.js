@@ -1,10 +1,10 @@
-import data from '@/js/data';
-console.log(data)
+import navData from '@/js/navData';
+console.log(navData)
 Vue.use(Vuex);
 export default new Vuex.Store({
     strict: process.env.NODE_ENV !== 'production',
     state: {
-        navData:data,
+        navData,
         // count: 0,
         // num:123,
         // ids:"asdf",

@@ -1,32 +1,53 @@
 <template>
   <div class="child">
-    <h1>{{msg}}</h1>
-    <router-link class="link" to="/layoutView/h2/h1.vue/12/h1.vue">to h2.vue</router-link>
-    <router-link class="link" :to="{name:'children'}">children 无参数</router-link>
-    <router-link class="link" to="/layoutView/h1/h1.vue/321/children/children">children 有参数，参数为空</router-link>
-    <h2>
-      接受来自{{$route.params.from}}的传参，id：{{$route.params.id}}，name：{{$route.params.name}}
-      <br>
-      mounted中赋值 from：{{from}}，id：{{id}}，name：{{name}}
-      <br>
-      $store.state.count:{{$store.state.count}}
-    </h2>
-    <Input type="text" name="" />
-    <router-view name='h1-content'></router-view>
+    <!-- express -->
+    <div class="demo-express">
+      <h3 class="demo-express-title">结果展示</h3>
+      <div class="demo-express-bg">
+          <div class="content-h1">
+              <label>标题展示</label>
+              <ol class="breadcrumb">
+                  <li><a href="#">首页</a></li>
+                  <li><a href="#">第一层</a></li>
+                  <li class="active">第二层</li>
+              </ol>
+              <span class="head-tools pull-right">
+                  <button class="refresh"></button>
+              </span>
+          </div>
+      </div>
+    </div>
+    <!-- code html -->
+    <div class="demo-express">
+      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn" /></h3>
+      <pre>
+        {{htmlcode}}
+      </pre>
+    </div>
+    <!-- code css -->
+    <div class="demo-express">
+      <h3 class="demo-express-title">CSS<Icon type="ios-copy" size='20' class="copyBtn" /></h3>
+      <pre>
+        {{csscode}}
+      </pre>
+    </div>
   </div>
-  
 </template>
 
 <script>
+import {h1} from '@/js/tool/part.js';
+let {htmlcode,csscode} = {htmlcode:h1.html,csscode:h1.css}
 export default {
   name: 'myh1',
   data () {
     return {
       msg: 'this is h1.vue !!!!',
-      from:"",
-      id:"",
-      name:""
+      htmlcode,
+      csscode
     }
+  },
+  components:{
+   
   },
   // props:['id','name'],
   mounted:function(){
