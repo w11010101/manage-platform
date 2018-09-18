@@ -22,7 +22,7 @@
     padding: 10px;
 }
 
-pre{
+pre,code.codeBox{
     tab-size:2;
     display: block;
     width: 100%;

@@ -86,7 +86,6 @@ var data = [
         id: 1,
         href:"/h1h2",
         icon: "md-baseball",
-        // nodes: null
         nodes:[
             {
                 level: 2,
@@ -94,6 +93,7 @@ var data = [
                 id: 11,
                 href:"/layoutView/h1",
                 icon: "ios-baseball",
+                props:null,
                 nodes:null,
             },
             {
@@ -102,11 +102,8 @@ var data = [
                 id: 12,
                 href:"/layoutView/h2",
                 icon: "ios-baseball-outline",
-                props:{
-                    from:'h2.vue',
-                    id:12,
-                    name:'h2'
-                },
+                props:null,
+                nodes:null,
             }
         ]
     },

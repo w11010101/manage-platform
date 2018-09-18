@@ -15,11 +15,11 @@
     import {mapState,mapMutations} from 'vuex'
     import Main from './nav.js';
 
-    var breadcrumb = require('@/plugin/breadcrumb/breadcrumb');
-    breadcrumb = new breadcrumb.breadcrumb({
+    // var breadcrumb = require('@/plugin/breadcrumb/breadcrumb');
+    var breadC = new breadcrumb({
         paramName:"href"
     });
-    
+    console.log(breadC)
     export default {
         name:"myNav",
         data(){
@@ -68,7 +68,7 @@
             // 点击页面跳转
             jumpPage:function(name){
                 console.log(event.target.getAttribute('setid'))
-                var currentNode = breadcrumb.init(this.navData,name).currentNode;
+                var currentNode = breadC.init(this.navData,name).currentNode;
                 this.$store.commit('setPageTabsList',{
                     name:currentNode.text,
                     id:currentNode.id,

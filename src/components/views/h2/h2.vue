@@ -1,46 +1,45 @@
 <template>
-  <div class="child">
-    <h1>{{msg}}</h1>
-    <router-link class="link" :to="{name:'h1'}">to h1.vue 无参数</router-link>
-    <router-link class="link" to="/layoutView/h1/h2.vue/123/wangchi">to h1.vue 有参数</router-link>
-    <h2>
-      接受来自{{$route.params.from}}的传参，id：{{$route.params.id}}，name：{{$route.params.name}}
-      <br>
-      <!-- mounted中赋值 from：{{from}}，id：{{id}}，name：{{name}} -->
-      <br>
-      $store.state.count:{{$store.state.count}}
-    </h2>
-    <h2>&lt;keep-alive&gt;</h2>
-    <Input type="text" name="" />
-    <h2>表单处理</h2>
-    <Input type="text" name="" :value='getInputVal' @input='onInputVal'/>
-  </div>
-  
+    <div class="child">
+        <!-- express -->
+        <div class="demo-express">
+            <h3 class="demo-express-title">结果展示</h3>
+            <div class="demo-express-bg">
+                <div class="content-h2">
+                    <label>h2标题展示</label>
+                </div>
+            </div>
+        </div>
+        <!-- code html -->
+        <div class="demo-express">
+            <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#html"/></h3>
+            <pre id='html'>
+                {{htmlcode}}
+            </pre>
+        </div>
+        <!-- code css -->
+        <div class="demo-express">
+            <h3 class="demo-express-title">CSS<Icon type="ios-copy" size='20' class="copyBtn" data-clipboard-target="#css" /></h3>
+            <pre id='css'>
+                {{csscode}}
+            </pre>
+        </div>
+    </div>
 </template>
 
 <script>
-import {mapState} from 'vuex'
+import {h2} from '@/js/tool/part.js';
+let {htmlcode,csscode} = {htmlcode:h2.html,csscode:h2.css}
 export default {
-  name: 'myh2',
+  name: 'myh1',
   data () {
     return {
-      msg: 'this is h2.vue !',
-      
+      msg: 'this is h1.vue !!!!',
+      htmlcode,
+      csscode
     }
   },
-  computed:{
-    //
-    // getInputVal(){
-    //   return this.$store.state.inputVal;
-    // }
-    ...mapState({
-      getInputVal:state => state.inputVal
-    })
-  },
-  methods:{
-    onInputVal(e){
-      this.$store.commit('updateInputVal',e.target.value)
-    }
+  components:{
+   
   }
 }
 </script>

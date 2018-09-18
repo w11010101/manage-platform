@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Application</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <style>
+        .main-container {
+            padding-top: 70px;
+        }
+
+        pre:empty {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">JS Application</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="list-inline list-unstyled requests">
+                    <li><a href="index.html" class="btn btn-primary">Home</a></li>
+                    <li><button type="button" class="btn btn-default js-login">Login</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">ID Token Contents</div>
+                    <div class="panel-body">
+                        <pre class="js-id-token"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/oidc-client/dist/oidc-client.js"></script>
+    <script type="text/javascript">
+        // helper function to show data to the user
+        function display(selector, data) {
+            if (data && typeof data === 'string') {
+                data = JSON.parse(data);
+            }
+            if (data) {
+                data = JSON.stringify(data, null, 2);
+            }
+
+            $(selector).text(data);
+        }
+
+        var settings = {
+            authority: 'http://open.xzxyun.com:80',
+            client_id: 'testjsclient',
+            popup_redirect_uri: 'http://localhost:8081/index.html',
+            // redirect_uri:'http://localhost:8080/logo',
+            response_type: 'id_token',
+            scope: 'openid profile orgfile role',
+
+            filterProtocolClaims: true,
+
+
+        };
+
+        var manager = new Oidc.UserManager(settings);
+        var user;
+
+        manager.events.addUserLoaded(function (loadedUser) {
+            user = loadedUser;
+            display('.js-user', user);
+        });
+
+        $('.js-login').on('click', function () {
+            manager
+                .signinPopup()
+                .catch(function (error) {
+                    console.error('error while logging in through the popup', error);
+                });
+        });
+    </script>
+</body>
+</html>

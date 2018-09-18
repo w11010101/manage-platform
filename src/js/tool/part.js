@@ -66,3 +66,54 @@ export const h1 = {
         }`,
     js:``
 }
+// h2 
+export const h2 = {
+    html:`
+        <div class="content-h2">
+            <label>h2标题展示</label>
+        </div>`,
+    css:`
+        .content-h2{
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+            
+            border:0;
+            position: relative;
+            margin: 20px 13px 20px 10px;
+        }
+        .content-h2 label{
+            font-size: 18px;
+            font-weight: normal;
+        }
+        .content-h2:before{
+            position: absolute;
+            top:50%;
+            left:0;
+            margin-top: -9px;
+            content: " ";
+            width: 3px;
+            height: 18px;
+            filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#06bce1,endcolorstr=#5682fd,gradientType=1);
+            background: -linear-gradient(top,#06bce1,#5682fd);
+            background: -moz-linear-gradient(top,#06bce1,#5682fd);
+            background: -webkit-linear-gradient(top,#06bce1,#5682fd);
+        }
+        .content-h2 form{
+            margin:0;
+            height: inherit;
+            margin-right: -15px;
+        }
+        .content-h2 form .form-group{
+            display: inline-block;
+            margin: 0;
+            vertical-align: top;
+        }
+        .content-h2 form .form-group + .form-group{
+            margin-left: 30px;
+        }
+        .content-h2 .form-group.form-group-right{
+            float: right;
+        }`,
+    js:``
+}

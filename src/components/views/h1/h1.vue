@@ -19,15 +19,15 @@
     </div>
     <!-- code html -->
     <div class="demo-express">
-      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn" /></h3>
-      <pre>
+      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#html"/></h3>
+      <pre id='html'>
         {{htmlcode}}
       </pre>
     </div>
     <!-- code css -->
     <div class="demo-express">
-      <h3 class="demo-express-title">CSS<Icon type="ios-copy" size='20' class="copyBtn" /></h3>
-      <pre>
+      <h3 class="demo-express-title">CSS<Icon type="ios-copy" size='20' class="copyBtn" data-clipboard-target="#css" /></h3>
+      <pre id='css'>
         {{csscode}}
       </pre>
     </div>
@@ -48,12 +48,6 @@ export default {
   },
   components:{
    
-  },
-  // props:['id','name'],
-  mounted:function(){
-    for(var key in this.$route.params){
-      this[key] = this.$route.params[key];
-    }
   }
 }
 </script>

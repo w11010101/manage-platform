@@ -36,14 +36,16 @@ module.exports = {
     Vue:"Vue",
     Router:'VueRouter',
     iview:"iview",
-    Vuex:"Vuex"
+    Vuex:"Vuex",
+    breadcrumb:'breadcrumb',
+    Oidc:'Oidc'
+    // clipboard:"ClipboardJS"
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      '@dev': resolve('src/components/views'),
     }
   },
   module: {

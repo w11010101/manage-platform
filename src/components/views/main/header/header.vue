@@ -20,10 +20,6 @@
                         </DropdownMenu>
                     </Dropdown>
                 </MenuItem>
-                <!-- <MenuItem name="2">
-                    <Icon type="ios-keypad"></Icon>
-                    Item 2
-                </MenuItem> -->
             </div>
         </Menu>
     </Header>
@@ -37,12 +33,12 @@ export default {
             msg: 'Header',
             navList:[
                 {
-                    name:'Vue-cli',
-                    to:'/layoutView/Vue-cli'
+                    name:'VueJs',
+                    href:'https://cn.vuejs.org/'
                 },
                 {
-                    name:'Vue',
-                    href:'https://cn.vuejs.org/'
+                    name:'Vue-cli',
+                    to:'/layoutView/Vue-cli'
                 },
                 {
                     name:'Vue-router',
@@ -59,6 +55,14 @@ export default {
                 {
                     name:'Git',
                     href:'https://git-scm.com/'
+                },
+                {
+                    name:'iveiw',
+                    href:'https://www.iviewui.com/'
+                },
+                {
+                    name:'bootstrap',
+                    href:'https://v3.bootcss.com/'
                 }
             ]
         }

@@ -48,10 +48,13 @@
 <script>
 import {mapState,mapMutations} from 'vuex';
 import axios from 'axios'
-var breadC = require('@/plugin/breadcrumb/breadcrumb').breadcrumb;
-var breadcrumb = new breadC({
+new Oidc.UserManager().signinPopupCallback();
+// new Oidc.UserManager().signinRedirectCallback();
+// var breadC = require('@/plugin/breadcrumb/breadcrumb').breadcrumb;
+var breadC = new breadcrumb({
     paramName:'href'
 });
+// console.log(clipboard)
 export default {
     name: 'layout',
     data() {
@@ -80,13 +83,24 @@ export default {
         console.log(to)
       // 对路由变化作出响应...
     },
+    mounted(){
+        // 复制
+        var clipboard= new ClipboardJS('.copyBtn');
+        clipboard.on('success', function(e) {
+            console.log(e.text)
+            if(e.value){
+
+            }
+            e.clearSelection();
+        });
+    },
     beforeRouteEnter (to,from,next){
         next();
     },
     beforeRouteUpdate (to,from,next){
         if(to.path === '/layoutView') return false;
         var navData = this.$refs.navVm.navData;
-        var breadcrumbObj = breadcrumb.init(navData,to.meta.href);
+        var breadcrumbObj = breadC.init(navData,to.meta.href);
         var nodesArr = breadcrumbObj.nodesArr;
         var ids = nodesArr.map(e=>e.id);
         this.$refs.navVm.active = to.meta.href;

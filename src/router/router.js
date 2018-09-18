@@ -10,7 +10,14 @@ function dynamicPropsFn(route){
 var router_config = [
     {
         path:'/',
-        redirect:'/layoutView'
+        redirect:'/logo'
+    },
+    {
+        path:'/logo',
+        name:'logo',
+        components:{
+            layoutView:resolve =>require(['@/components/views/main/logo/logo'],resolve)
+        },
     },
     {
         path:'/layoutView',

@@ -8,6 +8,7 @@ import routes from './router';
 Vue.use(VueRouter);
 
 export default new VueRouter({
+    mode: 'history',
     routes
 })
 // export default new VueRouter({
