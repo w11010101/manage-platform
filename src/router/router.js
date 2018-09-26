@@ -1,3 +1,4 @@
+
 function dynamicPropsFn(route){
     // console.log(route);
     // console.log(arguments);
@@ -70,6 +71,18 @@ var router_config = [
                 meta:{
                     href:"/layoutView/form-input"
                 },
+            },{
+                path:'form-button',
+                name:'form-button',
+                components:{
+                    viewsContent:resolve =>require(['@/components/views/form-button/form-button'],resolve)
+                },
+                meta:{
+                    href:"/layoutView/form-button"
+                },
+                props:{
+                    componentName:"button"
+                }
             },
         ]
     }

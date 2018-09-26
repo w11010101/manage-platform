@@ -60,7 +60,7 @@ export default new Vuex.Store({
                 }
                 // console.log('i = ',i);
                 // console.log(state.pageTabsList.length);
-                // console.log(repeat); 
+                console.log(objs); 
                 if(i == state.pageTabsList.length && !repeat){
                     state.pageTabsList.push(objs);
                 }

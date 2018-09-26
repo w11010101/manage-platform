@@ -55,9 +55,9 @@ var data = [
             },
             {
                 level: 2,
-                text: 'form-btns',
+                text: 'form-button',
                 id: 22,
-                href:"/layoutView/form-btns",
+                href:"/layoutView/form-button",
                 icon: "md-football",
             }
         ]

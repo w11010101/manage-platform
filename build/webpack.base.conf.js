@@ -38,7 +38,7 @@ module.exports = {
     iview:"iview",
     Vuex:"Vuex",
     breadcrumb:'breadcrumb',
-    Oidc:'Oidc'
+    // Oidc:'Oidc'
     // clipboard:"ClipboardJS"
   },
   resolve: {

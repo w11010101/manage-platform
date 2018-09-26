@@ -1,6 +1,6 @@
 <template>
   <div class="child">
-    <Alert show-icon style='font-size:16px;'>依赖 iview ，完整文档请点击 Docs 跳转查看；
+    <Alert show-icon style='font-size:16px;'>依赖 iview ，若想查看相关方法、属性和事件，请点击 Docs 跳转查看；
       <template slot="desc">注意：非 template/render 模式下，把<code>&lt;Input&gt;</code>改成 <code>&lt;i-input&gt;</code>。</template>
     </Alert>
     <!-- <Alert show-icon style='font-size:16px;'>依赖 boostrap.css，完整文档请点击Docs跳转查看；</Alert> -->
@@ -43,6 +43,18 @@
         &lt;Input v-model="value" placeholder="Enter something..." style="width: 150px" size="small"/&gt;
       </code>
     </div>
+    <!--  -->
+    <Divider>带清除按钮</Divider>
+    <Input v-model="value" placeholder="Enter something..." clearable style="width: 200px" />
+    <div class="demo-express">
+      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part4"/></h3>
+      <code class="codeBox" id='part4'>
+        &lt;!-- icon="ios-clock-outline" --&gt;
+        <br>
+        &lt;Input v-model="value" placeholder="Enter something..." clearable style="width: 200px" /&gt;
+      </code>
+    </div>
+    <!--  -->
     <!--  -->
     <Divider>带Icon的输入框</Divider>
     <Input v-model="value" icon="ios-clock-outline" placeholder="Enter something..." style="width: 200px" />

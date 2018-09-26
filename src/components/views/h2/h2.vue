@@ -11,14 +11,16 @@
         </div>
         <!-- code html -->
         <div class="demo-express">
-            <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#html"/></h3>
+            <h3 class="demo-express-title">HTML
+              <Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#html"/></h3>
             <pre id='html'>
                 {{htmlcode}}
             </pre>
         </div>
         <!-- code css -->
         <div class="demo-express">
-            <h3 class="demo-express-title">CSS<Icon type="ios-copy" size='20' class="copyBtn" data-clipboard-target="#css" /></h3>
+            <h3 class="demo-express-title">CSS
+              <Icon type="ios-copy" size='20' class="copyBtn" data-clipboard-target="#css" /></h3>
             <pre id='css'>
                 {{csscode}}
             </pre>
@@ -46,5 +48,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  
 </style>

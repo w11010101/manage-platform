@@ -1,18 +1,16 @@
 /* demo-express */
 .demo-express-title{
+    height: 30px;
     font-size: 20px;
-    /*margin:10px 0;*/
-    /*line-height: 50px;*/
-    /*padding: 0 10px;*/
-    /*background: #aabbcc;*/
+    line-height: 30px;
     font-weight: normal;
+    
+}
+.demo-express-title .copyBtn {
+    vertical-align: middle;
 }
 .demo-express{
     max-width: 700px;
-    /*padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #d9edf7;*/
     margin-bottom: 20px;
 }
 .demo-express .demo-express-bg{
@@ -26,7 +24,6 @@ pre,code.codeBox{
     tab-size:2;
     display: block;
     width: 100%;
-
     padding: 9.5px;
     margin: 0 0 10px;
     font-size: 13px;
@@ -136,4 +133,17 @@ pre,code.codeBox{
 }
 .content-h2 .form-group.form-group-right{
     float: right;
+}
+
+/*.copyBtn*/
+.copyBtn{
+    padding: 2px 0;
+    box-sizing: border-box;
+    border:1px solid #f5f7f9;
+    border-radius: 3px;
+    background: #f5f7f9;
+    transition: all .2s ease;
+}
+.copyBtn:active{
+    
 }

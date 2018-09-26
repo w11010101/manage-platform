@@ -3,18 +3,29 @@
         <Layout>
             <myHeader></myHeader>
             <Layout >
-                <Sider :style='{height:"calc(100vh - 60px)",background:"#fff"}' width="240">
+                <Sider ref='side' 
+                    hide-trigger 
+                    collapsible 
+                    :collapsed-width="78" 
+                    v-model="isCollapsed"
+                    width='240' 
+                    :style='{height:"calc(100vh - 60px)",background:"#fff"}'>
+                    <!--菜单收起按钮 -->
+                    <div class="nav-icon">
+                        <Icon @click.native="collapsedSider" :style='{color: "#515a6e"}' :class="rotateIcon" type="md-menu" size="24"></Icon>
+                    </div>
                     <myNav ref="navVm"></myNav>
                 </Sider>
-                <Layout>
+
+                <!-- <Layout> -->
                     <Content :style="{background: '#fff',padding:'10px 15px'}" class="viewContent">
-                        <router-view class="child pagesTab" name="pagesTab"></router-view>
+                        <!-- <router-view class="child pagesTab" name="pagesTab"></router-view> -->
                         <!-- <Layout >
                             <pagesTab class="pagesTab" :value="$route"></pagesTab>
                         </Layout> -->
-                        <Layout >
+                        <Layout aaabbbaaabbb>
                             <keep-alive>
-                                <router-view class='view-content child' name="viewsContent"/>
+                                <router-view class='view-content child' aaabbb name="viewsContent"/>
                             </keep-alive>
                         <!-- <h1>layout.vue</h1> -->
                         </Layout>
@@ -40,7 +51,7 @@
                             <myContentFooter></myContentFooter>
                         </Footer> -->
                     </Content>
-                </Layout>
+                <!-- </Layout> -->
             </Layout>
         </Layout>
     </div>
@@ -48,7 +59,7 @@
 <script>
 import {mapState,mapMutations} from 'vuex';
 import axios from 'axios'
-new Oidc.UserManager().signinPopupCallback();
+// new Oidc.UserManager().signinPopupCallback();
 // new Oidc.UserManager().signinRedirectCallback();
 // var breadC = require('@/plugin/breadcrumb/breadcrumb').breadcrumb;
 var breadC = new breadcrumb({
@@ -60,6 +71,7 @@ export default {
     data() {
         return {
             msg: 'this is layout!',
+            isCollapsed: false,
             generators:{}
         }
     },
@@ -71,6 +83,13 @@ export default {
         //     // console.log(this.pageTabsList)
         //     return this.pageTabsList;
         // }
+        
+        rotateIcon: function () {   // menu icon rotate
+            return [
+                'menu-icon',
+                this.isCollapsed ? 'rotate-icon' : ''
+            ];
+        },
     }, 
     // store,
     components: {
@@ -78,6 +97,7 @@ export default {
         myNav:resolve =>require(['../nav/nav.vue'],resolve),
         pagesTab:resolve =>require(['../tabs/tabs'],resolve),
         // myContentFooter
+        
     },
     '$route' (to, from) {
         console.log(to)
@@ -109,6 +129,9 @@ export default {
        
     },
     methods:{
+        collapsedSider: function() {
+            this.$refs.side.toggleCollapse();
+        },
         stortFn:function(){
             this.increment()
             // this.add();
@@ -127,16 +150,13 @@ export default {
                 console.log('error');
             })
         },
-        // ...mapMutations({
-        //     add:'increment'
-        // }),
+
         ...mapMutations([
             'increment',
             'incrementPayload',
             // 'removeALLPageTabsList'
         ]),
         axiosFn(){
-            // axios.default.baseURL = 'https://wisdom.xzxpay.com/card/anonymous/childInfo';
             axios.default.post['Content-Type'] = 'application/json';
 
             axios.post('https://wisdom.xzxpay.com/card/anonymous/childInfo',{

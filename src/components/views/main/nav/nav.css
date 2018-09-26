@@ -65,8 +65,13 @@
 }
 /**/
 
-.collapsed-menu .ivu-menu-submenu-title-icon {
+/*.collapsed-menu .ivu-menu-submenu-title-icon,
+.ivu-layout-sider-collapsed .ivu-menu-submenu-title-icon,
+.ivu-layout-sider-collapsed .ivu-menu-submenu-title{
   width: 0px;
   height: 0px;
   opacity: 0;
+}*/
+.ivu-layout-sider-collapsed .ivu-menu{
+  transform: translateX(-100%);
 }
