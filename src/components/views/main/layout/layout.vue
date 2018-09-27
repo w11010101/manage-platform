@@ -25,7 +25,7 @@
                         </Layout> -->
                         <Layout aaabbbaaabbb>
                             <keep-alive>
-                                <router-view class='view-content child' aaabbb name="viewsContent"/>
+                                <router-view class='view-content child' aaabbb id="viewsContent"/>
                             </keep-alive>
                         <!-- <h1>layout.vue</h1> -->
                         </Layout>
@@ -59,9 +59,7 @@
 <script>
 import {mapState,mapMutations} from 'vuex';
 import axios from 'axios'
-// new Oidc.UserManager().signinPopupCallback();
-// new Oidc.UserManager().signinRedirectCallback();
-// var breadC = require('@/plugin/breadcrumb/breadcrumb').breadcrumb;
+
 var breadC = new breadcrumb({
     paramName:'href'
 });

@@ -1,9 +1,8 @@
 <template>
   <div class="child">
     <Alert show-icon style='font-size:16px;'>依赖 iview ，若想查看相关方法、属性和事件，请点击 Docs 跳转查看；
-      <template slot="desc">注意：非 template/render 模式下，把<code>&lt;Input&gt;</code>改成 <code>&lt;i-input&gt;</code>。</template>
+      <template slot="desc">注意：非 template/render 模式下，把<code>&lt;{{name.replace(/^\S/,s=>s.toUpperCase())}}&gt;</code>改成 <code>&lt;i-{{name}}&gt;</code>。</template>
     </Alert>
-    <!-- <Alert show-icon style='font-size:16px;'>依赖 boostrap.css，完整文档请点击Docs跳转查看；</Alert> -->
     <!--  -->
     <Divider>默认大小</Divider>
     <Input v-model="value" placeholder="Enter something..."/>
@@ -147,6 +146,12 @@ export default {
     return {
       value: 'this is form-input.vue 。',
       
+    }
+  },
+  props:{
+    name:{
+      type:String,
+      default:"name"
     }
   },
   computed:{

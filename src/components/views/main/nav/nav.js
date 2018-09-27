@@ -21,10 +21,12 @@ Vue.component("menu-parts",{
             for(var key in item.props){
                 params += '/'+item.props[key];
             }
-            console.log(item)
-            console.log('params = ' , params)
+            // console.log(item)
+            // console.log('params = ' , params)
+            var href = (item['props']&&item['props'].length)?'/layoutView/'+item.text+params:{name:item.text.indexOf('/')?item.text.substr(item.text.lastIndexOf('/')+1):item.text};
+            // console.log('href = ', href)
 
-            return item['props']?'/layoutView/'+item.text+params:{name:item.text.indexOf('/')?item.text.substr(item.text.lastIndexOf('/')+1):item.text};
+            return href;
         }
     },
     methods:{

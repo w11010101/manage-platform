@@ -11,7 +11,7 @@ function dynamicPropsFn(route){
 var router_config = [
     {
         path:'/',
-        redirect:'/logo'
+        redirect:'/layoutView'
     },
     {
         path:'/logo',
@@ -33,9 +33,7 @@ var router_config = [
             {
                 path:'Vue-cli',
                 name:'Vue-cli',
-                components:{
-                    viewsContent:resolve =>require(['@/components/views/main/vuecli/vue-cli'],resolve)
-                },
+                component:resolve =>require(['@/components/views/main/vuecli/vue-cli'],resolve),
                 meta:{
                     href:"/layoutView/Vue-cli"
                 },
@@ -43,9 +41,7 @@ var router_config = [
             {
                 path:'h1',
                 name:'h1',
-                components:{
-                    viewsContent:resolve =>require(['@/components/views/h1/h1'],resolve)
-                },
+                component:resolve =>require(['@/components/views/h1/h1'],resolve),
                 props:{
                     viewsContent:dynamicPropsFn
                 },
@@ -56,32 +52,39 @@ var router_config = [
             },{
                 path:'h2',
                 name:'h2',
-                components:{
-                    viewsContent:resolve =>require(['@/components/views/h2/h2'],resolve)
-                },
+                components:resolve =>require(['@/components/views/h2/h2'],resolve),
                 meta:{
                     href:"/layoutView/h2"
                 },
             },{
                 path:'form-input',
                 name:'form-input',
-                components:{
-                    viewsContent:resolve =>require(['@/components/views/form-input/form-input'],resolve)
-                },
+                component:resolve =>require(['@/components/views/form-input/form-input'],resolve),
                 meta:{
                     href:"/layoutView/form-input"
                 },
+                props:{
+                    name:"input"
+                }
             },{
                 path:'form-button',
                 name:'form-button',
-                components:{
-                    viewsContent:resolve =>require(['@/components/views/form-button/form-button'],resolve)
-                },
+                component:resolve =>require(['@/components/views/form-button/form-button'],resolve),
                 meta:{
                     href:"/layoutView/form-button"
                 },
                 props:{
-                    componentName:"button"
+                    name:"button"
+                }
+            },{
+                path:'example-table',
+                name:'example-table',
+                component:resolve =>require(['@/components/views/table/table'],resolve),
+                meta:{
+                    href:"/layoutView/example-table"
+                },
+                props:{
+                    name:"table"
                 }
             },
         ]

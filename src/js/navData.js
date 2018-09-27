@@ -127,6 +127,9 @@ var data = [
                 id: 22,
                 href:"/layoutView/form-button",
                 icon: "md-football",
+                // props1:{
+                //     componentName:'button！'
+                // }
             }
         ]
     },
@@ -139,9 +142,9 @@ var data = [
         nodes:[
             {
                 level: 2,
-                text: 'table',
+                text: 'example-table',
                 id: 31,
-                href:"/layoutView/table",
+                href:"/layoutView/example-table",
                 icon: "ios-basketball",
             }
         ]

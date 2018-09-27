@@ -117,3 +117,339 @@ export const h2 = {
         }`,
     js:``
 }
+// table
+export const table = {
+    html:{
+        example1:``
+    },
+    js:{
+        example1:[
+            [ 
+                {
+                    title: "TOP",
+                    key: "top"
+                }, {
+                    title: "Head",
+                    key: "header"
+                }, {
+                    title: "Name",
+                    key: "name"
+                }, {
+                    title: "Age",
+                    key: "age"
+                }, {
+                    title: "Address",
+                    key: "address"
+                }, {
+                    title: "Ship",
+                    key: "ship"
+                }, {
+                    title: "Captain",
+                    key: "captain"
+                }, {
+                    title: "Ability",
+                    key: "ability"
+                }, {
+                    title: "MoneyReward",
+                    key: "moneyReward"
+                }
+            ],
+            [
+                {
+                    top: 1,
+                    header: "夏洛特·卡塔库栗",
+                    name: "夏洛特·卡塔库栗",
+                    age: "?",
+                    address: "蛋糕岛",
+                    ship: "四皇 BIG MOM",
+                    captain: "BIG MOM",
+                    ability: "特殊超人系“糯糯果实”",
+                    moneyReward: "10亿5700万贝里"
+                }, {
+                    top: 2,
+                    header: "杰克",
+                    name: "杰克",
+                    age: "?",
+                    address: "百兽海贼团",
+                    ship: "百兽海贼团",
+                    captain: "凯多",
+                    ability: "动物系古代种象象果实猛犸象形态",
+                    moneyReward: "10亿"
+                }, {
+                    top: 3,
+                    header: "夏洛特·斯慕吉",
+                    name: "夏洛特·斯慕吉",
+                    age: "?",
+                    address: "蛋糕岛",
+                    ship: "四皇 BIG MOM",
+                    captain: "BIG MOM",
+                    ability: "榨榨果实",
+                    moneyReward: "9亿3200万贝里"
+                }, {
+                    top: 4,
+                    header: "夏洛特·克力架",
+                    name: "夏洛特·克力架",
+                    age: "?",
+                    address: "蛋糕岛",
+                    ship: "四皇 BIG MOM",
+                    captain: "BIG MOM",
+                    ability: "超人系·饼干果实",
+                    moneyReward: "8亿6000万z贝里"
+                }
+            ]
+        ],
+        example2:[
+            [
+            {
+                title: "TOP",
+                key: "top",
+                width:100,
+                fixed:'left',
+            }, {
+                title: "Head",
+                key: "header",
+                width:100,
+            }, {
+                title: "Name",
+                key: "name",
+                width:100,
+            }, {
+                title: "Age",
+                key: "age",
+                width:100,
+            }, {
+                title: "Address",
+                key: "address",
+                width:100,
+            }, {
+                title: "Ship",
+                key: "ship",
+                width:100,
+            }, {
+                title: "Captain",
+                key: "captain",
+                width:100,
+            }, {
+                title: "Ability",
+                key: "ability",
+                width:100,
+            }, {
+                title: "MoneyReward",
+                key: "moneyReward",
+                width:100,
+            }],
+            [{
+                top: 1,
+                header: "路飞",
+                name: "路飞",
+                age: "？",
+                address: "风车岛",
+                ship: "万里阳光号",
+                captain: "路飞",
+                ability: "橡胶果实",
+                moneyReward: "15亿贝里"
+            },
+            {
+                top: 2,
+                header: "夏洛特·卡塔库栗",
+                name: "夏洛特·卡塔库栗",
+                age: "?",
+                address: "蛋糕岛",
+                ship: "四皇 BIG MOM",
+                captain: "BIG MOM",
+                ability: "特殊超人系“糯糯果实”",
+                moneyReward: "10亿5700万贝里"
+            }, {
+                top: 3,
+                header: "杰克",
+                name: "杰克",
+                age: "?",
+                address: "百兽海贼团",
+                ship: "百兽海贼团",
+                captain: "凯多",
+                ability: "动物系古代种象象果实猛犸象形态",
+                moneyReward: "10亿贝里"
+            }, {
+                top: 4,
+                header: "夏洛特·斯慕吉",
+                name: "夏洛特·斯慕吉",
+                age: "?",
+                address: "蛋糕岛",
+                ship: "四皇 BIG MOM",
+                captain: "BIG MOM",
+                ability: "榨榨果实",
+                moneyReward: "9亿3200万贝里"
+            }, {
+                top: 5,
+                header: "夏洛特·克力架",
+                name: "夏洛特·克力架",
+                age: "?",
+                address: "蛋糕岛",
+                ship: "四皇 BIG MOM",
+                captain: "BIG MOM",
+                ability: "超人系·饼干果实",
+                moneyReward: "8亿6000万贝里"
+            }, {
+                top: 6,
+                header: "夏洛特·佩罗斯佩罗",
+                name: "夏洛特·佩罗斯佩罗",
+                age: "?",
+                address: "蛋糕岛",
+                ship: "四皇 BIG MOM",
+                captain: "BIG MOM",
+                ability: "超人系·饼干果实",
+                moneyReward: "7亿贝里"
+            }, {
+                top: 7,
+                header: "萨博",
+                name: "萨博",
+                age: "？",
+                address: "革命军",
+                ship: "蒙奇.D.龙",
+                captain: "？",
+                ability: "烧烧果实",
+                moneyReward: "6亿200万贝里"
+            },]
+        ],
+        example3:[
+            [
+            {
+                title: "TOP",
+                key: "top",
+                width:100,
+                sortable:true,
+            }, {
+                title: "Head",
+                key: "header",
+                width:100,
+            }, {
+                title: "Name",
+                key: "name",
+                width:100,
+            }, {
+                title: "Age",
+                key: "age",
+                width:100,
+            }, {
+                title: "Address",
+                key: "address",
+                width:100,
+            }, {
+                title: "Ship",
+                key: "ship",
+                width:100,
+            }, {
+                title: "Captain",
+                key: "captain",
+                width:100,
+            }, {
+                title: "Ability",
+                key: "ability",
+                width:100,
+            }, {
+                title: "MoneyReward",
+                key: "moneyReward",
+                width:150,
+                sortable:true,
+                sortMethod(a,b,type){
+                    
+                    function replaceNum (val){
+                        var newVal = '';
+                        if(val.indexOf('亿贝里')>0){
+                            newVal = val.replace(/亿贝里/g,'00000000');
+                        }else if(val.indexOf('万贝里')){
+                            if (val.indexOf('亿')) {
+                                newVal = val.replace(/亿/g,'');
+                            }else{
+                                newVal = val;
+                            }
+                            newVal = newVal.replace(/万贝里/g,'0000');
+                        } 
+                        return parseInt(newVal);
+                    }  
+                    a = replaceNum(a);
+                    b = replaceNum(b)
+                    if(type === 'asc'){
+                        // 小 → 大
+                        return a>b;
+                    }else{
+                        // 大 → 小 
+                        return a<b;
+                    }
+                }
+            }],
+            [{
+                top: 1,
+                header: "路飞",
+                name: "路飞",
+                age: "？",
+                address: "风车岛",
+                ship: "万里阳光号",
+                captain: "路飞",
+                ability: "橡胶果实",
+                moneyReward: "15亿贝里"
+            },
+            {
+                top: 2,
+                header: "夏洛特·卡塔库栗",
+                name: "夏洛特·卡塔库栗",
+                age: "?",
+                address: "蛋糕岛",
+                ship: "四皇 BIG MOM",
+                captain: "BIG MOM",
+                ability: "特殊超人系“糯糯果实”",
+                moneyReward: "10亿5700万贝里"
+            }, {
+                top: 3,
+                header: "杰克",
+                name: "杰克",
+                age: "?",
+                address: "百兽海贼团",
+                ship: "百兽海贼团",
+                captain: "凯多",
+                ability: "动物系古代种象象果实猛犸象形态",
+                moneyReward: "10亿贝里"
+            }, {
+                top: 4,
+                header: "夏洛特·斯慕吉",
+                name: "夏洛特·斯慕吉",
+                age: "?",
+                address: "蛋糕岛",
+                ship: "四皇 BIG MOM",
+                captain: "BIG MOM",
+                ability: "榨榨果实",
+                moneyReward: "9亿3200万贝里"
+            }, {
+                top: 5,
+                header: "夏洛特·克力架",
+                name: "夏洛特·克力架",
+                age: "?",
+                address: "蛋糕岛",
+                ship: "四皇 BIG MOM",
+                captain: "BIG MOM",
+                ability: "超人系·饼干果实",
+                moneyReward: "8亿6000万贝里"
+            }, {
+                top: 6,
+                header: "夏洛特·佩罗斯佩罗",
+                name: "夏洛特·佩罗斯佩罗",
+                age: "?",
+                address: "蛋糕岛",
+                ship: "四皇 BIG MOM",
+                captain: "BIG MOM",
+                ability: "超人系·饼干果实",
+                moneyReward: "7亿贝里"
+            }, {
+                top: 7,
+                header: "萨博",
+                name: "萨博",
+                age: "？",
+                address: "革命军",
+                ship: "蒙奇.D.龙",
+                captain: "？",
+                ability: "烧烧果实",
+                moneyReward: "6亿200万贝里"
+            },]
+        ]
+    }
+}
