@@ -74,42 +74,20 @@ var data = [
                 href:"levelText17",
                 icon: "md-baseball",
                 disabled:true,
-                nodes:[
-
-                ]
+                nodes:null
             }, 
         ]
     },
     {
         level: 1,
-        text: 'h1、h2',
+        text: 'Dropdown 下拉菜单',
         id: 1,
-        href:"/h1h2",
-        icon: "md-baseball",
-        nodes:[
-            {
-                level: 2,
-                text: 'h1',
-                id: 11,
-                href:"/layoutView/h1",
-                icon: "ios-baseball",
-                props:null,
-                nodes:null,
-            },
-            {
-                level: 2,
-                text: 'h2',
-                id: 12,
-                href:"/layoutView/h2",
-                icon: "ios-baseball-outline",
-                props:null,
-                nodes:null,
-            }
-        ]
+        href:"/layoutView/dropdown",
+        icon: "md-basketball",
     },
     {
         level: 1,
-        text: 'Form',
+        text: 'Form 表单',
         id: 2,
         href:"/Form",
         icon: "ios-football",
@@ -130,40 +108,76 @@ var data = [
                 // props1:{
                 //     componentName:'button！'
                 // }
-            }
+            },{
+                level: 2,
+                text: 'form-radio',
+                id: 23,
+                href:"/layoutView/form-radio",
+                icon: "ios-football-outline",
+            },{
+                level: 2,
+                text: 'form-checkbox',
+                id: 24,
+                href:"/layoutView/form-checkbox",
+                icon: "ios-football-outline",
+            },
         ]
     },
     {
         level: 1,
-        text: 'Table',
+        text: 'H1、H2 标题',
         id: 3,
-        href:"/Table",
-        icon: "md-basketball",
+        href:"/h1h2",
+        icon: "md-baseball",
         nodes:[
             {
                 level: 2,
-                text: 'example-table',
+                text: 'h1',
                 id: 31,
-                href:"/layoutView/example-table",
-                icon: "ios-basketball",
+                href:"/layoutView/h1",
+                icon: "ios-baseball",
+                props:null,
+                nodes:null,
+            },
+            {
+                level: 2,
+                text: 'h2',
+                id: 32,
+                href:"/layoutView/h2",
+                icon: "ios-baseball-outline",
+                props:null,
+                nodes:null,
             }
         ]
     },
     {
         level: 1,
-        text: 'nav',
+        text: 'Tab 标签页-选项卡',
         id: 4,
-        href:"/nav",
+        href:"/layoutView/tab",
         icon: "md-basketball",
-        nodes:[
-            {
-                level: 2,
-                text: 'nav',
-                id: 41,
-                href:"/layoutView/nav",
-                icon: "ios-basketball",
-            }
-        ]
-    }
+    },    
+    {
+        level: 1,
+        text: 'Table 表格',
+        id: 5,
+        href:"/layoutView/table",
+        icon: "md-basketball",
+    },    
+    {
+        level: 1,
+        text: 'alert 警告提示',
+        id: 6,
+        href:"/layoutView/alert",
+        icon: "md-basketball",
+    },
+    {
+        level: 1,
+        text: 'page 分页',
+        id: 7,
+        href:"/layoutView/page",
+        icon: "md-basketball",
+    },
+
 ];
 module.exports = data;

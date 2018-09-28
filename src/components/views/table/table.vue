@@ -4,7 +4,7 @@
           <template slot="desc">注意：非 template/render 模式下，把<code>&lt;{{name.replace(/^\S/,s=>s.toUpperCase())}}&gt;</code>改成 <code>&lt;i-{{name}}&gt;</code>。</template>
         </Alert>
         <!--  -->
-        <Divider>基础用法</Divider>
+        <Divider orientation="left">基础用法</Divider>
         <Table :columns="codeList1" border :data="codeLine1"></Table>
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-html"/></h3>
@@ -25,7 +25,7 @@
             </pre>
         </div>
         <!--  -->
-        <Divider>固定列、固定宽高</Divider>
+        <Divider orientation="left">固定列、固定宽高</Divider>
         <Table :columns="codeList2" width="700" height='300' border :data="codeLine2"></Table>
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part2-html"/></h3>
@@ -46,7 +46,7 @@
             </pre>
         </div>
         <!--  -->
-        <Divider>排序</Divider>
+        <Divider orientation="left">排序</Divider>
         <Table :columns="codeList3"  height='300' border :data="codeLine3"></Table>
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-html"/></h3>
@@ -67,6 +67,50 @@
             </pre>
         </div>
         <!--  -->
+        <Divider orientation="left">表头分组</Divider>
+        <Table :columns="codeList4"  border :data="codeLine4"></Table>
+        <div class="demo-express">
+            <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-html"/></h3>
+            <code class="codeBox" id='part3-html'>
+            &lt;Table :columns="codeList4" :data="codeLine4"&gt;&lt;/Table&gt;
+            </code>
+        </div>
+        <div class="demo-express">
+            <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part4-js"/></h3>
+            <pre class="codeBox" id='part4-js'>
+            // data 
+            // codeList4
+            <br>
+            const codeList4 = {{textList4}}
+            <br>
+            // codeLine4
+            const codeLine4 = {{textLine4}}
+            </pre>
+        </div>
+        <!--  -->
+        <Divider orientation="left">加载中</Divider>
+        <Table :columns="codeList5" :loading='loading' border :data="codeLine5"></Table>
+        <br>
+        切换 Loading 状态 <Switch v-model="loading" size="large"></Switch>
+        <div class="demo-express">
+            <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-html"/></h3>
+            <code class="codeBox" id='part3-html'>
+            &lt;Table :columns="codeList5" :loading='loading' :data="codeLine5"&gt;&lt;/Table&gt;
+            </code>
+        </div>
+        <div class="demo-express">
+            <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part5-js"/></h3>
+            <pre class="codeBox" id='part5-js'>
+            // data 
+            // codeList5
+            <br>
+            const codeList5 = {{textList4}}
+            <br>
+            // codeLine5
+            const codeLine5 = {{textLine4}}
+            </pre>
+        </div>
+        <!--  -->
     </div>
 </template>
 
@@ -81,6 +125,7 @@ export default {
     name: 'example-table',
     data () {
         return {
+            loading:false,
             value: 'this is table.vue 。',
             // 基础用法
             codeList1: jsCode.example1[0],
@@ -97,6 +142,16 @@ export default {
             textList3: toStringify(jsCode.example3[0]),
             codeLine3: jsCode.example3[1],
             textLine3: toStringify(jsCode.example3[1]),
+            // 表头分组
+            codeList4: jsCode.example4[0],
+            textList4: toStringify(jsCode.example4[0]),
+            codeLine4: jsCode.example4[1],
+            textLine4: toStringify(jsCode.example4[1]),
+            // 加载中
+            codeList5: jsCode.example5[0],
+            textList5: toStringify(jsCode.example5[0]),
+            codeLine5: jsCode.example5[1],
+            textLine5: toStringify(jsCode.example5[1]),
         }
     },
     props: {

@@ -59,7 +59,7 @@ var router_config = [
             },{
                 path:'form-input',
                 name:'form-input',
-                component:resolve =>require(['@/components/views/form-input/form-input'],resolve),
+                component:resolve =>require(['@/components/views/form/form-input'],resolve),
                 meta:{
                     href:"/layoutView/form-input"
                 },
@@ -69,7 +69,7 @@ var router_config = [
             },{
                 path:'form-button',
                 name:'form-button',
-                component:resolve =>require(['@/components/views/form-button/form-button'],resolve),
+                component:resolve =>require(['@/components/views/form/form-button'],resolve),
                 meta:{
                     href:"/layoutView/form-button"
                 },
@@ -77,16 +77,77 @@ var router_config = [
                     name:"button"
                 }
             },{
-                path:'example-table',
-                name:'example-table',
+                path:'form-radio',
+                name:'form-radio',
+                component:resolve =>require(['@/components/views/form/form-radio'],resolve),
+                meta:{
+                    href:"/layoutView/form-radio"
+                },
+                props:{
+                    name:"radio"
+                }
+            },{
+                path:'form-checkbox',
+                name:'form-checkbox',
+                component:resolve =>require(['@/components/views/form/form-checkbox'],resolve),
+                meta:{
+                    href:"/layoutView/form-checkbox"
+                },
+                props:{
+                    name:"checkbox"
+                }
+            },{
+                path:'table',
+                name:'table',
                 component:resolve =>require(['@/components/views/table/table'],resolve),
                 meta:{
-                    href:"/layoutView/example-table"
+                    href:"/layoutView/table"
                 },
                 props:{
                     name:"table"
                 }
+            },{
+                path:'dropdown',
+                name:'dropdown',
+                component:resolve =>require(['@/components/views/dropdown/dropdown'],resolve),
+                meta:{
+                    href:"/layoutView/dropdown"
+                },
+                props:{
+                    name:"dropdown"
+                }
+            },{
+                path:'tab',
+                name:'tab',
+                component:resolve =>require(['@/components/views/tab/tab'],resolve),
+                meta:{
+                    href:"/layoutView/tab"
+                },
+                props:{
+                    name:"tab"
+                }
+            },{
+                path:'alert',
+                name:'alert',
+                component:resolve =>require(['@/components/views/alert/alert'],resolve),
+                meta:{
+                    href:"/layoutView/alert"
+                },
+                props:{
+                    name:"alert"
+                }
+            },{
+                path:'page',
+                name:'page',
+                component:resolve =>require(['@/components/views/page/page'],resolve),
+                meta:{
+                    href:"/layoutView/page"
+                },
+                props:{
+                    name:"page"
+                }
             },
+
         ]
     }
 ]

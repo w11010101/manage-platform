@@ -4,7 +4,7 @@
       <template slot="desc">注意：非 template/render 模式下，把<code>&lt;{{name.replace(/^\S/,s=>s.toUpperCase())}}&gt;</code>改成 <code>&lt;i-{{name}}&gt;</code>。</template>
     </Alert>
     <!--  -->
-    <Divider>默认大小</Divider>
+    <Divider orientation="left">默认大小</Divider>
     <Input v-model="value" placeholder="Enter something..."/>
     <div class="demo-express">
       <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1"/></h3>
@@ -13,7 +13,7 @@
       </code>
     </div>
     <!--  -->
-    <Divider>默认大小 width: 300px</Divider>
+    <Divider orientation="left">默认大小 width: 300px</Divider>
     <Input v-model="value" placeholder="Enter something..." style="width: 300px" />
     <div class="demo-express">
       <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part2"/></h3>
@@ -22,7 +22,7 @@
       </code>
     </div>
     <!--  -->
-    <Divider>尺寸 ：大、中（默认）、小</Divider>
+    <Divider orientation="left">尺寸 ：大、中（默认）、小</Divider>
     <Input v-model="value" placeholder="Enter something..." style="width: 150px" size="large"/>
     <Input v-model="value" placeholder="Enter something..." style="width: 150px"/>
     <Input v-model="value" placeholder="Enter something..." style="width: 150px" size="small"/>
@@ -43,7 +43,7 @@
       </code>
     </div>
     <!--  -->
-    <Divider>带清除按钮</Divider>
+    <Divider orientation="left">带清除按钮</Divider>
     <Input v-model="value" placeholder="Enter something..." clearable style="width: 200px" />
     <div class="demo-express">
       <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part4"/></h3>
@@ -55,7 +55,7 @@
     </div>
     <!--  -->
     <!--  -->
-    <Divider>带Icon的输入框</Divider>
+    <Divider orientation="left">带Icon的输入框</Divider>
     <Input v-model="value" icon="ios-clock-outline" placeholder="Enter something..." style="width: 200px" />
     <Input v-model="value" icon="ios-add-circle" placeholder="Enter something..." style="width: 200px" />
     <div class="demo-express">
@@ -71,7 +71,7 @@
       </code>
     </div>
     <!--  -->
-    <Divider>带Icon的输入框</Divider>
+    <Divider orientation="left">带Icon的输入框</Divider>
     Props：
     <Input prefix="ios-contact" placeholder="Enter name" style="width: auto" />
     <Input suffix="ios-search" placeholder="Enter text" style="width: auto" />
@@ -108,7 +108,7 @@
       </code>
     </div>
     <!--  -->
-    <Divider>文本域</Divider>
+    <Divider orientation="left">文本域</Divider>
     <Row type="flex" justify="start" align="top" class="code-row-bg">
       <Col span="2"><p>固定行高</p></Col>
       <Col span="6"><p><Input v-model="value" type="textarea" placeholder="Enter something..." style="width: 200px"/></p></Col>

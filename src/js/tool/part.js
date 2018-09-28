@@ -368,7 +368,7 @@ export const table = {
                         return parseInt(newVal);
                     }  
                     a = replaceNum(a);
-                    b = replaceNum(b)
+                    b = replaceNum(b);
                     if(type === 'asc'){
                         // 小 → 大
                         return a>b;
@@ -450,6 +450,292 @@ export const table = {
                 ability: "烧烧果实",
                 moneyReward: "6亿200万贝里"
             },]
+        ],
+        example4:[
+            [
+                {
+                    title: "世界格局",
+                    // key: "title1",
+                    align:'center',
+                    children:[
+                        {
+                            title: "世界最高政府",
+                            // key: "title",
+                            align:'center',
+                            children:[
+                                {
+                                    title:'海军',
+                                    // key:'title',
+                                    align:'center',
+                                    children:[
+                                        {
+                                            title:'海军元帅',
+                                            key:'title1',
+                                            align:'center',
+                                        },
+                                        {
+                                            title:'海军大将',
+                                            key:'title2',
+                                            align:'center',
+                                        },
+                                        {
+                                            title:'海军中将',
+                                            key:'title3',
+                                            align:'center',
+                                        }
+                                    ]
+                                },
+                                {
+                                    title:'王下七武海',
+                                    key:'title4',
+                                    align:'center',
+                                }
+                            ]
+                        },
+                        {
+                            title: "海贼团",
+                            align:'center',
+                            children:[
+                                {
+                                    title: "四皇",
+                                    key: "title5",
+                                    align:'center',
+                                },{
+                                    title: "其他",
+                                    key: "title6",
+                                    align:'center',
+                                }
+                            ]
+                        },
+                        {
+                            title: "反叛军",
+                            key: "title7",
+                            align:'center',
+                            
+                        }
+                    ]
+                }
+            ],[
+                {
+                    title1:'佛之战国、赤犬 — 萨卡斯基',
+                    title2:'赤犬 — 萨卡斯基、黄猿 — 波鲁萨利诺、青稚 — 库赞、藤虎 — 一笑、绿牛',
+                    title3:'英雄卡普',
+                    title4:'鹰眼-乔拉可尔·密佛格、巴索罗米·熊、女帝、唐吉诃德·多弗朗明哥、沙·克洛克达尔、海侠-甚平、月光·莫利亚',
+                    title5:'白胡子海贼团、红发海贼团、百兽海贼团、BIG·MOM海贼团、黑胡子海贼团',
+                    title6:'草帽海贼团',
+                    title7:'革命军'
+                }
+
+            ]
+        ],
+        example5:[
+            [
+                {
+                    title: "世界格局",
+                    // key: "title1",
+                    align:'center',
+                    children:[
+                        {
+                            title: "世界最高政府",
+                            // key: "title",
+                            align:'center',
+                            children:[
+                                {
+                                    title:'海军',
+                                    // key:'title',
+                                    align:'center',
+                                    children:[
+                                        {
+                                            title:'海军元帅',
+                                            key:'title1',
+                                            align:'center',
+                                        },
+                                        {
+                                            title:'海军大将',
+                                            key:'title2',
+                                            align:'center',
+                                        },
+                                        {
+                                            title:'海军中将',
+                                            key:'title3',
+                                            align:'center',
+                                        }
+                                    ]
+                                },
+                                {
+                                    title:'王下七武海',
+                                    key:'title4',
+                                    align:'center',
+                                }
+                            ]
+                        },
+                        {
+                            title: "海贼团",
+                            align:'center',
+                            children:[
+                                {
+                                    title: "四皇",
+                                    key: "title5",
+                                    align:'center',
+                                },{
+                                    title: "其他",
+                                    key: "title6",
+                                    align:'center',
+                                }
+                            ]
+                        },
+                        {
+                            title: "反叛军",
+                            key: "title7",
+                            align:'center',
+                            
+                        }
+                    ]
+                }
+            ],[
+                {
+                    title1:'佛之战国、赤犬 — 萨卡斯基',
+                    title2:'赤犬 — 萨卡斯基、黄猿 — 波鲁萨利诺、青稚 — 库赞、藤虎 — 一笑、绿牛',
+                    title3:'英雄卡普',
+                    title4:'鹰眼-乔拉可尔·密佛格、巴索罗米·熊、女帝、唐吉诃德·多弗朗明哥、沙·克洛克达尔、海侠-甚平、月光·莫利亚',
+                    title5:'白胡子海贼团、红发海贼团、百兽海贼团、BIG·MOM海贼团、黑胡子海贼团',
+                    title6:'草帽海贼团',
+                    title7:'革命军'
+                }
+
+            ]
         ]
     }
 }
+// dropdown 
+export const dropdown = {
+    html:`<Dropdown trigger="click" style="margin-left: 20px">
+        <Button type="primary">
+            下拉菜单
+            <Icon type="ios-arrow-down"></Icon>
+        </Button>
+        <DropdownMenu slot="list">
+            <DropdownItem>驴打滚</DropdownItem>
+            <DropdownItem>炸酱面</DropdownItem>
+            <DropdownItem disabled>豆汁儿</DropdownItem>
+            <DropdownItem>冰糖葫芦</DropdownItem>
+            <DropdownItem divided>北京烤鸭</DropdownItem>
+        </DropdownMenu>
+    </Dropdown>`,
+}
+// tab 
+export const tab = {
+    html:`
+        <Tabs value="name1">
+            <TabPane label="标签一" name="name1">标签一的内容</TabPane>
+            <TabPane label="标签二" name="name2">标签二的内容</TabPane>
+            <TabPane label="标签三" name="name3">标签三的内容</TabPane>
+        </Tabs>`,
+    css:``
+}
+// alert 
+export const alert = {
+    html:[
+        `<Alert>An info prompt</Alert>
+    <Alert type="success">A success prompt</Alert>
+    <Alert type="warning">A warning prompt</Alert>
+    <Alert type="error">An error prompt</Alert>`,
+        `<Alert>
+        An info prompt
+        <template slot="desc">Content of prompt. Content of prompt. Content of prompt. Content of prompt. </template>
+    </Alert>
+    <Alert type="success">
+        A success prompt
+        <template slot="desc">Content of prompt. Content of prompt. Content of prompt. Content of prompt. </template>
+    </Alert>
+    <Alert type="warning">
+        A warning prompt
+        <template slot="desc">
+        Content of prompt. Content of prompt. Content of prompt.
+    </template>
+    </Alert>
+    <Alert type="error">
+        An error prompt
+        <span slot="desc">
+            Custom error description copywriting. <Icon type="help-circled" size="14"></Icon>
+        </span>
+    </Alert>`,
+    `<Alert show-icon>
+        An info prompt
+        <template slot="desc">Content of prompt. Content of prompt. Content of prompt. Content of prompt. </template>
+    </Alert>
+    <Alert show-icon>
+        Custom icon
+        <Icon type="ios-bulb-outline" slot="icon"></Icon>
+        <template slot="desc">Custom icon copywriting. Custom icon copywriting. Custom icon copywriting. </template>
+    </Alert>`,
+    `<Alert banner closable type="warning">Notice: notification contents...</Alert>
+    <Alert show-icon closable>
+        Custom icon
+        <Icon type="ios-bulb-outline" slot="icon"></Icon>
+        <template slot="desc">Custom icon copywriting. Custom icon copywriting. Custom icon copywriting. </template>
+    </Alert>`,
+    ],
+    css:``
+}
+// page 
+export const page = {
+    html:[
+        `<Page :total="100" /> // 数据总数100条`,
+        `<Page :current="2" :total="50" simple />`
+    ],
+    css:``
+}
+// radio 
+export const radio = {
+    html:[
+        `<RadioGroup v-model="phone">
+        <Radio label="apple">
+            <Icon type="logo-apple"></Icon>
+            <span>Apple</span>
+        </Radio>
+        <Radio label="android">
+            <Icon type="logo-android"></Icon>
+            <span>Android</span>
+        </Radio>
+        <Radio label="windows">
+            <Icon type="logo-windows"></Icon>
+            <span>Windows</span>
+        </Radio>
+    </RadioGroup>
+    <RadioGroup v-model="animal">
+        <Radio label="金斑蝶"></Radio>
+        <Radio label="爪哇犀牛"></Radio>
+        <Radio label="印度黑羚"></Radio>
+    </RadioGroup>`
+    ],
+    css:``
+}
+// checkbox 
+export const checkbox = {
+    html:[
+        `<CheckboxGroup v-model="social">
+        <Checkbox label="twitter">
+            <Icon type="logo-twitter"></Icon>
+            <span>Twitter</span>
+        </Checkbox>
+        <Checkbox label="facebook">
+            <Icon type="logo-facebook"></Icon>
+            <span>Facebook</span>
+        </Checkbox>
+        <Checkbox label="github">
+            <Icon type="logo-github"></Icon>
+            <span>Github</span>
+        </Checkbox>
+        <Checkbox label="snapchat">
+            <Icon type="logo-snapchat"></Icon>
+            <span>Snapchat</span>
+        </Checkbox>
+    </CheckboxGroup>
+    <span> {{social}} </span>`
+    ],
+    css:``
+}
+
+
+

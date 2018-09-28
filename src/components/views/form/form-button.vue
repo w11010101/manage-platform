@@ -4,7 +4,7 @@
       <template slot="desc">注意：非 template/render 模式下，把<code>&lt;{{name.replace(/^\S/,s=>s.toUpperCase())}}&gt;</code>改成 <code>&lt;i-{{name}}&gt;</code>。</template>
     </Alert>
     <!--  -->
-    <Divider>按钮类型</Divider>
+    <Divider orientation="left">按钮类型</Divider>
     <Button>Default</Button>
     <Button type="primary">Primary</Button>
     <Button type="dashed">Dashed</Button>
