@@ -23,11 +23,12 @@
             <Icon type="logo-snapchat"></Icon>
             <span>Snapchat</span>
         </Checkbox>
+        <Checkbox label="disabled" disabled></Checkbox>
     </CheckboxGroup>
     <span> {{social}} </span>
     <!-- code -->
     <div class="demo-express">
-        <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1"/></h3>
+        <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-html"/></h3>
         <pre class="codeBox" id='part1-html'>   {{htmlCode[0]}}</pre>
     </div>
 

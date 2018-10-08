@@ -15,8 +15,8 @@
     <Button type="warning">Warning</Button>
     <Button type="error">Error</Button>
     <div class="demo-express">
-      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1"/></h3>
-      <code class="codeBox" id='part1'>
+      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-html"/></h3>
+      <code class="codeBox" id='part1-html'>
         &lt;Button&gt;Default&lt;/Button&gt;
         <br>
         &lt;Button type="primary"&gt;Primary&lt;/Button&gt;

@@ -1,7 +1,5 @@
 
 function dynamicPropsFn(route){
-    // console.log(route);
-    // console.log(arguments);
     return {
         from:"fn",
         id:"111",
@@ -52,7 +50,7 @@ var router_config = [
             },{
                 path:'h2',
                 name:'h2',
-                components:resolve =>require(['@/components/views/h2/h2'],resolve),
+                component:resolve =>require(['@/components/views/h2/h2'],resolve),
                 meta:{
                     href:"/layoutView/h2"
                 },
@@ -95,6 +93,36 @@ var router_config = [
                 },
                 props:{
                     name:"checkbox"
+                }
+            },{
+                path:'form-switch',
+                name:'form-switch',
+                component:resolve =>require(['@/components/views/form/form-switch'],resolve),
+                meta:{
+                    href:"/layoutView/form-switch"
+                },
+                props:{
+                    name:"switch"
+                }
+            },{
+                path:'form-select',
+                name:'form-select',
+                component:resolve =>require(['@/components/views/form/form-select'],resolve),
+                meta:{
+                    href:"/layoutView/form-select"
+                },
+                props:{
+                    name:"select"
+                }
+            },{
+                path:'form-datePicker',
+                name:'form-datePicker',
+                component:resolve =>require(['@/components/views/form/form-datePicker'],resolve),
+                meta:{
+                    href:"/layoutView/form-datePicker"
+                },
+                props:{
+                    name:"datePicker"
                 }
             },{
                 path:'table',

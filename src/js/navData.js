@@ -120,6 +120,24 @@ var data = [
                 id: 24,
                 href:"/layoutView/form-checkbox",
                 icon: "ios-football-outline",
+            },{
+                level: 2,
+                text: 'form-switch',
+                id: 25,
+                href:"/layoutView/form-switch",
+                icon: "ios-football-outline",
+            },{
+                level: 2,
+                text: 'form-select',
+                id: 26,
+                href:"/layoutView/form-select",
+                icon: "ios-football-outline",
+            },{
+                level: 2,
+                text: 'form-datePicker',
+                id: 27,
+                href:"/layoutView/form-datePicker",
+                icon: "ios-football-outline",
             },
         ]
     },

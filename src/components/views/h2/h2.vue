@@ -13,17 +13,13 @@
         <div class="demo-express">
             <h3 class="demo-express-title">HTML
               <Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#html"/></h3>
-            <pre id='html'>
-                {{htmlcode}}
-            </pre>
+            <pre id='html'> {{htmlcode}} </pre>
         </div>
         <!-- code css -->
         <div class="demo-express">
             <h3 class="demo-express-title">CSS
               <Icon type="ios-copy" size='20' class="copyBtn" data-clipboard-target="#css" /></h3>
-            <pre id='css'>
-                {{csscode}}
-            </pre>
+            <pre id='css'> {{csscode}} </pre>
         </div>
     </div>
 </template>
@@ -31,11 +27,12 @@
 <script>
 import {h2} from '@/js/tool/part.js';
 let {htmlcode,csscode} = {htmlcode:h2.html,csscode:h2.css}
+console.log(h2)
 export default {
-  name: 'myh1',
+  name: 'myh2',
   data () {
     return {
-      msg: 'this is h1.vue !!!!',
+      msg: 'this is h2.vue !!!!',
       htmlcode,
       csscode
     }

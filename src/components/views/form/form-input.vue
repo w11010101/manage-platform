@@ -7,8 +7,8 @@
     <Divider orientation="left">默认大小</Divider>
     <Input v-model="value" placeholder="Enter something..."/>
     <div class="demo-express">
-      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1"/></h3>
-      <code class="codeBox" id='part1'>
+      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-html"/></h3>
+      <code class="codeBox" id='part1-html'>
         &lt;Input v-model="value" placeholder="Enter something..."/&gt;
       </code>
     </div>
@@ -16,8 +16,8 @@
     <Divider orientation="left">默认大小 width: 300px</Divider>
     <Input v-model="value" placeholder="Enter something..." style="width: 300px" />
     <div class="demo-express">
-      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part2"/></h3>
-      <code class="codeBox" id='part2'>
+      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part2-html"/></h3>
+      <code class="codeBox" id='part2-html'>
         &lt;Input v-model="value" placeholder="Enter something..." style="width: 300px" /&gt;
       </code>
     </div>
@@ -27,8 +27,8 @@
     <Input v-model="value" placeholder="Enter something..." style="width: 150px"/>
     <Input v-model="value" placeholder="Enter something..." style="width: 150px" size="small"/>
     <div class="demo-express">
-      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3"/></h3>
-      <code class="codeBox" id='part3'>
+      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-html"/></h3>
+      <code class="codeBox" id='part3-html'>
         &lt;!-- 大 --&gt;
         <br>
         &lt;Input v-model="value" placeholder="Enter something..." style="width: 150px" size="large"/&gt;
@@ -46,8 +46,8 @@
     <Divider orientation="left">带清除按钮</Divider>
     <Input v-model="value" placeholder="Enter something..." clearable style="width: 200px" />
     <div class="demo-express">
-      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part4"/></h3>
-      <code class="codeBox" id='part4'>
+      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part4-html"/></h3>
+      <code class="codeBox" id='part4-html'>
         &lt;!-- icon="ios-clock-outline" --&gt;
         <br>
         &lt;Input v-model="value" placeholder="Enter something..." clearable style="width: 200px" /&gt;
@@ -59,8 +59,8 @@
     <Input v-model="value" icon="ios-clock-outline" placeholder="Enter something..." style="width: 200px" />
     <Input v-model="value" icon="ios-add-circle" placeholder="Enter something..." style="width: 200px" />
     <div class="demo-express">
-      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part4"/></h3>
-      <code class="codeBox" id='part4'>
+      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part5-html"/></h3>
+      <code class="codeBox" id='part5-html'>
         &lt;!-- icon="ios-clock-outline" --&gt;
         <br>
         &lt;Input v-model="value" icon="ios-clock-outline" placeholder="Enter something..." style="width: 200px" /&gt;
@@ -84,8 +84,8 @@
         <Icon type="ios-search" slot="suffix" />
     </Input>
     <div class="demo-express">
-      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part5"/></h3>
-      <code class="codeBox" id='part5'>
+      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part6-html"/></h3>
+      <code class="codeBox" id='part6-html'>
         &lt;!-- Props： --&gt;
         <br>
         &lt;Input prefix="ios-contact" placeholder="Enter name" style="width: auto" /&gt;
@@ -115,8 +115,8 @@
       <Col span="6"><p><Input v-model="value" type="textarea" :rows="4" placeholder="Enter something..." style="width: 200px"/></p></Col>
     </Row>
     <div class="demo-express">
-      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part6"/></h3>
-      <code class="codeBox" id='part6'>
+      <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part7-html"/></h3>
+      <code class="codeBox" id='part7-html'>
         &lt;Input v-model="value" type="textarea" placeholder="Enter something..." style="width: 200px" /&gt;
         <br>
         &lt;Input v-model="value" type="textarea" :rows="4" placeholder="Enter something..." style="width: 200px" /&gt;

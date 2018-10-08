@@ -731,10 +731,96 @@ export const checkbox = {
             <Icon type="logo-snapchat"></Icon>
             <span>Snapchat</span>
         </Checkbox>
+        <Checkbox label="disabled" disabled></Checkbox>
     </CheckboxGroup>
     <span> {{social}} </span>`
     ],
     css:``
+}
+// iSwitch 
+export const iSwitch = {
+    html:[
+        `<i-switch v-model="switch1" @on-change="change" />
+    <i-switch size="large" />
+    <i-switch />
+    <i-switch size="small" />
+    <i-switch>
+        <Icon type="md-checkmark" slot="open"></Icon>
+        <Icon type="md-close" slot="close"></Icon>
+    </i-switch>
+    <i-switch size="large">
+        <span slot="open">ON</span>
+        <span slot="close">OFF</span>
+    </i-switch>
+    <i-switch disabled="disabled" size="large">
+        <span slot="close">禁止</span>
+    </i-switch>`
+    ],
+    css:``
+}
+// select 
+export const select = {
+    html:[
+        `<Select v-model="model1" style="width:200px">
+        <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+    </Select>`,
+        `<Select v-model="model2" multiple style="width:260px">
+        <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+    </Select>`,
+        `<Select v-model="model3" clearable style="width:200px">
+        <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+    </Select>`
+    ],
+    css:``,
+    js:[
+        `cityList: [
+            {
+                value: '北京',
+                label: '北京'
+            },
+            {
+                value: '上海',
+                label: '上海'
+            },
+            {
+                value: '哈尔滨',
+                label: '哈尔滨'
+            },
+            {
+                value: '成都',
+                label: '成都'
+            },
+            {
+                value: '广东',
+                label: '广东'
+            },
+            {
+                value: '香港',
+                label: '香港'
+            }
+        ],
+        model1: ''`,
+        `// cityList 用上一个
+        model2: []`,
+        `// cityList 用上一个
+        model3: []`
+    ]
+}
+// datePicker 
+export const datePicker = {
+    html:[
+        `<DatePicker type="date" placeholder="Select date" style="width: 200px"></DatePicker>
+    <DatePicker type="daterange" placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>`,
+        `<DatePicker type="year" placeholder="Select year" style="width: 200px"></DatePicker>
+    <DatePicker type="month" placeholder="Select month" style="width: 200px"></DatePicker>`,
+        `<DatePicker :value="value1" format="yyyy年MM月dd日" type="date" placeholder="Select date" style="width: 200px"></DatePicker>
+    <DatePicker :value="value2" format="yyyy/MM/dd" type="daterange" placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>`
+    ],
+    css:``,
+    js:[
+        `value1: '2016-01-01',
+      value2: ['2016-01-01', '2016-02-15']`
+    ]
 }
 
 
