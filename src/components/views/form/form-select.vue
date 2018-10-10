@@ -5,7 +5,6 @@
         </Alert>
         <!-- example 1 -->
         <Divider orientation="left">基础用法</Divider>
-        <!-- example -->
         <Select v-model="model1" style="width:200px">
             <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
         </Select>
@@ -20,7 +19,6 @@
         </div>
         <!-- example 2 -->
         <Divider orientation="left">多选用法</Divider>
-        <!-- example -->
         <Select v-model="model2" multiple style="width:260px">
             <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
         </Select>
@@ -35,7 +33,6 @@
         </div>
         <!-- example 3 -->
         <Divider orientation="left">清除用法</Divider>
-        <!-- example -->
         <Select v-model="model3" clearable style="width:200px">
             <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
         </Select>
@@ -91,7 +88,8 @@ export default {
             }
         ],
         model1: '',
-        model2: []
+        model2: [],
+        model3: []
     }
   },
   props: {

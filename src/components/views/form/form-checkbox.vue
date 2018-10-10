@@ -3,9 +3,8 @@
         <Alert show-icon style='font-size:16px;'>依赖 iview ，若想查看相关方法、属性和事件，请点击 Docs 跳转查看；
             <template slot="desc">注意：非 template/render 模式下，把<code>&lt;{{name.replace(/^\S/,s=>s.toUpperCase())}}&gt;</code>改成 <code>&lt;i-{{name}}&gt;</code>。</template>
         </Alert>
-    <!--  -->
+    <!-- example 1 -->
     <Divider orientation="left">按钮类型</Divider>
-    <!-- example -->
     <CheckboxGroup v-model="social">
         <Checkbox label="twitter">
             <Icon type="logo-twitter"></Icon>

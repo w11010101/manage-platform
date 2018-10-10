@@ -9,12 +9,12 @@
                     :collapsed-width="78" 
                     v-model="isCollapsed"
                     width='240' 
-                    :style='{height:"calc(100vh - 60px)",background:"#fff"}'>
+                    :style='{height:"calc(100vh - 60px)",background:"#fff",overflowY:"auto"}'>
                     <!--菜单收起按钮 -->
                     <div class="nav-icon">
                         <Icon @click.native="collapsedSider" :style='{color: "#515a6e"}' :class="rotateIcon" type="md-menu" size="24"></Icon>
                     </div>
-                    <myNav ref="navVm"></myNav>
+                    <myNav ref="navVm" ></myNav>
                 </Sider>
 
                 <!-- <Layout> -->
@@ -23,9 +23,9 @@
                         <!-- <Layout >
                             <pagesTab class="pagesTab" :value="$route"></pagesTab>
                         </Layout> -->
-                        <Layout aaabbbaaabbb>
+                        <Layout>
                             <keep-alive>
-                                <router-view class='view-content child' aaabbb id="viewsContent"/>
+                                <router-view class='view-content child' id="viewsContent"/>
                             </keep-alive>
                         <!-- <h1>layout.vue</h1> -->
                         </Layout>

@@ -1,6 +1,6 @@
 <template>
   <div class="child">
-    <!-- express -->
+    <!-- example 1 -->
     <div class="demo-express">
       <h3 class="demo-express-title">结果展示</h3>
       <div class="demo-express-bg">
@@ -17,12 +17,11 @@
           </div>
       </div>
     </div>
-    <!-- code html -->
+    <!-- code -->
     <div class="demo-express">
       <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#html"/></h3>
       <pre id='html'> {{htmlcode}} </pre>
     </div>
-    <!-- code css -->
     <div class="demo-express">
       <h3 class="demo-express-title">CSS<Icon type="ios-copy" size='20' class="copyBtn" data-clipboard-target="#css" /></h3>
       <pre id='css'> {{csscode}} </pre>

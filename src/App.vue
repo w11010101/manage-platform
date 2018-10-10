@@ -1,5 +1,5 @@
 <template>
-    <div id="app" adsf>
+    <div id="app">
         <div class="layout">
             <Layout>
                 <router-view name="layoutView"/>

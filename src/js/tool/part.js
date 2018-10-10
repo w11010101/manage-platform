@@ -822,6 +822,528 @@ export const datePicker = {
       value2: ['2016-01-01', '2016-02-15']`
     ]
 }
+// cascader 
+export const cascader = {
+    html:[
+        `<Cascader :data="data1" v-model="value1" style='width: 200px;'></Cascader>`,
+        `<Cascader :data="data1" v-model="value2" style='width: 200px;'></Cascader>`, 
+        `<Cascader :data="data3" v-model="value3" :load-data=loadData style='width: 200px;'></Cascader>`
+    ],
+    css:``,
+    js:{
+        example1:[
+            {
+            value: 'beijing',
+            label: '北京',
+            children: [
+                {
+                    value: 'gugong',
+                    label: '故宫'
+                },
+                {
+                    value: 'tiantan',
+                    label: '天坛'
+                },
+                {
+                    value: 'wangfujing',
+                    label: '王府井'
+                }
+            ]
+            }, {
+                value: 'heilongjiang',
+                label: '黑龙江',
+                children: [
+                    {
+                        value: 'haerbin',
+                        label: '哈尔滨',
+                        children: [
+                            {
+                                value: 'zhongyangdajie',
+                                label: '中央大街',
+                            }
+                        ]
+                    },
+                    {
+                        value: 'daxinganling',
+                        label: '大兴安岭',
+                        children: [
+                            {
+                                value: 'yuying',
+                                label: '育英',
+                            },
+                            {
+                                value: 'mohe',
+                                label: '漠河',
+                            }
+                        ]
+                    }
+                ],
+            },
+            {
+                    value: 'jiangsu',
+                    label: '江苏',
+                    children: [
+                        {
+                            value: 'nanjing',
+                            label: '南京',
+                            children: [
+                                {
+                                    value: 'fuzimiao',
+                                    label: '夫子庙',
+                                }
+                            ]
+                        },
+                        {
+                            value: 'suzhou',
+                            label: '苏州',
+                            children: [
+                                {
+                                    value: 'zhuozhengyuan',
+                                    label: '拙政园',
+                                },
+                                {
+                                    value: 'shizilin',
+                                    label: '狮子林',
+                                }
+                            ]
+                        }
+                    ],
+                }
+        ],
+        example2:[
+            `// methode
+            loadData(item,callback) {
+            console.log(item);
+            item.loading = true;
+            setTimeout(function(){
+                item.loading = false;
+                switch (item.value){
+                    case 'beijing':
+                        item.children = [
+                            {
+                                value: 'gugong',
+                                label: '故宫'
+                            },
+                            {
+                                value: 'tiantan',
+                                label: '天坛'
+                            },
+                            {
+                                value: 'wangfujing',
+                                label: '王府井'
+                            }
+                        ];
+                    break;
+                    case 'heilongjiang':
+                        item.children = [
+                            {
+                                value: 'haerbin',
+                                label: '哈尔滨',
+                                children: [
+                                    {
+                                        value: 'zhongyangdajie',
+                                        label: '中央大街',
+                                    }
+                                ]
+                            },
+                            {
+                                value: 'daxinganling',
+                                label: '大兴安岭',
+                                children: [
+                                    {
+                                        value: 'yuying',
+                                        label: '育英',
+                                    },
+                                    {
+                                        value: 'mohe',
+                                        label: '漠河',
+                                    }
+                                ]
+                            }
+                        ];
+                    break;
+                    case 'jiangsu':
+                        item.children = [
+                            {
+                                value: 'nanjing',
+                                label: '南京',
+                                children: [
+                                    {
+                                        value: 'fuzimiao',
+                                        label: '夫子庙',
+                                    }
+                                ]
+                            },
+                            {
+                                value: 'suzhou',
+                                label: '苏州',
+                                children: [
+                                    {
+                                        value: 'zhuozhengyuan',
+                                        label: '拙政园',
+                                    },
+                                    {
+                                        value: 'shizilin',
+                                        label: '狮子林',
+                                    }
+                                ]
+                            }
+                        ];
+                    break;
+
+                }
+                callback();
+            },2000)
+        }`
+        ]
+    }
+}
+// transfer 
+export const transfer = {
+    html:[
+        `<Transfer
+            :data="data1"
+            :target-keys="targetKeys1"
+            :render-format="render1"
+            @on-change="handleChange1"
+            :list-style="listStyle"></Transfer>`,
+        `<Transfer
+            :data="data1"
+            :target-keys="targetKeys1"
+            filterable
+            :filter-method="filterMethod"
+            @on-change="handleChange1"
+            :list-style="listStyle"></Transfer>`,
+    ],
+    css:``,
+    js:[
+        `// data 
+        listStyle:{
+            width: '300px',
+            height: '300px'
+        },
+        data1:this.getData(),
+        targetKeys1:this.getTargetKeys()
+        // methods
+        getData(){
+            let data = [];
+            for(let i = 0;i<10;i++){
+                data.push({
+                    key: i.toString(),
+                    label: 'Content ' + i,
+                    description: 'The desc of content  ' + i,
+                    disabled: Math.random() * 3 < 1
+                });
+            }
+            return data;
+        },
+        getTargetKeys(){
+            return this.getData().filter(()=>Math.random()*2>1).map(item=>item.key)
+        },
+        render1 (item) {
+            return item.label;
+        },
+        handleChange1 (newTargetKeys, direction, moveKeys) {
+            console.log(newTargetKeys);
+            console.log(direction);
+            console.log(moveKeys);
+            this.targetKeys1 = newTargetKeys;
+        }`,
+        `// data、methods 可以同上
+        filterMethod (data, query) {
+            return data.label.indexOf(query) > -1;
+        }
+        `,
+    ]
+}
+// upload 
+export const upload = {
+    html:[
+        `<Upload action="//jsonplaceholder.ty.com/posts/picode">
+        <Button icon="ios-cloud-upload-outline">Upload files</Button>
+    </Upload>`,
+       `<Upload
+        multiple
+        type="drag"
+        action="//jsonplaceholder.typicode.com/posts/">
+        <div style="padding: 20px 0">
+            <Icon type="ios-cloud-upload" size="52" style="color: #3399ff"></Icon>
+            <p>Click or drag files here to upload</p>
+        </div>
+    </Upload>`
+    ],
+    css:``,
+    js:[]
+}
+// form 
+export const form = {
+    html:[
+        ` <Form ref="formInline" :model="formInline" :rules="ruleInline" inline>
+        <FormItem prop="user">
+            <Input type="text" v-model="formInline.user" placeholder="Username">
+                <Icon type="ios-person-outline" slot="prepend"></Icon>
+            </Input>
+        </FormItem>
+        <FormItem prop="password">
+            <Input type="password" v-model="formInline.password" placeholder="Password">
+                <Icon type="ios-lock-outline" slot="prepend"></Icon>
+            </Input>
+        </FormItem>
+        <FormItem>
+            <Button type="primary" @click="handleSubmit('formInline')">Signin</Button>
+            <Button @click="handleReset('formInline')" style="margin-left: 8px">Reset</Button>
+        </FormItem>
+    </Form>`,
+
+    ],
+    css:``,
+    js:[
+        `// data
+        formInline: {
+            user: '',
+            password: ''
+        },
+        ruleInline: {
+            user: [
+                { required: true, message: '请填写用户名.', trigger: 'blur' }
+            ],
+            password: [
+                { required: true, message: '请填写密码.', trigger: 'blur' },
+                { type: 'string', min: 6, message: '密码不能少于6位.', trigger: 'blur' }
+            ]
+        }
+        // methods
+        handleSubmit(name){
+            this.$refs[name].validate((valid) => {
+                if (valid) {
+                    this.$Message.success('Success!');
+                } else {
+                    this.$Message.error('Fail!');
+                }
+            });
+        },
+        handleReset (name) {
+            this.$refs[name].resetFields();
+        },`,
+
+    ]
+}
+// message 
+export const message = {
+    html:[
+        ` <Button type="primary" @click="info">默认提示信息</Button>`,
+        `<Button @click="success">success提示信息</Button>
+    <Button @click="warning">warning提示信息</Button>
+    <Button @click="error">error提示信息</Button>`,
+        `<Button @click="time">延迟{{second}}秒关闭</Button>`
+    ],
+    css:``,
+    js:[
+        `info () {
+        this.$Message.info('默认提示信息');
+    },`,
+        `success () {
+        this.$Message.success('success提示信息');
+    },
+    warning () {
+        this.$Message.warning('warning提示信息');
+    },
+    error () {
+        this.$Message.error('error提示信息');
+    },`,
+        `// data
+        second:5,
+        // methods
+        time () {
+            let second = this.second;
+            this.$Message.info({
+                content: '延迟'+second+'秒关闭',
+                duration: second,
+                closable: true
+            });
+        },`
+
+    ]
+}
+// notice 
+export const notice = {
+    html:[
+        ` <Button type="primary" @click="open(false)">打开通知</Button>
+    <Button @click="open(true)">打开通知(只有标题)</Button>`,
+        `<p>带描述信息</p>
+    <Button @click="info(false)">消息</Button>
+    <Button @click="success(false)">成功</Button>
+    <Button @click="warning(false)">警告</Button>
+    <Button @click="error(false)">错误</Button>
+    <p>只有标题</p>
+    <Button @click="info(true)">消息</Button>
+    <Button @click="success(true)">成功</Button>
+    <Button @click="warning(true)">警告</Button>
+    <Button @click="error(true)">错误</Button>`,
+        `<Button type="primary" @click="time">打开通知</Button>`,
+
+    ],
+    css:``,
+    js:[
+        `// methods
+    open (nodesc) {
+        this.$Notice.open({
+            title: '通知标题',
+            desc: nodesc ? '' : '这里是通知的描述'
+        });
+    }`,
+        `// methods
+    info (nodesc) {
+        this.$Notice.info({
+            title: '通知标题',
+            desc: nodesc ? '' : '这里是通知的描述'
+        });
+    },
+    success (nodesc) {
+        this.$Notice.success({
+            title: '通知标题',
+            desc: nodesc ? '' : '这里是通知的描述'
+        });
+    },
+    warning (nodesc) {
+        this.$Notice.warning({
+            title: '通知标题',
+            desc: nodesc ? '' : '这里是通知的描述'
+        });
+    },
+    error (nodesc) {
+        this.$Notice.error({
+            title: '通知标题',
+            desc: nodesc ? '' : '这里是通知的描述'
+        });
+    },`,
+        `// methods
+    time () {
+        this.$Notice.open({
+            title: '通知标题',
+            desc: '这条通知不会自动关闭, 需要你点击关闭按钮去关闭.',
+            duration: 0
+        });
+    }`,
+
+    ]
+}
+// modal 
+export const modal = {
+    html:[
+        ` <Button type="primary" @click="modal1 = true">显示对话框</Button>
+    <Modal
+        v-model="modal1"
+        title="普通的Modal的对话框标题"
+        @on-ok="ok"
+        @on-cancel="cancel">
+        <p>对话内容</p>
+        <p>对话内容</p>
+        <p>对话内容</p>
+    </Modal>`,
+        `<Button @click="modal2 = true">Set the width</Button>
+    <Modal
+        v-model="modal2"
+        title="Custom width"
+        width="300">
+        <p>Customize width, unit px, default 520px.</p>
+        <p>The width of the dialog box is responsive, and the width becomes <code>auto</code> when the screen size is less than 768px.</p>
+    </Modal>`,
+        `<Button type="primary" @click="modal3 = true">Display dialog box</Button>
+    <Modal
+        v-model="modal3"
+        title="Title"
+        :loading="loading"
+        @on-ok="asyncOK">
+        <p>After you click ok, the dialog box will close in 2 seconds.</p>
+    </Modal>`,
+    `<Divider orientation="left">可拖拽</Divider>
+    <Button @click="modal4 = true">Open the first modal</Button>
+    <Button @click="modal5 = true">Open the second modal</Button>
+    <Modal v-model="modal4" draggable scrollable title="Modal 1">
+        <div>This is the first modal</div>
+    </Modal>
+    <Modal v-model="modal5" draggable scrollable title="Modal 2">
+        <div>This is the second modal</div>
+    </Modal>`,
+    `<Button @click="instance('confirm')">confirm</Button>
+    <Button @click="instance('info')">Info</Button>
+    <Button @click="instance('success')">Success</Button>
+    <Button @click="instance('warning')">Warning</Button>
+    <Button @click="instance('error')">Error</Button>`
+
+
+    ],
+    css:``,
+    js:[
+    `// data
+    modal1:false,
+    // methods
+    ok () {
+            this.$Message.info('Clicked ok');
+    },
+    cancel () {
+        this.$Message.info('Clicked cancel');
+    }`,
+    `// data
+    modal2:false,
+    `,
+    `// data
+    modal3:false,
+    loading:true
+    // methods
+    asyncOK(){
+        setTimeout(()=>{
+            this.modal3 = false;
+        },2000)
+    }`,
+    `// data 
+    modal4:false,
+    modal5:false,`,
+    `// methods 
+    instance(type){
+        console.log(type)
+        let title = 'this is title';
+        let content = '<p>content of dialog</p><p>content of dialog</p>';
+        switch (type){
+            case 'confirm':
+                this.$Modal.confirm({
+                    title,
+                    content,
+                })
+            break;
+            case 'info':
+                this.$Modal.info({
+                    title,
+                    content,
+                })
+            break;
+            case 'success':
+                this.$Modal.success({
+                    title,
+                    content,
+                })
+            break;
+            case 'warning':
+                this.$Modal.warning({
+                    title,
+                    content,
+                })
+            break;
+            case 'error':
+                this.$Modal.error({
+                    title,
+                    content,
+                })
+            break;
+        }
+    }`
+
+
+    ]
+}
+
+
 
 
 

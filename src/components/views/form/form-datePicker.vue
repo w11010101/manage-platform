@@ -4,8 +4,7 @@
             <template slot="desc">注意：非 template/render 模式下，把<code>&lt;{{name.replace(/^\S/,s=>s.toUpperCase())}}&gt;</code>改成 <code>&lt;i-{{name}}&gt;</code>。</template>
         </Alert>
         <!-- example 1 -->
-        <Divider orientation="left">基本尺寸</Divider>
-        <!-- example -->
+        <Divider orientation="left">基本尺寸</Divider>        
         <Row>
             <Col span="6">
                 <DatePicker type="date" placeholder="Select date" style="width: 200px"></DatePicker>
@@ -20,8 +19,7 @@
             <pre class="codeBox" id='part1-html'>   {{htmlCode[0]}}</pre>
         </div>
         <!-- example 2 -->
-        <Divider orientation="left">年和月</Divider>
-        <!-- example -->
+        <Divider orientation="left">年和月</Divider>        
         <Row>
             <Col span="6">
                 <DatePicker type="year" placeholder="Select year" style="width: 200px"></DatePicker>
@@ -36,8 +34,7 @@
             <pre class="codeBox" id='part2-html'>   {{htmlCode[1]}}</pre>
         </div>
         <!-- example 3 -->
-        <Divider orientation="left">日期格式</Divider>
-        <!-- example -->
+        <Divider orientation="left">日期格式</Divider>        
         <Row>
             <Col span="6">
                 <DatePicker :value="value1" format="yyyy年MM月dd日" type="date" placeholder="Select date" style="width: 200px"></DatePicker>
@@ -52,8 +49,8 @@
             <pre class="codeBox" id='part3-html'>   {{htmlCode[2]}}</pre>
         </div>
         <div class="demo-express">
-            <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-html"/></h3>
-            <pre class="codeBox" id='part3-html'>   {{jsCode[0]}}</pre>
+            <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-js"/></h3>
+            <pre class="codeBox" id='part3-js'>   {{jsCode[0]}}</pre>
         </div>
     <!--  -->
     </div>

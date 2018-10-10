@@ -94,14 +94,21 @@ var data = [
         nodes:[
             {
                 level: 2,
-                text: 'form-input',
+                text: 'form',
+                id: 20,
+                href:"/layoutView/form",
+                icon: "ios-football-outline",
+            },
+            {
+                level: 2,
+                text: 'input 输入框',
                 id: 21,
                 href:"/layoutView/form-input",
                 icon: "ios-football-outline",
             },
             {
                 level: 2,
-                text: 'form-button',
+                text: 'button 按钮',
                 id: 22,
                 href:"/layoutView/form-button",
                 icon: "md-football",
@@ -110,33 +117,51 @@ var data = [
                 // }
             },{
                 level: 2,
-                text: 'form-radio',
+                text: 'radio 单选框',
                 id: 23,
                 href:"/layoutView/form-radio",
                 icon: "ios-football-outline",
             },{
                 level: 2,
-                text: 'form-checkbox',
+                text: 'checkbox 多选框',
                 id: 24,
                 href:"/layoutView/form-checkbox",
                 icon: "ios-football-outline",
             },{
                 level: 2,
-                text: 'form-switch',
+                text: 'switch 开关',
                 id: 25,
                 href:"/layoutView/form-switch",
                 icon: "ios-football-outline",
             },{
                 level: 2,
-                text: 'form-select',
+                text: 'select 下拉选择',
                 id: 26,
                 href:"/layoutView/form-select",
                 icon: "ios-football-outline",
             },{
                 level: 2,
-                text: 'form-datePicker',
+                text: 'datePicker 日期',
                 id: 27,
                 href:"/layoutView/form-datePicker",
+                icon: "ios-football-outline",
+            },{
+                level: 2,
+                text: 'cascader 层级选择',
+                id: 28,
+                href:"/layoutView/form-cascader",
+                icon: "ios-football-outline",
+            },{
+                level: 2,
+                text: 'transfer 穿梭框',
+                id: 29,
+                href:"/layoutView/form-transfer",
+                icon: "ios-football-outline",
+            },{
+                level: 2,
+                text: 'upload 上传',
+                id: 30,
+                href:"/layoutView/form-upload",
                 icon: "ios-football-outline",
             },
         ]
@@ -194,6 +219,27 @@ var data = [
         text: 'page 分页',
         id: 7,
         href:"/layoutView/page",
+        icon: "md-basketball",
+    },
+    {
+        level: 1,
+        text: 'message 全局信息',
+        id: 8,
+        href:"/layoutView/message",
+        icon: "md-basketball",
+    },
+    {
+        level: 1,
+        text: 'notice 通知信息',
+        id: 9,
+        href:"/layoutView/notice",
+        icon: "md-basketball",
+    },
+    {
+        level: 1,
+        text: 'modal 对话框',
+        id: 10,
+        href:"/layoutView/modal",
         icon: "md-basketball",
     },
 
