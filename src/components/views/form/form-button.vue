@@ -17,23 +17,7 @@
     <!-- code -->
     <div class="demo-express">
       <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-html"/></h3>
-      <code class="codeBox" id='part1-html'>
-        &lt;Button&gt;Default&lt;/Button&gt;
-        <br>
-        &lt;Button type="primary"&gt;Primary&lt;/Button&gt;
-        <br>
-        &lt;Button type="dashed"&gt;Dashed&lt;/Button&gt;
-        <br>
-        &lt;Button type="text"&gt;Text&lt;/Button&gt;
-        <br>
-        &lt;Button type="info"&gt;Info&lt;/Button&gt;
-        <br>
-        &lt;Button type="success"&gt;Success&lt;/Button&gt;
-        <br>
-        &lt;Button type="warning"&gt;Warning&lt;/Button&gt;
-        <br>
-        &lt;Button type="error"&gt;Error&lt;/Button&gt;
-      </code>
+      <pre class="codeBox" id='part1-html'>{{htmlCode[0]}}</pre>
     </div>
 
 
@@ -42,12 +26,15 @@
 </template>
 
 <script>
+import {button} from '@/js/tool/part.js';
+const {htmlCode,jsCode} = {htmlCode:button.html,jsCode:button.js};
 export default {
-  name: 'form-input',
+  name: 'form-button',
   data () {
     return {
-      value: 'this is form-input.vue 。',
-      
+      value: 'this is form-button.vue 。',
+      htmlCode,
+      jsCode
     }
   },
   props: {

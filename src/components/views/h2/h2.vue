@@ -13,12 +13,12 @@
         <div class="demo-express">
             <h3 class="demo-express-title">HTML
               <Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#html"/></h3>
-            <pre id='html'> {{htmlcode}} </pre>
+            <pre id='html'>{{htmlcode}} </pre>
         </div>
         <div class="demo-express">
             <h3 class="demo-express-title">CSS
               <Icon type="ios-copy" size='20' class="copyBtn" data-clipboard-target="#css" /></h3>
-            <pre id='css'> {{csscode}} </pre>
+            <pre id='css'>{{csscode}} </pre>
         </div>
     </div>
 </template>

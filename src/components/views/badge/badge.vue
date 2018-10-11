@@ -5,35 +5,49 @@
         </Alert>
         <!-- example 1 -->
         <Divider orientation="left">基础用法</Divider>
-        <Page :total="100" />
+        <Badge :count="3">
+            <a href="#" class="demo-badge"></a>
+        </Badge>
         <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-html"/></h3>
             <pre class="codeBox" id='part1-html'>{{htmlCode[0]}}</pre>
         </div>
+        <div class="demo-express">
+            <h3 class="demo-express-title">CSS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-css"/></h3>
+            <pre class="codeBox" id='part1-css'>{{cssCode[0]}}</pre>
+        </div>
         <!-- example 2 -->
-        <Divider orientation="left">迷你版</Divider>
-        <Page :current="2" :total="50" simple />
+        <Divider orientation="left">小红点</Divider>
+        <Badge dot>
+            <a href="#" class="demo-badge"></a>
+        </Badge>
         <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part2-html"/></h3>
             <pre class="codeBox" id='part2-html'>{{htmlCode[1]}}</pre>
         </div>
-    
-
+        
+        
 
     </div>
 </template>
 
 <script>
-import {page} from '@/js/tool/part.js';
-const {htmlCode} = {htmlCode:page.html};
+import {badge} from '@/js/tool/part.js';
+let {htmlCode,cssCode} = {htmlCode:badge.html,cssCode:badge.css};
+
+function toStringify(obj){
+    return typeof obj === 'object'?JSON.stringify(obj):obj;
+}
 export default {
-    name: 'example-page',
+    name: 'example-tooltip',
     data () {
         return {
-            value: 'this is page.vue 。',
+            value: 'this is tooltip.vue 。',
             htmlCode,
+            cssCode,
+            
         }
     },
     props: {
@@ -58,5 +72,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    
+    .demo-badge{
+        width: 42px;
+        height: 42px;
+        background: #eee;
+        border-radius: 6px;
+        display: inline-block;
+    }
 </style>

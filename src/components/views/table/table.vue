@@ -6,21 +6,19 @@
         <!-- example 1 -->
         <Divider orientation="left">基础用法</Divider>
         <Table :columns="codeList1" border :data="codeLine1"></Table>
+        <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-html"/></h3>
             <code class="codeBox" id='part1-html'>
             &lt;Table :columns="codeList1" :data="codeLine1"&gt;&lt;/Table&gt;
             </code>
         </div>
-        <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-js"/></h3>
             <pre class="codeBox" id='part1-js'>
-            // data
+        // data
             // codeList1
-            <br>
             const codeList1 = {{textList1}}
-            <br>
             // codeLine1
             const codeLine1 = {{textLine1}}
             </pre>
@@ -28,21 +26,19 @@
         <!-- example 2 -->
         <Divider orientation="left">固定列、固定宽高</Divider>
         <Table :columns="codeList2" width="700" height='300' border :data="codeLine2"></Table>
+        <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part2-html"/></h3>
             <code class="codeBox" id='part2-html'>
             &lt;Table :columns="codeList2" :data="codeLine2"&gt;&lt;/Table&gt;
             </code>
         </div>
-        <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part2-js"/></h3>
             <pre class="codeBox" id='part2-js'>
-            // data
+        // data
             // codeList2
-            <br>
             const codeList2 = {{textList2}}
-            <br>
             // codeLine2
             const codeLine2 = {{textLine2}}
             </pre>
@@ -50,21 +46,19 @@
         <!-- example 3 -->
         <Divider orientation="left">排序</Divider>
         <Table :columns="codeList3"  height='300' border :data="codeLine3"></Table>
+        <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-html"/></h3>
             <code class="codeBox" id='part3-html'>
             &lt;Table :columns="codeList3" :data="codeLine3"&gt;&lt;/Table&gt;
             </code>
         </div>
-        <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-js"/></h3>
             <pre class="codeBox" id='part3-js'>
-            // data 
+        // data 
             // codeList3
-            <br>
             const codeList3 = {{textList3}}
-            <br>
             // codeLine3
             const codeLine3 = {{textLine3}}
             </pre>
@@ -72,21 +66,19 @@
         <!-- example 4 -->
         <Divider orientation="left">表头分组</Divider>
         <Table :columns="codeList4"  border :data="codeLine4"></Table>
+        <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-html"/></h3>
             <code class="codeBox" id='part3-html'>
             &lt;Table :columns="codeList4" :data="codeLine4"&gt;&lt;/Table&gt;
             </code>
         </div>
-        <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part4-js"/></h3>
             <pre class="codeBox" id='part4-js'>
-            // data 
+        // data 
             // codeList4
-            <br>
             const codeList4 = {{textList4}}
-            <br>
             // codeLine4
             const codeLine4 = {{textLine4}}
             </pre>
@@ -96,21 +88,19 @@
         <Table :columns="codeList5" :loading='loading' border :data="codeLine5"></Table>
         <br>
         切换 Loading 状态 <Switch v-model="loading" size="large"></Switch>
+        <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-html"/></h3>
             <code class="codeBox" id='part3-html'>
             &lt;Table :columns="codeList5" :loading='loading' :data="codeLine5"&gt;&lt;/Table&gt;
             </code>
         </div>
-        <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part5-js"/></h3>
             <pre class="codeBox" id='part5-js'>
-            // data 
+        // data 
             // codeList5
-            <br>
             const codeList5 = {{textList4}}
-            <br>
             // codeLine5
             const codeLine5 = {{textLine4}}
             </pre>

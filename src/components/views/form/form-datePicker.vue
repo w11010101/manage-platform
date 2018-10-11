@@ -16,7 +16,7 @@
         <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-html"/></h3>
-            <pre class="codeBox" id='part1-html'>   {{htmlCode[0]}}</pre>
+            <pre class="codeBox" id='part1-html'>{{htmlCode[0]}}</pre>
         </div>
         <!-- example 2 -->
         <Divider orientation="left">年和月</Divider>        
@@ -31,7 +31,7 @@
         <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part2-html"/></h3>
-            <pre class="codeBox" id='part2-html'>   {{htmlCode[1]}}</pre>
+            <pre class="codeBox" id='part2-html'>{{htmlCode[1]}}</pre>
         </div>
         <!-- example 3 -->
         <Divider orientation="left">日期格式</Divider>        
@@ -46,11 +46,11 @@
         <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-html"/></h3>
-            <pre class="codeBox" id='part3-html'>   {{htmlCode[2]}}</pre>
+            <pre class="codeBox" id='part3-html'>{{htmlCode[2]}}</pre>
         </div>
         <div class="demo-express">
             <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-js"/></h3>
-            <pre class="codeBox" id='part3-js'>   {{jsCode[0]}}</pre>
+            <pre class="codeBox" id='part3-js'>{{jsCode[0]}}</pre>
         </div>
     <!--  -->
     </div>

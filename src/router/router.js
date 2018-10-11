@@ -246,6 +246,28 @@ var router_config = [
                     name:"modal"
                 }
             },
+            {
+                path:'tooltip',
+                name:'tooltip',
+                component:resolve =>require(['@/components/views/tooltip/tooltip'],resolve),
+                meta:{
+                    href:"/layoutView/tooltip"
+                },
+                props:{
+                    name:"tooltip"
+                }
+            },
+            {
+                path:'badge',
+                name:'badge',
+                component:resolve =>require(['@/components/views/badge/badge'],resolve),
+                meta:{
+                    href:"/layoutView/badge"
+                },
+                props:{
+                    name:"badge"
+                }
+            },
 
         ]
     }

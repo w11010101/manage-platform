@@ -242,6 +242,20 @@ var data = [
         href:"/layoutView/modal",
         icon: "md-basketball",
     },
+    {
+        level: 1,
+        text: 'tooltip 文字提示',
+        id: 11,
+        href:"/layoutView/tooltip",
+        icon: "md-basketball",
+    },
+    {
+        level: 1,
+        text: 'badge 徽标',
+        id: 12,
+        href:"/layoutView/badge",
+        icon: "md-basketball",
+    },
 
 ];
 module.exports = data;

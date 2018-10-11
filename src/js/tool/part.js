@@ -1,120 +1,117 @@
 // h1 
 export const h1 = {
     html:`<div class="content-h1">
-            <label>标题展示</label>
-            <ol class="breadcrumb">
-                <li><a href="#">首页</a></li>
-                <li><a href="#">第一层</a></li>
-                <li class="active">第二层</li>
-            </ol>
-            <span class="head-tools pull-right">
-                <button class="refresh"></button>
-            </span>
-        </div>`,
-    css:`
-        .content-h1{
-            height: 66px;
-            padding: 0 10px 0 38px;
-            background: url(../assets/ico-title.png) no-repeat left center;
-            line-height: 66px;
-            color:#000;
-            margin:0 0 20px 0;
-            border-bottom:1px solid #979797;
-        }
-        .content-h1 label{
-           font-size: 24px;
-           font-weight: normal;
-           margin-right: 10px; 
-           margin-bottom: 0;    
-        }
-        .pull-right {
-            float: right!important;
-        }
-        .content-h1 .refresh{
-            width: 24px;
-            height: 24px;
-            margin-top:21px;
-            border:0;
-            background: url(../assets/refresh.png) no-repeat;
-            cursor:pointer;
-        }
-        .content-h1 .breadcrumb{
-            display: inline-block;
-            background: none;
-            padding: 0;
-            margin-top: 0;
-        }
-        .content-h1 .breadcrumb>li {
-            display: inline-block;
-        }
-        .content-h1 .breadcrumb a{
-            color: #000;
-        }
-        .content-h1 .breadcrumb>li:before,
-        .content-h1 .breadcrumb>li+li:before{
-            font-family: monospace;
-            font-size: 12px;
-            content:"\\003E";
-            color: #9f9f9f;
-            background:none;
-            padding: 0 5px;
-        }
-        .breadcrumb>li+li:before{
-            padding: 0 5px;
-            color: #ccc;
-            content: "/\00a0";
-        }`,
+        <label>标题展示</label>
+        <ol class="breadcrumb">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">第一层</a></li>
+            <li class="active">第二层</li>
+        </ol>
+        <span class="head-tools pull-right">
+            <button class="refresh"></button>
+        </span>
+    </div>`,
+    css:`.content-h1{
+        height: 66px;
+        padding: 0 10px 0 38px;
+        background: url(../assets/ico-title.png) no-repeat left center;
+        line-height: 66px;
+        color:#000;
+        margin:0 0 20px 0;
+        border-bottom:1px solid #979797;
+    }
+    .content-h1 label{
+       font-size: 24px;
+       font-weight: normal;
+       margin-right: 10px; 
+       margin-bottom: 0;    
+    }
+    .pull-right {
+        float: right!important;
+    }
+    .content-h1 .refresh{
+        width: 24px;
+        height: 24px;
+        margin-top:21px;
+        border:0;
+        background: url(../assets/refresh.png) no-repeat;
+        cursor:pointer;
+    }
+    .content-h1 .breadcrumb{
+        display: inline-block;
+        background: none;
+        padding: 0;
+        margin-top: 0;
+    }
+    .content-h1 .breadcrumb>li {
+        display: inline-block;
+    }
+    .content-h1 .breadcrumb a{
+        color: #000;
+    }
+    .content-h1 .breadcrumb>li:before,
+    .content-h1 .breadcrumb>li+li:before{
+        font-family: monospace;
+        font-size: 12px;
+        content:"\\003E";
+        color: #9f9f9f;
+        background:none;
+        padding: 0 5px;
+    }
+    .breadcrumb>li+li:before{
+        padding: 0 5px;
+        color: #ccc;
+        content: "/\00a0";
+    }`,
     js:``
 }
 // h2 
 export const h2 = {
-    html:`
-        <div class="content-h2">
-            <label>h2标题展示</label>
-        </div>`,
-    css:`
-        .content-h2{
-            height: 30px;
-            line-height: 30px;
-            padding-left: 10px;
-            
-            border:0;
-            position: relative;
-            margin: 20px 13px 20px 10px;
-        }
-        .content-h2 label{
-            font-size: 18px;
-            font-weight: normal;
-        }
-        .content-h2:before{
-            position: absolute;
-            top:50%;
-            left:0;
-            margin-top: -9px;
-            content: " ";
-            width: 3px;
-            height: 18px;
-            filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#06bce1,endcolorstr=#5682fd,gradientType=1);
-            background: -linear-gradient(top,#06bce1,#5682fd);
-            background: -moz-linear-gradient(top,#06bce1,#5682fd);
-            background: -webkit-linear-gradient(top,#06bce1,#5682fd);
-        }
-        .content-h2 form{
-            margin:0;
-            height: inherit;
-            margin-right: -15px;
-        }
-        .content-h2 form .form-group{
-            display: inline-block;
-            margin: 0;
-            vertical-align: top;
-        }
-        .content-h2 form .form-group + .form-group{
-            margin-left: 30px;
-        }
-        .content-h2 .form-group.form-group-right{
-            float: right;
-        }`,
+    html:`<div class="content-h2">
+        <label>h2标题展示</label>
+    </div>`,
+    css:`.content-h2{
+        height: 30px;
+        line-height: 30px;
+        padding-left: 10px;
+        
+        border:0;
+        position: relative;
+        margin: 20px 13px 20px 10px;
+    }
+    .content-h2 label{
+        font-size: 18px;
+        font-weight: normal;
+    }
+    .content-h2:before{
+        position: absolute;
+        top:50%;
+        left:0;
+        margin-top: -9px;
+        content: " ";
+        width: 3px;
+        height: 18px;
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#06bce1,endcolorstr=#5682fd,gradientType=1);
+        background: -linear-gradient(top,#06bce1,#5682fd);
+        background: -moz-linear-gradient(top,#06bce1,#5682fd);
+        background: -webkit-linear-gradient(top,#06bce1,#5682fd);
+    }
+    .content-h2 form{
+        margin:0;
+        height: inherit;
+        margin-right: -15px;
+    }
+    .content-h2 form .form-group{
+        display: inline-block;
+        margin: 0;
+        vertical-align: top;
+    }
+    .content-h2 form .form-group + .form-group{
+        margin-left: 30px;
+    }
+    .content-h2 .form-group.form-group-right{
+        float: right;
+    }`,
     js:``
 }
 // table
@@ -625,12 +622,11 @@ export const dropdown = {
 }
 // tab 
 export const tab = {
-    html:`
-        <Tabs value="name1">
-            <TabPane label="标签一" name="name1">标签一的内容</TabPane>
-            <TabPane label="标签二" name="name2">标签二的内容</TabPane>
-            <TabPane label="标签三" name="name3">标签三的内容</TabPane>
-        </Tabs>`,
+    html:`<Tabs value="name1">
+        <TabPane label="标签一" name="name1">标签一的内容</TabPane>
+        <TabPane label="标签二" name="name2">标签二的内容</TabPane>
+        <TabPane label="标签三" name="name3">标签三的内容</TabPane>
+    </Tabs>`,
     css:``
 }
 // alert 
@@ -685,6 +681,52 @@ export const page = {
         `<Page :current="2" :total="50" simple />`
     ],
     css:``
+}
+// input 
+export const input = {
+    html:[
+        `<Input v-model="value" placeholder="Enter something..."/>`,
+        `<Input v-model="value" placeholder="Enter something..." style="width: 300px" />`,
+        `<Input v-model="value" placeholder="Enter something..." style="width: 150px" size="large"/>
+    <Input v-model="value" placeholder="Enter something..." style="width: 150px"/>
+    <Input v-model="value" placeholder="Enter something..." style="width: 150px" size="small"/>`,
+        `<Input v-model="value" placeholder="Enter something..." clearable style="width: 200px" />`,
+        `<Input v-model="value" icon="ios-clock-outline" placeholder="Enter something..." style="width: 200px" />
+    <Input v-model="value" icon="ios-add-circle" placeholder="Enter something..." style="width: 200px" />`,
+        `Props：
+    <Input prefix="ios-contact" placeholder="Enter name" style="width: auto" />
+    <Input suffix="ios-search" placeholder="Enter text" style="width: auto" />
+    Slots： 
+    <Input placeholder="Enter name" style="width: auto">
+        <Icon type="ios-contact" slot="prefix" />
+    </Input>
+    <Input placeholder="Enter text" style="width: auto">
+        <Icon type="ios-search" slot="suffix" />
+    </Input>`,
+        `<Input v-model="value" type="textarea" placeholder="Enter something..." style="width: 200px"/>
+    <Input v-model="value" type="textarea" :rows="4" placeholder="Enter something..." style="width: 200px"/>`,
+        `<Input v-model="value" type="textarea" :autosize="true" placeholder="Enter something..." style="width: 200px"/>
+    <Input v-model="value" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="Enter something..." style="width: 200px"/>`,
+    ``
+    ],
+    css:``,
+    js:''
+}
+// button 
+export const button = {
+    html:[
+        `<Button>Default</Button>
+    <Button type="primary">Primary</Button>
+    <Button type="dashed">Dashed</Button>
+    <Button type="text">Text</Button>
+    <br><br>
+    <Button type="info">Info</Button>
+    <Button type="success">Success</Button>
+    <Button type="warning">Warning</Button>
+    <Button type="error">Error</Button>`
+    ],
+    css:``,
+    js:''
 }
 // radio 
 export const radio = {
@@ -774,36 +816,36 @@ export const select = {
     css:``,
     js:[
         `cityList: [
-            {
-                value: '北京',
-                label: '北京'
-            },
-            {
-                value: '上海',
-                label: '上海'
-            },
-            {
-                value: '哈尔滨',
-                label: '哈尔滨'
-            },
-            {
-                value: '成都',
-                label: '成都'
-            },
-            {
-                value: '广东',
-                label: '广东'
-            },
-            {
-                value: '香港',
-                label: '香港'
-            }
-        ],
-        model1: ''`,
-        `// cityList 用上一个
-        model2: []`,
-        `// cityList 用上一个
-        model3: []`
+        {
+            value: '北京',
+            label: '北京'
+        },
+        {
+            value: '上海',
+            label: '上海'
+        },
+        {
+            value: '哈尔滨',
+            label: '哈尔滨'
+        },
+        {
+            value: '成都',
+            label: '成都'
+        },
+        {
+            value: '广东',
+            label: '广东'
+        },
+        {
+            value: '香港',
+            label: '香港'
+        }
+    ],
+    model1: ''`,
+    `// cityList 用上一个
+    model2: []`,
+    `// cityList 用上一个
+    model3: []`
     ]
 }
 // datePicker 
@@ -819,7 +861,7 @@ export const datePicker = {
     css:``,
     js:[
         `value1: '2016-01-01',
-      value2: ['2016-01-01', '2016-02-15']`
+    value2: ['2016-01-01', '2016-02-15']`
     ]
 }
 // cascader 
@@ -911,8 +953,8 @@ export const cascader = {
                 }
         ],
         example2:[
-            `// methode
-            loadData(item,callback) {
+            `    // methode
+        loadData(item,callback) {
             console.log(item);
             item.loading = true;
             setTimeout(function(){
@@ -990,7 +1032,6 @@ export const cascader = {
                             }
                         ];
                     break;
-
                 }
                 callback();
             },2000)
@@ -1006,54 +1047,55 @@ export const transfer = {
             :target-keys="targetKeys1"
             :render-format="render1"
             @on-change="handleChange1"
-            :list-style="listStyle"></Transfer>`,
+            :list-style="listStyle">
+    </Transfer>`,
         `<Transfer
             :data="data1"
             :target-keys="targetKeys1"
             filterable
             :filter-method="filterMethod"
             @on-change="handleChange1"
-            :list-style="listStyle"></Transfer>`,
+            :list-style="listStyle">
+     </Transfer>`,
     ],
     css:``,
     js:[
         `// data 
-        listStyle:{
-            width: '300px',
-            height: '300px'
-        },
-        data1:this.getData(),
-        targetKeys1:this.getTargetKeys()
-        // methods
-        getData(){
-            let data = [];
-            for(let i = 0;i<10;i++){
-                data.push({
-                    key: i.toString(),
-                    label: 'Content ' + i,
-                    description: 'The desc of content  ' + i,
-                    disabled: Math.random() * 3 < 1
-                });
-            }
-            return data;
-        },
-        getTargetKeys(){
-            return this.getData().filter(()=>Math.random()*2>1).map(item=>item.key)
-        },
-        render1 (item) {
-            return item.label;
-        },
-        handleChange1 (newTargetKeys, direction, moveKeys) {
-            console.log(newTargetKeys);
-            console.log(direction);
-            console.log(moveKeys);
-            this.targetKeys1 = newTargetKeys;
-        }`,
-        `// data、methods 可以同上
-        filterMethod (data, query) {
-            return data.label.indexOf(query) > -1;
+    listStyle:{
+        width: '300px',
+        height: '300px'
+    },
+    data1:this.getData(),
+    targetKeys1:this.getTargetKeys()
+    // methods
+    getData(){
+        let data = [];
+        for(let i = 0;i<10;i++){
+            data.push({
+                key: i.toString(),
+                label: 'Content ' + i,
+                description: 'The desc of content  ' + i,
+                disabled: Math.random() * 3 < 1
+            });
         }
-        `,
+        return data;
+    },
+    getTargetKeys(){
+        return this.getData().filter(()=>Math.random()*2>1).map(item=>item.key)
+    },
+    render1 (item) {
+        return item.label;
+    },
+    handleChange1 (newTargetKeys, direction, moveKeys) {
+        console.log(newTargetKeys);
+        console.log(direction);
+        console.log(moveKeys);
+        this.targetKeys1 = newTargetKeys;
+    }`,
+    `// data、methods 可以同上
+    filterMethod (data, query) {
+        return data.label.indexOf(query) > -1;
+    }`,
     ]
 }
 // upload 
@@ -1099,39 +1141,39 @@ export const form = {
     css:``,
     js:[
         `// data
-        formInline: {
-            user: '',
-            password: ''
-        },
-        ruleInline: {
-            user: [
-                { required: true, message: '请填写用户名.', trigger: 'blur' }
-            ],
-            password: [
-                { required: true, message: '请填写密码.', trigger: 'blur' },
-                { type: 'string', min: 6, message: '密码不能少于6位.', trigger: 'blur' }
-            ]
-        }
-        // methods
-        handleSubmit(name){
-            this.$refs[name].validate((valid) => {
-                if (valid) {
-                    this.$Message.success('Success!');
-                } else {
-                    this.$Message.error('Fail!');
-                }
-            });
-        },
-        handleReset (name) {
-            this.$refs[name].resetFields();
-        },`,
+    formInline: {
+        user: '',
+        password: ''
+    },
+    ruleInline: {
+        user: [
+            { required: true, message: '请填写用户名.', trigger: 'blur' }
+        ],
+        password: [
+            { required: true, message: '请填写密码.', trigger: 'blur' },
+            { type: 'string', min: 6, message: '密码不能少于6位.', trigger: 'blur' }
+        ]
+    }
+    // methods
+    handleSubmit(name){
+        this.$refs[name].validate((valid) => {
+            if (valid) {
+                this.$Message.success('Success!');
+            } else {
+                this.$Message.error('Fail!');
+            }
+        });
+    },
+    handleReset (name) {
+        this.$refs[name].resetFields();
+    },`,
 
     ]
 }
 // message 
 export const message = {
     html:[
-        ` <Button type="primary" @click="info">默认提示信息</Button>`,
+        `<Button type="primary" @click="info">默认提示信息</Button>`,
         `<Button @click="success">success提示信息</Button>
     <Button @click="warning">warning提示信息</Button>
     <Button @click="error">error提示信息</Button>`,
@@ -1168,7 +1210,7 @@ export const message = {
 // notice 
 export const notice = {
     html:[
-        ` <Button type="primary" @click="open(false)">打开通知</Button>
+        `<Button type="primary" @click="open(false)">打开通知</Button>
     <Button @click="open(true)">打开通知(只有标题)</Button>`,
         `<p>带描述信息</p>
     <Button @click="info(false)">消息</Button>
@@ -1231,7 +1273,7 @@ export const notice = {
 // modal 
 export const modal = {
     html:[
-        ` <Button type="primary" @click="modal1 = true">显示对话框</Button>
+        `<Button type="primary" @click="modal1 = true">显示对话框</Button>
     <Modal
         v-model="modal1"
         title="普通的Modal的对话框标题"
@@ -1342,8 +1384,111 @@ export const modal = {
 
     ]
 }
+// tooltip 
+export const tooltip = {
+    html:[
+        `<Tooltip content="Here is the prompt text（这里是提示信息）">
+        A balloon appears when the mouse passes over this text（当鼠标经过这段文字时，会出现气泡）
+    </Tooltip>`,
+        `<div class="top">
+        <Tooltip content="Top Left text" placement="top-start">
+            <Button>上左</Button>
+        </Tooltip>
+        <Tooltip content="Top Center text" placement="top">
+            <Button>上中</Button>
+        </Tooltip>
+        <Tooltip content="Top Right text" placement="top-end">
+            <Button>上右</Button>
+        </Tooltip>
+    </div>
+    <div class="center">
+        <div class="center-left">
+            <Tooltip content="Left Top text" placement="left-start">
+                <Button>左上</Button>
+            </Tooltip><br><br>
+            <Tooltip content="Left Center text" placement="left">
+                <Button>左中</Button>
+            </Tooltip><br><br>
+            <Tooltip content="Left Bottom text" placement="left-end">
+                <Button>左下</Button>
+            </Tooltip>
+        </div>
+        <div class="center-right">
+            <Tooltip content="Right Top text" placement="right-start">
+                <Button>右上</Button>
+            </Tooltip><br><br>
+            <Tooltip content="Right Center text" placement="right">
+                <Button>右中</Button>
+            </Tooltip><br><br>
+            <Tooltip content="Right Bottom text" placement="right-end">
+                <Button>右下</Button>
+            </Tooltip>
+        </div>
+    </div>
+    <div class="bottom">
+        <Tooltip content="Bottom Left text" placement="bottom-start">
+            <Button>下左</Button>
+        </Tooltip>
+        <Tooltip content="Bottom Center text" placement="bottom">
+            <Button>下中</Button>
+        </Tooltip>
+        <Tooltip content="Bottom Right text" placement="bottom-end">
+            <Button>下右</Button>
+        </Tooltip>
+    </div>`,
 
 
+    ],
+    css:[
+        `.top,.bottom{
+        text-align: center;
+    }
+    .center{
+        width: 300px;
+        margin: 10px auto;
+        overflow: hidden;
+    }
+    .center-left{
+        float: left;
+    }
+    .center-right{
+        float: right;
+    }`,
+    ],
+    js:[
+    
+
+
+    ]
+}
+// badge 
+export const badge = {
+    html:[
+        `<Badge :count="3">
+        <a href="#" class="demo-badge"></a>
+    </Badge>`,
+        `<Badge dot>
+        <a href="#" class="demo-badge"></a>
+    </Badge>`
+
+
+    ],
+    css:[
+        `.demo-badge{
+        width: 42px;
+        height: 42px;
+        background: #eee;
+        border-radius: 6px;
+        display: inline-block;
+    }`,
+
+    ],
+    js:[
+    
+
+
+    ]
+}
 
 
 

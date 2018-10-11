@@ -18,11 +18,11 @@
         <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-html"/></h3>
-            <pre class="codeBox" id='part1-html'> {{htmlCode[0]}} </pre>
+            <pre class="codeBox" id='part1-html'>{{htmlCode[0]}} </pre>
         </div>
         <div class="demo-express">
             <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-js"/></h3>
-            <pre class="codeBox" id='part1-js'> {{jsCode[0]}} </pre>
+            <pre class="codeBox" id='part1-js'>{{jsCode[0]}} </pre>
         </div>
         <!-- example 2 -->
         <Divider orientation="left">设置宽高</Divider>
@@ -37,11 +37,11 @@
         <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part2-html"/></h3>
-            <pre class="codeBox" id='part2-html'> {{htmlCode[1]}} </pre>
+            <pre class="codeBox" id='part2-html'>{{htmlCode[1]}} </pre>
         </div>
         <div class="demo-express">
             <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part2-js"/></h3>
-            <pre class="codeBox" id='part2-js'> {{jsCode[1]}} </pre>
+            <pre class="codeBox" id='part2-js'>{{jsCode[1]}} </pre>
         </div>
         <!-- example 3 -->
         <Divider orientation="left">异步关闭</Divider>
@@ -56,11 +56,11 @@
         <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-html"/></h3>
-            <pre class="codeBox" id='part3-html'> {{htmlCode[2]}} </pre>
+            <pre class="codeBox" id='part3-html'>{{htmlCode[2]}} </pre>
         </div>
         <div class="demo-express">
             <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-js"/></h3>
-            <pre class="codeBox" id='part3-js'> {{jsCode[2]}} </pre>
+            <pre class="codeBox" id='part3-js'>{{jsCode[2]}} </pre>
         </div>
         <!-- example 4 -->
         <Divider orientation="left">可拖拽</Divider>
@@ -75,11 +75,11 @@
         <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part4-html"/></h3>
-            <pre class="codeBox" id='part4-html'> {{htmlCode[3]}} </pre>
+            <pre class="codeBox" id='part4-html'>{{htmlCode[3]}} </pre>
         </div>
         <div class="demo-express">
             <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part4-js"/></h3>
-            <pre class="codeBox" id='part4-js'> {{jsCode[3]}} </pre>
+            <pre class="codeBox" id='part4-js'>{{jsCode[3]}} </pre>
         </div>
         <!-- example 5 -->
         <Divider orientation="left">实例化用法</Divider>
@@ -91,11 +91,11 @@
         <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part5-html"/></h3>
-            <pre class="codeBox" id='part5-html'> {{htmlCode[4]}} </pre>
+            <pre class="codeBox" id='part5-html'>{{htmlCode[4]}} </pre>
         </div>
         <div class="demo-express">
             <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part5-js"/></h3>
-            <pre class="codeBox" id='part5-js'> {{jsCode[4]}} </pre>
+            <pre class="codeBox" id='part5-js'>{{jsCode[4]}} </pre>
         </div>
 
     </div>

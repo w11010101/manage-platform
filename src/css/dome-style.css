@@ -35,6 +35,7 @@ pre,code.codeBox{
     border: 1px solid #ccc;
     border-radius: 4px;
     overflow-x: auto;
+    text-indent: 2.2em;
 }
 .copyBtn{
     margin-left:10px;

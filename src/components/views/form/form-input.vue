@@ -9,9 +9,7 @@
     <!-- code -->
     <div class="demo-express">
       <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-html"/></h3>
-      <code class="codeBox" id='part1-html'>
-        &lt;Input v-model="value" placeholder="Enter something..."/&gt;
-      </code>
+      <pre class="codeBox" id='part1-html'>{{htmlCode[0]}}</pre>
     </div>
     <!-- example 2 -->
     <Divider orientation="left">默认大小 width: 300px</Divider>
@@ -19,9 +17,7 @@
     <!-- code -->
     <div class="demo-express">
       <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part2-html"/></h3>
-      <code class="codeBox" id='part2-html'>
-        &lt;Input v-model="value" placeholder="Enter something..." style="width: 300px" /&gt;
-      </code>
+      <pre class="codeBox" id='part2-html'>{{htmlCode[1]}}</pre>
     </div>
     <!-- example 3 -->
     <Divider orientation="left">尺寸 ：大、中（默认）、小</Divider>
@@ -31,19 +27,7 @@
     <!-- code -->
     <div class="demo-express">
       <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-html"/></h3>
-      <code class="codeBox" id='part3-html'>
-        &lt;!-- 大 --&gt;
-        <br>
-        &lt;Input v-model="value" placeholder="Enter something..." style="width: 150px" size="large"/&gt;
-        <br>
-        &lt;!-- 中 --&gt;
-        <br>
-        &lt;Input v-model="value" placeholder="Enter something..." style="width: 150px"/&gt;
-        <br>
-        &lt;!-- 小 --&gt;
-        <br>
-        &lt;Input v-model="value" placeholder="Enter something..." style="width: 150px" size="small"/&gt;
-      </code>
+      <pre class="codeBox" id='part3-html'>{{htmlCode[2]}}</pre>
     </div>
     <!-- example 4 -->
     <Divider orientation="left">带清除按钮</Divider>
@@ -51,11 +35,7 @@
     <!-- code -->
     <div class="demo-express">
       <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part4-html"/></h3>
-      <code class="codeBox" id='part4-html'>
-        &lt;!-- icon="ios-clock-outline" --&gt;
-        <br>
-        &lt;Input v-model="value" placeholder="Enter something..." clearable style="width: 200px" /&gt;
-      </code>
+      <pre class="codeBox" id='part4-html'>{{htmlCode[3]}}</pre>
     </div>
     <!-- example 5 -->
     <Divider orientation="left">带Icon的输入框</Divider>
@@ -64,15 +44,7 @@
     <!-- code -->
     <div class="demo-express">
       <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part5-html"/></h3>
-      <code class="codeBox" id='part5-html'>
-        &lt;!-- icon="ios-clock-outline" --&gt;
-        <br>
-        &lt;Input v-model="value" icon="ios-clock-outline" placeholder="Enter something..." style="width: 200px" /&gt;
-        <br>
-        &lt;!-- icon="ios-add-circle" --&gt;
-        <br>
-        &lt;Input v-model="value" icon="ios-add-circle" placeholder="Enter something..." style="width: 200px" /&gt;
-      </code>
+      <pre class="codeBox" id='part5-html'>{{htmlCode[4]}}</pre>
     </div>
     <!-- example 6 -->
     <Divider orientation="left">带Icon的输入框</Divider>
@@ -90,27 +62,7 @@
     <!-- code -->
     <div class="demo-express">
       <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part6-html"/></h3>
-      <code class="codeBox" id='part6-html'>
-        &lt;!-- Props： --&gt;
-        <br>
-        &lt;Input prefix="ios-contact" placeholder="Enter name" style="width: auto" /&gt;
-        <br>
-        &lt;Input suffix="ios-search" placeholder="Enter text" style="width: auto" /&gt;
-        <br>
-        &lt;!-- Slots： --&gt;
-        <br>
-        &lt;Input placeholder="Enter name" style="width: auto"&gt;
-          <br>
-          &nbsp;&nbsp;&lt;Icon type="ios-contact" slot="prefix" /&gt;
-          <br>
-        &lt;/Input&gt;
-        <br>
-        &lt;Input placeholder="Enter text" style="width: auto"&gt;
-          <br>
-          &nbsp;&nbsp;&lt;Icon type="ios-search" slot="suffix" /&gt;
-          <br>
-        &lt;/Input&gt;
-      </code>
+      <pre class="codeBox" id='part6-html'>{{htmlCode[5]}}</pre>
     </div>
     <!-- example 7 -->
     <Divider orientation="left">文本域</Divider>
@@ -122,11 +74,7 @@
     <!-- code -->
     <div class="demo-express">
       <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part7-html"/></h3>
-      <code class="codeBox" id='part7-html'>
-        &lt;Input v-model="value" type="textarea" placeholder="Enter something..." style="width: 200px" /&gt;
-        <br>
-        &lt;Input v-model="value" type="textarea" :rows="4" placeholder="Enter something..." style="width: 200px" /&gt;
-      </code>
+      <pre class="codeBox" id='part7-html'>{{htmlCode[6]}}</pre>
     </div>
     <!-- example 8 -->
     <Divider orientation="left">自适应行高</Divider>
@@ -137,23 +85,21 @@
     </Row>
     <div class="demo-express">
       <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part8-html"/></h3>
-      <code class="codeBox" id='part8-html'>
-        &lt;Input v-model="value" type="textarea" :autosize="true" placeholder="Enter something..." style="width: 200px"/&gt;
-        <br>
-        &lt;Input v-model="value" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="Enter something..." style="width: 200px" /&gt;
-      </code>
+      <pre class="codeBox" id='part8-html'>{{htmlCode[7]}}</pre>
     </div>
     <!--  -->
   </div>
 </template>
 
 <script>
+import {input} from '@/js/tool/part.js';
+const {htmlCode} = {htmlCode:input.html}
 export default {
   name: 'form-input',
   data () {
     return {
       value: 'this is form-input.vue 。',
-      
+      htmlCode,
     }
   },
   props:{

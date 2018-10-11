@@ -13,7 +13,7 @@
         <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-html"/></h3>
-            <pre class="codeBox" id='part1-html'>   {{htmlCode[0]}}</pre>
+            <pre class="codeBox" id='part1-html'>{{htmlCode[0]}}</pre>
         </div>
         <!--  -->
         <Divider orientation="left">含描述信息</Divider>
@@ -41,7 +41,7 @@
         <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part2-html"/></h3>
-            <pre class="codeBox" id='part2-html'>   {{htmlCode[1]}}</pre>
+            <pre class="codeBox" id='part2-html'>{{htmlCode[1]}}</pre>
         </div>
         <!--  -->
         <Divider orientation="left">带图标、自定义图标</Divider>
@@ -58,7 +58,7 @@
         <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part3-html"/></h3>
-            <pre class="codeBox" id='part3-html'>   {{htmlCode[2]}}</pre>
+            <pre class="codeBox" id='part3-html'>{{htmlCode[2]}}</pre>
         </div>
         <!--  -->
         <Divider orientation="left">关闭按钮</Divider>
@@ -72,7 +72,7 @@
         <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part4-html"/></h3>
-            <pre class="codeBox" id='part4-html'>   {{htmlCode[3]}}</pre>
+            <pre class="codeBox" id='part4-html'>{{htmlCode[3]}}</pre>
         </div>    
 
     </div>
