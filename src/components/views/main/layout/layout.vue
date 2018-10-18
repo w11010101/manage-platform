@@ -19,6 +19,8 @@
 
                 <!-- <Layout> -->
                     <Content :style="{background: '#fff',padding:'10px 15px'}" class="viewContent">
+                        <img id='xiu' src="http://www.daqianduan.com/wp-content/uploads/2014/11/hs-xiu.jpg">
+                        <Button @click='changeFn'>change</Button>
                         <!-- <router-view class="child pagesTab" name="pagesTab"></router-view> -->
                         <!-- <Layout >
                             <pagesTab class="pagesTab" :value="$route"></pagesTab>
@@ -111,6 +113,13 @@ export default {
             }
             e.clearSelection();
         });
+        var xiu = document.getElementById('xiu')
+        xiu.onload = xiu.onreadystatechange = function(){
+           if(!this.readyState||this.readyState=='loaded'||this.readyState=='complete'){
+               // 加载完成 
+               console.log(this)
+           }
+        };
     },
     beforeRouteEnter (to,from,next){
         next();
@@ -184,6 +193,11 @@ export default {
             console.log('abc')
             console.log(val);
         },
+        changeFn(){
+            console.log(obj.a);
+            obj.a = 2;
+            console.log(obj.a);
+        }
         // handleCloseTag(){
         //     this.$store.commit('removeALLPageTabsList')
         //     // console.log(this.pageTabsList)
@@ -192,7 +206,34 @@ export default {
         // }
     }
 }
+var obj = {
+    a:1
+};
+Object.defineProperty(obj,'a',{
+    get(){
+        console.log(this)
+        // return obj.a
+    },
+    set(newVal){
+        console.log('这个是新值'+newVal);
+    }
+})
 
+var  p1 = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        reject(new Error('fail'));
+    },3000);
+});
+var p2 = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        resolve(p1,1000,'p2');
+    },1000);
+});
+p2.then(function(result){
+    console.log(result);
+}).catch(function(error){
+    console.log(error);
+});
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

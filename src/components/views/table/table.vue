@@ -5,7 +5,7 @@
         </Alert>
         <!-- example 1 -->
         <Divider orientation="left">基础用法</Divider>
-        <Table :columns="codeList1" border :data="codeLine1"></Table>
+        <Table :columns="codeList1" width="602" border :data="codeLine1"></Table>
         <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-html"/></h3>

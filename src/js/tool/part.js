@@ -123,76 +123,32 @@ export const table = {
         example1:[
             [ 
                 {
-                    title: "TOP",
-                    key: "top"
+                    title: "浏览器类型",
+                    key: "browserType",
+                    width:100,
                 }, {
-                    title: "Head",
-                    key: "header"
-                }, {
-                    title: "Name",
-                    key: "name"
-                }, {
-                    title: "Age",
-                    key: "age"
-                }, {
-                    title: "Address",
-                    key: "address"
-                }, {
-                    title: "Ship",
-                    key: "ship"
-                }, {
-                    title: "Captain",
-                    key: "captain"
-                }, {
-                    title: "Ability",
-                    key: "ability"
-                }, {
-                    title: "MoneyReward",
-                    key: "moneyReward"
+                    title: "浏览器内核",
+                    key: "browserKernel",
+                    width:500,
                 }
             ],
             [
                 {
-                    top: 1,
-                    header: "夏洛特·卡塔库栗",
-                    name: "夏洛特·卡塔库栗",
-                    age: "?",
-                    address: "蛋糕岛",
-                    ship: "四皇 BIG MOM",
-                    captain: "BIG MOM",
-                    ability: "特殊超人系“糯糯果实”",
-                    moneyReward: "10亿5700万贝里"
+                    browserType: 'IE',
+                    browserKernel: "trident",
                 }, {
-                    top: 2,
-                    header: "杰克",
-                    name: "杰克",
-                    age: "?",
-                    address: "百兽海贼团",
-                    ship: "百兽海贼团",
-                    captain: "凯多",
-                    ability: "动物系古代种象象果实猛犸象形态",
-                    moneyReward: "10亿"
+                    browserType: 'Firefox',
+                    browserKernel: "gecko",
                 }, {
-                    top: 3,
-                    header: "夏洛特·斯慕吉",
-                    name: "夏洛特·斯慕吉",
-                    age: "?",
-                    address: "蛋糕岛",
-                    ship: "四皇 BIG MOM",
-                    captain: "BIG MOM",
-                    ability: "榨榨果实",
-                    moneyReward: "9亿3200万贝里"
+                    browserType: 'Safari',
+                    browserKernel: "webkit",
                 }, {
-                    top: 4,
-                    header: "夏洛特·克力架",
-                    name: "夏洛特·克力架",
-                    age: "?",
-                    address: "蛋糕岛",
-                    ship: "四皇 BIG MOM",
-                    captain: "BIG MOM",
-                    ability: "超人系·饼干果实",
-                    moneyReward: "8亿6000万z贝里"
-                }
+                    browserType: 'Opera',
+                    browserKernel: "以前是presto内核，Opera现已改成Google Chrome 的Blink内核",
+                },{
+                    browserType: 'Chrome',
+                    browserKernel: "Blink (基于webkit，Google与Opera Software共同开发)",
+                },
             ]
         ],
         example2:[
