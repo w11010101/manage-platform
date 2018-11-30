@@ -206,34 +206,34 @@ export default {
         // }
     }
 }
-var obj = {
-    a:1
-};
-Object.defineProperty(obj,'a',{
-    get(){
-        console.log(this)
-        // return obj.a
-    },
-    set(newVal){
-        console.log('这个是新值'+newVal);
-    }
-})
+// var obj = {
+//     a:1
+// };
+// Object.defineProperty(obj,'a',{
+//     get(){
+//         console.log(this)
+//         // return obj.a
+//     },
+//     set(newVal){
+//         console.log('这个是新值'+newVal);
+//     }
+// })
 
-var  p1 = new Promise(function(resolve,reject){
-    setTimeout(function(){
-        reject(new Error('fail'));
-    },3000);
-});
-var p2 = new Promise(function(resolve,reject){
-    setTimeout(function(){
-        resolve(p1,1000,'p2');
-    },1000);
-});
-p2.then(function(result){
-    console.log(result);
-}).catch(function(error){
-    console.log(error);
-});
+// var  p1 = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         reject(new Error('fail'));
+//     },3000);
+// });
+// var p2 = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         resolve(p1,1000,'p2');
+//     },1000);
+// });
+// p2.then(function(result){
+//     console.log(result);
+// }).catch(function(error){
+//     console.log(error);
+// });
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

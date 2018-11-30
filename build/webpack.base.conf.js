@@ -38,8 +38,6 @@ module.exports = {
     iview:"iview",
     Vuex:"Vuex",
     breadcrumb:'breadcrumb',
-    // Oidc:'Oidc'
-    // clipboard:"ClipboardJS"
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
