@@ -256,6 +256,13 @@ var data = [
         href:"/layoutView/badge",
         icon: "md-basketball",
     },
+    {
+        level: 1,
+        text: 'echarts 图表',
+        id: 13,
+        href:"/layoutView/echarts",
+        icon: "md-basketball",
+    },
 
 ];
 module.exports = data;

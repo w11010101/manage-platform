@@ -268,6 +268,17 @@ var router_config = [
                     name:"badge"
                 }
             },
+            {
+                path:'echarts',
+                name:'echarts',
+                component:resolve =>require(['@/components/views/echarts/echarts'],resolve),
+                meta:{
+                    href:"/layoutView/echarts"
+                },
+                props:{
+                    name:"echarts"
+                }
+            },
 
         ]
     }

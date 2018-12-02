@@ -5,20 +5,20 @@ export default new Vuex.Store({
     strict: process.env.NODE_ENV !== 'production',
     state: {
         navData,
-        // count: 0,
+        count: 0,
         num:123,
         // ids:"asdf",
-        // arr:["a","b","c","d","e","f","g"],
+        arr:["a","b","c","d","e","f","g"],
         obj:{
           a:11,
           b:22,
           c:33,
           d:44
         },
-        // todos: [
-        //   { id: 1, text: 'id-1=true', done: true },
-        //   { id: 2, text: 'id-2-false', done: false }
-        // ],
+        todos: [
+          { id: 1, text: 'id-1=true', done: true },
+          { id: 2, text: 'id-2-false', done: false }
+        ],
         // inputVal:"表单处理12",
         pageTabsList:[{
             name:'layoutView',

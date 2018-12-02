@@ -21,6 +21,11 @@
                     <Content :style="{background: '#fff',padding:'10px 15px'}" class="viewContent">
                         <img id='xiu' src="http://www.daqianduan.com/wp-content/uploads/2014/11/hs-xiu.jpg">
                         <Button @click='changeFn'>change</Button>
+                        <!-- <p>Vuex $store.state.obj：{{obj}}</p>
+                        <p>Vuex $store.state.arr：{{arr}}</p>
+                        <p>Vuex $store.state.count：{{count}}</p>
+                        <p>$store.getters.doneTodos：{{doneTodos}}</p>
+                        {{filter|myFilter1|myFilter2}} -->
                         <!-- <router-view class="child pagesTab" name="pagesTab"></router-view> -->
                         <!-- <Layout >
                             <pagesTab class="pagesTab" :value="$route"></pagesTab>
@@ -59,9 +64,30 @@
     </div>
 </template>
 <script>
-import {mapState,mapMutations} from 'vuex';
-import axios from 'axios'
+    // var echarts = reuqire('echarts')
+import {mapState,mapMutations,mapGetters} from 'vuex';
+import axios from 'axios';
 
+console.log(echarts)
+// 过滤器
+// Vue.filter('myFilter',function(value){
+//     // console.trace();
+//     // console.log(arguments);
+//     return value+'(myFilter)';
+// });
+var filters = {
+    'myFilter1':function(value){
+        // console.trace();
+        // console.log(arguments);
+        return value+' + ( myFilter1 )';
+    },
+    'myFilter2':function(value){
+        // console.trace();
+        // console.log(arguments);
+        return value+' + ( myFilter2 )';
+    }
+}
+// 
 var breadC = new breadcrumb({
     paramName:'href'
 });
@@ -72,7 +98,8 @@ export default {
         return {
             msg: 'this is layout!',
             isCollapsed: false,
-            generators:{}
+            generators:{},
+            filter:'filterData'
         }
     },
     computed:{
@@ -83,7 +110,7 @@ export default {
         //     // console.log(this.pageTabsList)
         //     return this.pageTabsList;
         // }
-        
+        ...mapGetters(['doneTodos']),
         rotateIcon: function () {   // menu icon rotate
             return [
                 'menu-icon',
@@ -204,7 +231,8 @@ export default {
         //     // this.pageTabsList = [];
         //     // console.log('handleCloseTag')
         // }
-    }
+    },
+    filters,
 }
 // var obj = {
 //     a:1

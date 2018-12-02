@@ -57,7 +57,7 @@ export default {
                     href:'https://git-scm.com/'
                 },
                 {
-                    name:'iveiw',
+                    name:'iview',
                     href:'https://www.iviewui.com/'
                 },
                 {

@@ -38,6 +38,7 @@ module.exports = {
     iview:"iview",
     Vuex:"Vuex",
     breadcrumb:'breadcrumb',
+    echarts:'echarts'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
