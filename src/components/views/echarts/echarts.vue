@@ -1,21 +1,15 @@
 <template>
     <div class="child">
-        <!-- <Alert show-icon style='font-size:16px;'>依赖 iview ，若想查看相关方法、属性和事件，请点击 Docs 跳转查看；
-          <template slot="desc">注意：非 template/render 模式下，把<code>&lt;{{name.replace(/^\S/,s=>s.toUpperCase())}}&gt;</code>改成 <code>&lt;i-{{name}}&gt;</code>。</template>
-        </Alert> -->
         <Alert show-icon style='font-size:16px;'>如果引入echarts.js是静态文件，勿忘配置webpack.base.conf.js;
             <template slot="desc">注意：echarts.js 为本地静态文件，第三方插件，如果该插件是按照模块化开发（commonjs、amd、cmd、es6）；可以通过相应的模块调用方法，来使用；
             </template>
         </Alert>
-        <!-- example 1 -->
         <Divider orientation="left">基础用法</Divider>
         <div id="echarts"></div>
-        <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">HTML<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-html"/></h3>
             <pre class="codeBox" id='part1-html'>{{htmlCode}}</pre>
         </div>
-        <!-- code -->
         <div class="demo-express">
             <h3 class="demo-express-title">JS<Icon type="ios-copy" size='20' class="copyBtn"  data-clipboard-target="#part1-js"/></h3>
             <pre class="codeBox" id='part1-js'>{{jsCode}}</pre>
@@ -25,6 +19,8 @@
 </template>
 
 <script>
+    import echarts from 'echarts'
+    // import
 import {myEcharts} from '@/js/tool/part.js';
 let {htmlCode,jsCode} = {htmlCode:myEcharts.html,jsCode:myEcharts.js};
 

@@ -91,6 +91,16 @@ export default new Vuex.Store({
             return state.todos.filter(todo => todo.id==2)
         },
         myAjax:(state) =>(option)=>{
+            // option={
+            //     url:'',
+            //     callback:function(){
+
+            //     }
+            // }
+            // $.ajax({
+            //     url,
+            //     callback,
+            // })
             return function(resolve,reject){
                 setTimeout(function(){
                     resolve(option);

@@ -56,14 +56,14 @@
             // 点击页面跳转
             jumpPage:function(name){
                 console.log(name)
-                // var currentNode = breadC.init(this.navData,name).currentNode;
-                // console.log(currentNode)
-                // this.$store.commit('setPageTabsList',{
-                //     name:currentNode.text,
-                //     id:currentNode.id,
-                //     router:currentNode.href,
-                //     props:currentNode.props||null
-                // })
+                var currentNode = breadC.init(this.navData,name).currentNode;
+                console.log(currentNode)
+                this.$store.commit('setPageTabsList',{
+                    name:currentNode.text,
+                    id:currentNode.id,
+                    router:currentNode.href,
+                    props:currentNode.props||null
+                })
             },
             // 
             collapsedMenuShow:function(name){

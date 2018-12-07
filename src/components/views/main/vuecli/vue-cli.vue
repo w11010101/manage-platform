@@ -33,13 +33,13 @@
     <div class="vueCli-content">
       <Alert class='alert' type="warning">警告：安装vue-cli前，要先安装Node.js和npm； <br>Node.js（> = 6.x，8.x首选），npm版本3+和Git</Alert>
       <h2>创建文件夹</h2>
-      <Alert class="code">mkdir &lt;fileName&gt;</Alert>
+      <Alert class="code">mkdir fileName</Alert>
       <h2>全局安装vue-cli</h2>
       <Alert class="code">npm install vue-cli -g</Alert>
       <h2>创建基于webpack的vue-cli项目</h2>
-      <Alert class="code">vue init webpack &lt;projectName&gt;</Alert>
+      <Alert class="code">vue init webpack projectName</Alert>
       <h2>进入项目</h2>
-      <Alert class="code">cd &lt;projectName&gt;</Alert>
+      <Alert class="code">cd projectName</Alert>
       <h2>安装本地依赖</h2>
       <Alert class="code">npm install</Alert>
       <h2>运行</h2>

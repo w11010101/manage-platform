@@ -1,4 +1,4 @@
-import routes from './router';
+import routes from './router.js';
 Vue.use(VueRouter);
 
 export default new VueRouter({

@@ -16,49 +16,16 @@
                     </div>
                     <myNav ref="navVm" ></myNav>
                 </Sider>
-
-                <!-- <Layout> -->
-                    <Content :style="{background: '#fff',padding:'10px 15px'}" class="viewContent">
-                        <img id='xiu' src="http://www.daqianduan.com/wp-content/uploads/2014/11/hs-xiu.jpg">
-                        <Button @click='changeFn'>change</Button>
-                        <!-- <p>Vuex $store.state.obj：{{obj}}</p>
-                        <p>Vuex $store.state.arr：{{arr}}</p>
-                        <p>Vuex $store.state.count：{{count}}</p>
-                        <p>$store.getters.doneTodos：{{doneTodos}}</p>
-                        {{filter|myFilter1|myFilter2}} -->
-                        <!-- <router-view class="child pagesTab" name="pagesTab"></router-view> -->
-                        <!-- <Layout >
-                            <pagesTab class="pagesTab" :value="$route"></pagesTab>
-                        </Layout> -->
-                        <Layout>
-                            <keep-alive>
-                                <router-view class='view-content child' id="viewsContent"/>
-                            </keep-alive>
-                        <!-- <h1>layout.vue</h1> -->
-                        </Layout>
-                        <!-- <div class="child">
-                            <h2>
-                                Vuex $store.state.obj：{{obj}}
-                                <br>
-                                Vuex $store.state.arr：{{arr}}
-                                <br>
-                                Vuex $store.state.count：{{count}}
-                                <br>
-                                this.private：{{private}}
-                                <br>
-                                $store.getters：{{$store.getters.doneTodos}}
-                            </h2>
-                            <Button @click=stortFn size='large'>$store.state.count++</Button>
-                            <Button @click=getListFn size='large'>$store.getters.ajax 请求</Button>
-                            <Button @click=axiosFn size='large'>axios 请求</Button>
-                            <Button @click=GeneratorFn size='large'>ES6-Generator函数语法</Button>
-                            <Button @click=GeneratorNextFn size='large'>ES6-Generator-next()</Button>
-                        </div> -->
-                        <!-- <Footer>
-                            <myContentFooter></myContentFooter>
-                        </Footer> -->
-                    </Content>
-                <!-- </Layout> -->
+                <!-- content -->
+                <Content :style="{background: '#fff',padding:'10px 15px'}" class="viewContent">
+                    <!-- <pagesTab></pagesTab> -->
+                    <img id='xiu' src="http://www.daqianduan.com/wp-content/uploads/2014/11/hs-xiu.jpg">
+                    <Layout>
+                        <keep-alive>
+                            <router-view class='view-content child' id="viewsContent"/>
+                        </keep-alive>
+                    </Layout>
+                </Content>
             </Layout>
         </Layout>
     </div>
@@ -67,7 +34,7 @@
     // var echarts = reuqire('echarts')
 import {mapState,mapMutations,mapGetters} from 'vuex';
 import axios from 'axios';
-
+// import myHeader from '@/components/main/header.vue'
 console.log(echarts)
 // 过滤器
 // Vue.filter('myFilter',function(value){
@@ -120,6 +87,7 @@ export default {
     }, 
     // store,
     components: {
+        // myHeader,
         myHeader:resolve =>require(['../header/header'],resolve),
         myNav:resolve =>require(['../nav/nav.vue'],resolve),
         pagesTab:resolve =>require(['../tabs/tabs'],resolve),
@@ -219,11 +187,6 @@ export default {
         abcFn(val){
             console.log('abc')
             console.log(val);
-        },
-        changeFn(){
-            console.log(obj.a);
-            obj.a = 2;
-            console.log(obj.a);
         }
         // handleCloseTag(){
         //     this.$store.commit('removeALLPageTabsList')
