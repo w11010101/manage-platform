@@ -2,7 +2,7 @@
     <Header>
         <Menu mode="horizontal" theme="dark" active-name="1">
             <img src="@/assets/logo.png" alt="" class="logo">
-            <span class="header-title">WEB 前端管理平台模板123</span>
+            <span class="header-title">WEB 前端管理平台模板456</span>
             <div class="layout-nav">
                 <MenuItem name="1">
                     <Dropdown trigger="click"   >
