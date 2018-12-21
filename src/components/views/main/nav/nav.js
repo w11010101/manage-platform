@@ -24,7 +24,6 @@ Vue.component("menu-parts",{
             // console.log(item)
             // console.log('params = ' , params)
             // console.log(item['props']&&item['props'].length)
-            // var href = (item['props']&&item['props'].length)?'/layoutView/'+item.text+params:{name:item.text.indexOf('/')?item.text.substr(item.text.lastIndexOf('/')+1):item.text};
             var href = (item['props']&&item['props'].length)?item.href+params:item.href;
             // console.log('href = ', href)
 

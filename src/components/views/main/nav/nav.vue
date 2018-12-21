@@ -5,6 +5,8 @@
     <Menu ref='side1' theme='light' :open-names="open" :active-name="active" width="auto" :class="menuitemClasses" accordion @on-select="jumpPage" @on-open-change="collapsedMenuShow">
         <menu-parts v-for="data in navData" :data='data' :key="data.id" ></menu-parts>
     </Menu>
+
+    
 </template>
 <script>
     import {mapState,mapMutations} from 'vuex'
@@ -25,7 +27,8 @@
                 name:'',
                 active:'',
                 openSubMenuID:[],
-                breadcrumbArr:[]
+                breadcrumbArr:[],
+                
             }
         },
         mixins:[Main],

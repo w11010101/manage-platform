@@ -38,7 +38,7 @@
                     },
                     {
                         name:'Vue-cli',
-                        to:'/layoutView/Vue-cli'
+                        to:'/Vue-cli'
                     },
                     {
                         name:'Vue-router',

@@ -12,7 +12,7 @@ var data = [
         //         level: 2,
         //         text: 'h1',
         //         id: 11,
-        //         href:"/layoutView/h1",
+        //         href:"/h1",
         //         icon: "ios-baseball",
         //         nodes:null,
         //         // nodes:[                    
@@ -20,7 +20,7 @@ var data = [
         //         //         level: 2,
         //         //         text: 'h1/children',
         //         //         id: 111,
-        //         //         href:"/layoutView/h1/children",
+        //         //         href:"/h1/children",
         //         //         icon: "ios-baseball-outline",
         //         //     }
         //         // ]
@@ -29,7 +29,7 @@ var data = [
         //         level: 2,
         //         text: 'h2',
         //         id: 12,
-        //         href:"/layoutView/h2",
+        //         href:"/h2",
         //         icon: "ios-baseball-outline",
         //         props:{
         //             from:'h2.vue',
@@ -50,14 +50,14 @@ var data = [
                 level: 2,
                 text: 'form-input',
                 id: 21,
-                href:"/layoutView/form-input",
+                href:"/form-input",
                 icon: "ios-football-outline",
             },
             {
                 level: 2,
                 text: 'form-button',
                 id: 22,
-                href:"/layoutView/form-button",
+                href:"/form-button",
                 icon: "md-football",
             }
         ]
@@ -73,7 +73,7 @@ var data = [
                 level: 2,
                 text: 'table',
                 id: 31,
-                href:"/layoutView/table",
+                href:"/table",
                 icon: "ios-basketball",
             }
         ]
@@ -89,7 +89,7 @@ var data = [
                 level: 2,
                 text: 'nav',
                 id: 41,
-                href:"/layoutView/nav",
+                href:"/nav",
                 icon: "ios-basketball",
             }
         ]
