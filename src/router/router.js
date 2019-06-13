@@ -272,6 +272,17 @@ var router_config = [
                     name:"echarts"
                 }
             },
+            {
+                path:'transfer',
+                name:'transfer',
+                component:resolve =>require(['@/components/views/transfer/transfer'],resolve),
+                meta:{
+                    href:"/layoutView/transfer"
+                },
+                props:{
+                    name:"transfer"
+                }
+            },
 
         ]
     }

@@ -263,6 +263,13 @@ var data = [
         href:"/layoutView/echarts",
         icon: "md-basketball",
     },
+    {
+        level: 1,
+        text: 'transfer 穿梭框',
+        id: 14,
+        href:"/layoutView/transfer",
+        icon: "md-basketball",
+    },
 
 ];
 module.exports = data;
