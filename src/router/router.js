@@ -7,12 +7,12 @@ function dynamicPropsFn(route){
     }
 }
 var router_config = [
+    // {
+    //     path:'/',
+    //     redirect:'/layoutView'
+    // },
     {
         path:'/',
-        redirect:'/layoutView'
-    },
-    {
-        path:'/layoutView',
         name:'layoutView',
         components:{
             layoutView:resolve =>require(['@/components/views/main/layout/layout'],resolve)
